@@ -11,12 +11,12 @@ using BLL;
 
 namespace CocoaExport.Vistas
 {
-    public partial class InspeccionesRegistro : Form
+    public partial class RegistroDeInspecciones : Form
     {
         int IdBuscado;
         int Num;
         Inspeciones Registro = new Inspeciones();
-        public InspeccionesRegistro()
+        public RegistroDeInspecciones()
         {
             
             InitializeComponent();
@@ -77,13 +77,14 @@ namespace CocoaExport.Vistas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            InspeccionesRegistro RegistroInsp = new InspeccionesRegistro();
+            RegistroDeInspecciones RegistroInsp = new RegistroDeInspecciones();
             if (IdInsptextBox.Text.Length == 0)
             {
                 Registro.Fecha = FechadateTimePicker.Text;
                 Registro.MaterialSiembra = MaterialSiembratextBox.Text;
                 Registro.ControlPlagas = ControlPlagastextBox.Text;
                 Registro.ResumenInspeccion = ResumenInsprichTextBox.Text;
+                Registro.SocioId = (int)IdSociocomboBox.SelectedValue;
 
                 if (FertSiradioButton.Checked == true)
                 {
@@ -117,13 +118,15 @@ namespace CocoaExport.Vistas
 
             }
             else
-            {
+            {   
+                
                 Registro.InspeccionId = Convert.ToInt32(IdInsptextBox.Text);
 
                 Registro.Fecha = FechadateTimePicker.Text;
                 Registro.MaterialSiembra = MaterialSiembratextBox.Text;
                 Registro.ControlPlagas = ControlPlagastextBox.Text;
                 Registro.ResumenInspeccion = ResumenInsprichTextBox.Text;
+                Registro.SocioId = (int)IdSociocomboBox.SelectedValue;
 
                 Registro.Editar();
 
@@ -145,6 +148,11 @@ namespace CocoaExport.Vistas
         }
 
         private void IdSociocomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

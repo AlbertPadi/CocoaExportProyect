@@ -21,5 +21,15 @@ namespace CocoaExport.Vistas
         {
             throw new NotImplementedException();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

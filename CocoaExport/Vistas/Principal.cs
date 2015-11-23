@@ -97,7 +97,7 @@ namespace CocoaExport
 
         private void registroInspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            InspeccionesRegistro Inspecciones = new InspeccionesRegistro();
+            RegistroDeInspecciones Inspecciones = new RegistroDeInspecciones();
             Inspecciones.Show();
         }
 
@@ -151,6 +151,18 @@ namespace CocoaExport
         private void inspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void recepcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Recepcion Recep = new Recepcion();
+            Recep.Show();
+        }
+
+        private void registroTipoCacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoCacaoRegistro Registro = new TipoCacaoRegistro();
+            Registro.Show();
         }
     }
 }

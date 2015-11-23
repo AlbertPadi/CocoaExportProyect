@@ -161,14 +161,7 @@ namespace CocoaExport.Vistas
             Socios socios = new Socios(); 
 
             RegistroSocios registro = new RegistroSocios ();
-            
-            table = socios.Listar("", "", "");
-
-            /*chart.Series.Add("Socios");
-            chart.Series["Series1"].XValueMember = "Fecha";
-            chart.Series["Series1"].YValueMembers = "Monto";
-            chart.DataSource = table;
-            chart.DataBind();*/
+           
 
         }
 

@@ -55,6 +55,8 @@
             this.registroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroTipoCacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenumenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +84,7 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem,
+            this.recepcionToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
@@ -92,7 +95,7 @@
             this.nuevoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem});
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nuevoToolStripMenuItem.Text = "Configuracion";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -106,7 +109,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click_1);
             // 
@@ -116,6 +119,7 @@
             this.registroSociosToolStripMenuItem,
             this.registroUsuariosToolStripMenuItem,
             this.registroCertificacionesToolStripMenuItem,
+            this.registroTipoCacaoToolStripMenuItem,
             this.listarToolStripMenuItem});
             this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
             this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
@@ -270,6 +274,20 @@
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
+            // recepcionToolStripMenuItem
+            // 
+            this.recepcionToolStripMenuItem.Name = "recepcionToolStripMenuItem";
+            this.recepcionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.recepcionToolStripMenuItem.Text = "Recepcion";
+            this.recepcionToolStripMenuItem.Click += new System.EventHandler(this.recepcionToolStripMenuItem_Click);
+            // 
+            // registroTipoCacaoToolStripMenuItem
+            // 
+            this.registroTipoCacaoToolStripMenuItem.Name = "registroTipoCacaoToolStripMenuItem";
+            this.registroTipoCacaoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.registroTipoCacaoToolStripMenuItem.Text = "Registro Tipo Cacao";
+            this.registroTipoCacaoToolStripMenuItem.Click += new System.EventHandler(this.registroTipoCacaoToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +339,8 @@
         private System.Windows.Forms.ToolStripMenuItem sociosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem certificacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recepcionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroTipoCacaoToolStripMenuItem;
     }
 }
 

@@ -43,6 +43,8 @@ create table Inspecciones(
 			ControlPlagas varchar(35), 
 			ResumenInspeccion varchar(200));
 
+			select *from Inspecciones
+
 create table TiposCacao(
 			TipoCacaoId int primary key identity, 
 			Descripcion varchar(35));					

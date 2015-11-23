@@ -82,14 +82,14 @@
     <Compile Include="Vistas\Recepcion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Recepcion.Designer.cs">
+    <Compile Include="Vistas\Recepcion.designer.cs">
       <DependentUpon>Recepcion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\InspeccionesRegistro.cs">
+    <Compile Include="Vistas\RegistroDeInspecciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\InspeccionesRegistro.Designer.cs">
-      <DependentUpon>InspeccionesRegistro.cs</DependentUpon>
+    <Compile Include="Vistas\RegistroDeInspecciones.designer.cs">
+      <DependentUpon>RegistroDeInspecciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\RegistroExportacion.cs">
       <SubType>Form</SubType>
@@ -114,6 +114,12 @@
     </Compile>
     <Compile Include="Vistas\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\TipoCacaoRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\TipoCacaoRegistro.designer.cs">
+      <DependentUpon>TipoCacaoRegistro.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Vistas\Certificaciones.resx">
       <DependentUpon>Certificaciones.cs</DependentUpon>
@@ -143,8 +149,8 @@
     <EmbeddedResource Include="Vistas\Recepcion.resx">
       <DependentUpon>Recepcion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\InspeccionesRegistro.resx">
-      <DependentUpon>InspeccionesRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\RegistroDeInspecciones.resx">
+      <DependentUpon>RegistroDeInspecciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\RegistroExportacion.resx">
       <DependentUpon>RegistroExportacion.cs</DependentUpon>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\TipoCacaoRegistro.resx">
+      <DependentUpon>TipoCacaoRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
