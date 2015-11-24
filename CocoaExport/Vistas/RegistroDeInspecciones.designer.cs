@@ -63,6 +63,7 @@
             this.IdInsptextBox.Name = "IdInsptextBox";
             this.IdInsptextBox.Size = new System.Drawing.Size(88, 20);
             this.IdInsptextBox.TabIndex = 34;
+            this.IdInsptextBox.TextChanged += new System.EventHandler(this.IdInsptextBox_TextChanged);
             // 
             // IdInsplabel
             // 

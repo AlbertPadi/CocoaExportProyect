@@ -156,5 +156,10 @@ namespace CocoaExport.Vistas
         {
 
         }
+
+        private void IdInsptextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

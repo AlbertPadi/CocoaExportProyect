@@ -74,6 +74,7 @@
             this.DescripcionTipotextBox.Name = "DescripcionTipotextBox";
             this.DescripcionTipotextBox.Size = new System.Drawing.Size(139, 20);
             this.DescripcionTipotextBox.TabIndex = 3;
+            this.DescripcionTipotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripcionTipotextBox_KeyPress);
             // 
             // label9
             // 

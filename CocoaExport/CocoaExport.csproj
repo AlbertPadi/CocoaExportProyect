@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utilities\Utilitarios.cs" />
     <Compile Include="Vistas\Certificaciones.cs">
       <SubType>Form</SubType>
     </Compile>

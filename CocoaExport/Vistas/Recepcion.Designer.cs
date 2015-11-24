@@ -29,23 +29,30 @@
         private void InitializeComponent()
         {
             this.RecepcionIdlabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RecepcionIdtextBox = new System.Windows.Forms.TextBox();
             this.SocioIdlabel = new System.Windows.Forms.Label();
             this.LoteIdlabel = new System.Windows.Forms.Label();
             this.CertificacionIdlabel = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.CantPtextBox = new System.Windows.Forms.TextBox();
             this.TipoCacaoIdlabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CertificacionIdcomboBox = new System.Windows.Forms.ComboBox();
+            this.TipoCacaoIdcomboBox = new System.Windows.Forms.ComboBox();
+            this.SocioIdcomboBox = new System.Windows.Forms.ComboBox();
+            this.ObservacionrichTextBox = new System.Windows.Forms.RichTextBox();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Fechalabel = new System.Windows.Forms.Label();
             this.Cantlabel = new System.Windows.Forms.Label();
             this.Observacionlabel = new System.Windows.Forms.Label();
             this.Recibidolabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.RecibidoPortextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Nuevobutton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Guardarbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.LoteIdcomboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // RecepcionIdlabel
@@ -58,12 +65,12 @@
             this.RecepcionIdlabel.TabIndex = 0;
             this.RecepcionIdlabel.Text = "ID Recepcion";
             // 
-            // textBox1
+            // RecepcionIdtextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 1;
+            this.RecepcionIdtextBox.Location = new System.Drawing.Point(167, 32);
+            this.RecepcionIdtextBox.Name = "RecepcionIdtextBox";
+            this.RecepcionIdtextBox.Size = new System.Drawing.Size(121, 20);
+            this.RecepcionIdtextBox.TabIndex = 1;
             // 
             // SocioIdlabel
             // 
@@ -95,12 +102,12 @@
             this.CertificacionIdlabel.TabIndex = 6;
             this.CertificacionIdlabel.Text = "ID Certificacion";
             // 
-            // textBox4
+            // CantPtextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(167, 301);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 7;
+            this.CantPtextBox.Location = new System.Drawing.Point(167, 301);
+            this.CantPtextBox.Name = "CantPtextBox";
+            this.CantPtextBox.Size = new System.Drawing.Size(121, 20);
+            this.CantPtextBox.TabIndex = 7;
             // 
             // TipoCacaoIdlabel
             // 
@@ -112,53 +119,45 @@
             this.TipoCacaoIdlabel.TabIndex = 8;
             this.TipoCacaoIdlabel.Text = "ID Tipo Cacao";
             // 
-            // comboBox1
+            // CertificacionIdcomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 174);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
+            this.CertificacionIdcomboBox.FormattingEnabled = true;
+            this.CertificacionIdcomboBox.Location = new System.Drawing.Point(167, 174);
+            this.CertificacionIdcomboBox.Name = "CertificacionIdcomboBox";
+            this.CertificacionIdcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.CertificacionIdcomboBox.TabIndex = 9;
             // 
-            // comboBox2
+            // TipoCacaoIdcomboBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(167, 215);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 10;
+            this.TipoCacaoIdcomboBox.FormattingEnabled = true;
+            this.TipoCacaoIdcomboBox.Location = new System.Drawing.Point(167, 215);
+            this.TipoCacaoIdcomboBox.Name = "TipoCacaoIdcomboBox";
+            this.TipoCacaoIdcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.TipoCacaoIdcomboBox.TabIndex = 10;
             // 
-            // comboBox3
+            // SocioIdcomboBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(167, 125);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 11;
+            this.SocioIdcomboBox.FormattingEnabled = true;
+            this.SocioIdcomboBox.Location = new System.Drawing.Point(167, 79);
+            this.SocioIdcomboBox.Name = "SocioIdcomboBox";
+            this.SocioIdcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.SocioIdcomboBox.TabIndex = 12;
             // 
-            // comboBox4
+            // ObservacionrichTextBox
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(167, 79);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 12;
+            this.ObservacionrichTextBox.Location = new System.Drawing.Point(167, 342);
+            this.ObservacionrichTextBox.Name = "ObservacionrichTextBox";
+            this.ObservacionrichTextBox.Size = new System.Drawing.Size(200, 76);
+            this.ObservacionrichTextBox.TabIndex = 13;
+            this.ObservacionrichTextBox.Text = "";
+            this.ObservacionrichTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // richTextBox1
+            // FechadateTimePicker
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(167, 342);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(200, 76);
-            this.richTextBox1.TabIndex = 13;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(167, 258);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(167, 258);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.FechadateTimePicker.TabIndex = 14;
             // 
             // Fechalabel
             // 
@@ -200,39 +199,125 @@
             this.Recibidolabel.TabIndex = 18;
             this.Recibidolabel.Text = "Recibido Por";
             // 
-            // textBox2
+            // RecibidoPortextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 442);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 19;
+            this.RecibidoPortextBox.Location = new System.Drawing.Point(167, 442);
+            this.RecibidoPortextBox.Name = "RecibidoPortextBox";
+            this.RecibidoPortextBox.Size = new System.Drawing.Size(121, 20);
+            this.RecibidoPortextBox.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(276, 514);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 16);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "Eliminar";
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
+            this.Eliminarbutton.Location = new System.Drawing.Point(258, 477);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
+            this.Eliminarbutton.TabIndex = 49;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(174, 514);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 16);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "Nuevo";
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
+            this.Nuevobutton.Location = new System.Drawing.Point(142, 477);
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
+            this.Nuevobutton.TabIndex = 47;
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(56, 514);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 16);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Guardar";
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
+            this.Guardarbutton.Location = new System.Drawing.Point(32, 477);
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
+            this.Guardarbutton.TabIndex = 45;
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
+            this.Buscarbutton.Location = new System.Drawing.Point(294, 32);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(73, 31);
+            this.Buscarbutton.TabIndex = 51;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // LoteIdcomboBox
+            // 
+            this.LoteIdcomboBox.FormattingEnabled = true;
+            this.LoteIdcomboBox.Location = new System.Drawing.Point(167, 125);
+            this.LoteIdcomboBox.Name = "LoteIdcomboBox";
+            this.LoteIdcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.LoteIdcomboBox.TabIndex = 11;
             // 
             // Recepcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(405, 514);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(405, 532);
+            this.Controls.Add(this.Buscarbutton);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Eliminarbutton);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Nuevobutton);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Guardarbutton);
+            this.Controls.Add(this.RecibidoPortextBox);
             this.Controls.Add(this.Recibidolabel);
             this.Controls.Add(this.Observacionlabel);
             this.Controls.Add(this.Cantlabel);
             this.Controls.Add(this.Fechalabel);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FechadateTimePicker);
+            this.Controls.Add(this.ObservacionrichTextBox);
+            this.Controls.Add(this.SocioIdcomboBox);
+            this.Controls.Add(this.LoteIdcomboBox);
+            this.Controls.Add(this.TipoCacaoIdcomboBox);
+            this.Controls.Add(this.CertificacionIdcomboBox);
             this.Controls.Add(this.TipoCacaoIdlabel);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.CantPtextBox);
             this.Controls.Add(this.CertificacionIdlabel);
             this.Controls.Add(this.LoteIdlabel);
             this.Controls.Add(this.SocioIdlabel);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.RecepcionIdtextBox);
             this.Controls.Add(this.RecepcionIdlabel);
             this.Name = "Recepcion";
             this.Text = "Recepcion";
+            this.Load += new System.EventHandler(this.Recepcion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,22 +326,29 @@
         #endregion
 
         private System.Windows.Forms.Label RecepcionIdlabel;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox RecepcionIdtextBox;
         private System.Windows.Forms.Label SocioIdlabel;
         private System.Windows.Forms.Label LoteIdlabel;
         private System.Windows.Forms.Label CertificacionIdlabel;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox CantPtextBox;
         private System.Windows.Forms.Label TipoCacaoIdlabel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox CertificacionIdcomboBox;
+        private System.Windows.Forms.ComboBox TipoCacaoIdcomboBox;
+        private System.Windows.Forms.ComboBox SocioIdcomboBox;
+        private System.Windows.Forms.RichTextBox ObservacionrichTextBox;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label Fechalabel;
         private System.Windows.Forms.Label Cantlabel;
         private System.Windows.Forms.Label Observacionlabel;
         private System.Windows.Forms.Label Recibidolabel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox RecibidoPortextBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button Nuevobutton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button Guardarbutton;
+        private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.ComboBox LoteIdcomboBox;
     }
 }

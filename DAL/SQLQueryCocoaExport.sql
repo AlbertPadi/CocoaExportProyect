@@ -34,27 +34,31 @@ create table Socios(
 		select *from Socios
 								
 create table Inspecciones(
-			InspeccionesId int primary key identity, 
+			InspeccionId int primary key identity, 
 			SocioId int References Socios(SocioId),
-			Fecha varchar (20),
+			Fecha varchar (60),
 			Fertilizantes int,
-			MaterialSiembra varchar(35), 
+			MaterialSiembra varchar(50), 
 			CrianzaAnimales int,
-			ControlPlagas varchar(35), 
+			ControlPlagas varchar(50), 
 			ResumenInspeccion varchar(200));
-
+			
 			select *from Inspecciones
 
 create table TiposCacao(
 			TipoCacaoId int primary key identity, 
 			Descripcion varchar(35));					
 		
+		select *from TiposCacao
+
 create table Recepciones(
 			RecepcionId int primary key identity, 
 			SocioId int References Socios(SocioId), 
 			LoteId int References Lotes(LoteId),
 			CertificacionId int References Certificaciones(CertificacionId), 
 			TipoCacaoId int References TiposCacao(TipoCacaoId),
+			Fecha varchar(40),
+			CantidadPesada int,
 			Observacion varchar(200), 
 			RecibidoPor varchar(50));
 			drop table Recepciones

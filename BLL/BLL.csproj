@@ -47,6 +47,7 @@
     <Compile Include="Lotes.cs" />
     <Compile Include="Recepcion.cs" />
     <Compile Include="Certificaciones.cs" />
+    <Compile Include="RecepcionClass.cs" />
     <Compile Include="TipoCacao.cs" />
     <Compile Include="Usuarios.cs" />
     <Compile Include="Socios.cs" />

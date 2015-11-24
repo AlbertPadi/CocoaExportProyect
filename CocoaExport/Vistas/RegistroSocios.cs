@@ -27,12 +27,13 @@ namespace CocoaExport.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            
+            ErrorProvider error = new ErrorProvider();
+
+
             BLL.Certificaciones registrocer = new BLL.Certificaciones();
             if (SocioIdtextBox.Text.Length == 0)
             {
-                
+                Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede quedar este campo en blanco");
                 registro.Nombre = NombretextBox.Text;
                 registro.Apellido = ApellidotextBox.Text;
                 registro.Direccion = DirecciontextBox.Text;
@@ -169,7 +170,7 @@ namespace CocoaExport.Vistas
         {
              
            
-               /* if (Char.IsLetter(e.KeyChar))
+                if (Char.IsLetter(e.KeyChar))
                 {
                     e.Handled = false;
                 }
@@ -184,12 +185,22 @@ namespace CocoaExport.Vistas
                 else
                 {
                     e.Handled = true;
-                MessageBox.Show("No acepta numeros este campo");
+                MessageBox.Show("Este Campo no acepta numeros ni caracteres especiales.");
                
-                }*/
+                }
             }
 
         private void CertificacioncomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ApellidotextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombretextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

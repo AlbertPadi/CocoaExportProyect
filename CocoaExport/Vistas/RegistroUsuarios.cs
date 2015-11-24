@@ -134,5 +134,10 @@ namespace CocoaExport.Vistas
                 Contrasena1textBox.Text = Registro.Contrasena1;
             }
         }
+
+        private void ApellidotextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
