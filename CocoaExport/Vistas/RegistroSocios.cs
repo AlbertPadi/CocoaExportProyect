@@ -27,15 +27,18 @@ namespace CocoaExport.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            
+
+            ErrorProvider error = new ErrorProvider();
             BLL.Certificaciones registrocer = new BLL.Certificaciones();
             if (SocioIdtextBox.Text.Length == 0)
             {
-                
+                Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haver campos en blanco");
                 registro.Nombre = NombretextBox.Text;
+                Utilities.Utilitarios.Validacion(ApellidotextBox, error, "No puede haver campos en blanco");
                 registro.Apellido = ApellidotextBox.Text;
+                Utilities.Utilitarios.Validacion(DirecciontextBox, error, "No puede haver campos en blanco");
                 registro.Direccion = DirecciontextBox.Text;
+                Utilities.Utilitarios.Validacion(CedulatextBox, error, "No puede haver campos en blanco");
                 registro.Cedula = CedulatextBox.Text;
                 registro.CertificacionId = (int)CertificacioncomboBox.SelectedValue;
 
@@ -70,11 +73,14 @@ namespace CocoaExport.Vistas
                 int.TryParse(SocioIdtextBox.Text, out socioId);
                 registro.SocioId = socioId;
 
+                Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haver campos en blanco");
                 registro.Nombre = NombretextBox.Text;
+                Utilities.Utilitarios.Validacion(ApellidotextBox, error, "No puede haver campos en blanco");
                 registro.Apellido = ApellidotextBox.Text;
+                Utilities.Utilitarios.Validacion(DirecciontextBox, error, "No puede haver campos en blanco");
                 registro.Direccion = DirecciontextBox.Text;
+                Utilities.Utilitarios.Validacion(CedulatextBox, error, "No puede haver campos en blanco");
                 registro.Cedula = CedulatextBox.Text;
-                registro.CertificacionId = (int)CertificacioncomboBox.SelectedValue;
                 double.TryParse(TerrenotextBox.Text, out CantTerreno);
 
                 registro.CantidadTerreno = CantTerreno;
@@ -176,24 +182,7 @@ namespace CocoaExport.Vistas
         {
              
            
-               /* if (Char.IsLetter(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else if (Char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else if (char.IsSeparator(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                MessageBox.Show("No acepta numeros este campo");
                
-                }*/
             }
 
         private void CertificacioncomboBox_SelectedIndexChanged(object sender, EventArgs e)

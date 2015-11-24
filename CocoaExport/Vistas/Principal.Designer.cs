@@ -165,12 +165,14 @@
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // certificacionesToolStripMenuItem
             // 
             this.certificacionesToolStripMenuItem.Name = "certificacionesToolStripMenuItem";
             this.certificacionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.certificacionesToolStripMenuItem.Text = "Certificaciones";
+            this.certificacionesToolStripMenuItem.Click += new System.EventHandler(this.certificacionesToolStripMenuItem_Click);
             // 
             // inspeccionesToolStripMenuItem
             // 
@@ -208,15 +210,16 @@
             // registroToolStripMenuItem2
             // 
             this.registroToolStripMenuItem2.Name = "registroToolStripMenuItem2";
-            this.registroToolStripMenuItem2.Size = new System.Drawing.Size(117, 22);
+            this.registroToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.registroToolStripMenuItem2.Text = "Registro";
             this.registroToolStripMenuItem2.Click += new System.EventHandler(this.registroToolStripMenuItem2_Click);
             // 
             // listarToolStripMenuItem1
             // 
             this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
-            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.listarToolStripMenuItem1.Text = "Listar";
+            this.listarToolStripMenuItem1.Click += new System.EventHandler(this.listarToolStripMenuItem1_Click);
             // 
             // controlDeLotesToolStripMenuItem
             // 
@@ -286,6 +289,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cocoa Export";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.MenumenuStrip.ResumeLayout(false);
             this.MenumenuStrip.PerformLayout();

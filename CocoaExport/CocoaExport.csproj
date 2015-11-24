@@ -47,6 +47,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultaVistas\ListarCertificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVistas\ListarCertificaciones.Designer.cs">
+      <DependentUpon>ListarCertificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaVistas\ListarLotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVistas\ListarLotes.Designer.cs">
+      <DependentUpon>ListarLotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaVistas\ListarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVistas\ListarUsuarios.Designer.cs">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Utilitarios.cs" />
     <Compile Include="Vistas\Certificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +134,15 @@
     <Compile Include="Vistas\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConsultaVistas\ListarCertificaciones.resx">
+      <DependentUpon>ListarCertificaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVistas\ListarLotes.resx">
+      <DependentUpon>ListarLotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVistas\ListarUsuarios.resx">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Certificaciones.resx">
       <DependentUpon>Certificaciones.cs</DependentUpon>
     </EmbeddedResource>

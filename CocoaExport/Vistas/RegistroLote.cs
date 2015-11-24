@@ -35,18 +35,22 @@ namespace CocoaExport.Vistas
             {
                 double.TryParse(TotaltextBox.Text, out total);
                 lotes.Total = total;
-                lotes.CodigoLote = CodigoLotetextBox.Text;
-                lotes.CertificacionId = (int)CertificaionIdcomboBox.SelectedValue;
-                lotes.Fecha = FechadateTimePicker.Text;
+                
+                {
+                    lotes.CodigoLote = CodigoLotetextBox.Text;
+                    lotes.CertificacionId = (int)CertificaionIdcomboBox.SelectedValue;
+                    lotes.Fecha = FechadateTimePicker.Text;
 
-                if (lotes.Insertar())
-                {
-                    MessageBox.Show("Se han insertado los datos!");
+                    if (lotes.Insertar())
+                    {
+                        MessageBox.Show("Se han insertado los datos!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al insertar los datos!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Error al insertar los datos!");
-                }
+                
             }
             else
             {
@@ -59,14 +63,19 @@ namespace CocoaExport.Vistas
                 lotes.CertificacionId = (int)CertificaionIdcomboBox.SelectedValue;
                 lotes.Fecha = FechadateTimePicker.Text;
 
-                if (lotes.Insertar())
+                lotes.Total = total;
+                
                 {
-                    MessageBox.Show("Se han modificado los datos!");
+                    if (lotes.Insertar())
+                    {
+                        MessageBox.Show("Se han modificado los datos!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al modificar los datos!");
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Error al modificar los datos!");
-                }
+                    
             }
             
 

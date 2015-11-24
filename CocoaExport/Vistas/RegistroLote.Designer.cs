@@ -79,9 +79,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Total";
+            this.label2.Text = "Total Quintales";
             // 
             // label3
             // 
@@ -109,7 +109,7 @@
             this.CertificaionIdcomboBox.Location = new System.Drawing.Point(142, 105);
             this.CertificaionIdcomboBox.Name = "CertificaionIdcomboBox";
             this.CertificaionIdcomboBox.Size = new System.Drawing.Size(200, 21);
-            this.CertificaionIdcomboBox.TabIndex = 3;
+            this.CertificaionIdcomboBox.TabIndex = 2;
             // 
             // label5
             // 
@@ -127,7 +127,7 @@
             this.FechadateTimePicker.Location = new System.Drawing.Point(142, 155);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.FechadateTimePicker.TabIndex = 4;
+            this.FechadateTimePicker.TabIndex = 3;
             // 
             // label6
             // 
@@ -173,7 +173,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(300, 303);
+            this.label9.Location = new System.Drawing.Point(163, 303);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 16);
             this.label9.TabIndex = 30;
@@ -183,7 +183,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(182, 303);
+            this.label10.Location = new System.Drawing.Point(291, 303);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 29;
@@ -202,19 +202,19 @@
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button1.Location = new System.Drawing.Point(279, 266);
+            this.button1.Location = new System.Drawing.Point(142, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 34);
-            this.button1.TabIndex = 27;
+            this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(160, 266);
+            this.Guardarbutton.Location = new System.Drawing.Point(273, 266);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(95, 34);
-            this.Guardarbutton.TabIndex = 5;
+            this.Guardarbutton.TabIndex = 4;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 

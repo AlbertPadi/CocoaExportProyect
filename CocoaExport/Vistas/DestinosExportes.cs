@@ -24,13 +24,18 @@ namespace CocoaExport.Vistas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
+            ErrorProvider error = new ErrorProvider();
             if (DestinoIdtextBox.Text.Length == 0)
             {
+                Utilities.Utilitarios.Validacion(PaistextBox, error, "No puede haver campos en blanco");
                 destino.Pais = PaistextBox.Text;
                 destino.CodigoDestino = CodigoDesttextBox.Text;
+                Utilities.Utilitarios.Validacion(NombreDesttextBox, error, "No puede haver campos en blanco");
                 destino.NombreDestino = NombreDesttextBox.Text;
+                Utilities.Utilitarios.Validacion(DireccionDesttextBox, error, "No puede haver campos en blanco");
                 destino.Direccion = DireccionDesttextBox.Text;
-                int.TryParse(CodigoDesttextBox.Text, out CodigoPost);
+                Utilities.Utilitarios.Validacion(CodigoPosttextBox, error, "No puede haver campos en blanco");
+                int.TryParse(CodigoPosttextBox.Text, out CodigoPost);
                 destino.CodigoPostal = CodigoPost;
 
 
@@ -46,12 +51,16 @@ namespace CocoaExport.Vistas
             else
             {
                 int.TryParse(DestinoIdtextBox.Text, out DestinoId);
-                destino.DestinoId = DestinoId;
+                Utilities.Utilitarios.Validacion(PaistextBox, error, "No puede haver campos en blanco");
                 destino.Pais = PaistextBox.Text;
                 destino.CodigoDestino = CodigoDesttextBox.Text;
+                Utilities.Utilitarios.Validacion(NombreDesttextBox, error, "No puede haver campos en blanco");
                 destino.NombreDestino = NombreDesttextBox.Text;
+                Utilities.Utilitarios.Validacion(DireccionDesttextBox, error, "No puede haver campos en blanco");
                 destino.Direccion = DireccionDesttextBox.Text;
-                destino.CodigoPostal = Convert.ToInt32(CodigoPosttextBox.Text);
+                Utilities.Utilitarios.Validacion(CodigoPosttextBox, error, "No puede haver campos en blanco");
+                int.TryParse(CodigoPosttextBox.Text, out CodigoPost);
+                destino.CodigoPostal = CodigoPost;
 
 
                 if (destino.Editar())

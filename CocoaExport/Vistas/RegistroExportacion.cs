@@ -21,6 +21,7 @@ namespace CocoaExport.Vistas
         double toneladas;
         int exportacionId;
         string addlotes;
+        int idbuscado;
         public RegistroExportacion()
         {
             InitializeComponent();
@@ -52,23 +53,30 @@ namespace CocoaExport.Vistas
                 exportacion.DestinoId = (int)DestinosIdcomboBox.SelectedValue;
                 exportacion.Resumen = ResumenrichTextBox.Text;
 
+                if (toneladas < 25000 || toneladas > 25999)
+                {
+                    ErrorProvider error = new ErrorProvider();
+                    error.SetError(CantidadtextBox, "Asegurese de que la cantidad sea >24999 o <25999");
+                }
+                else
+                {
 
-                for (int i = 0; i < LoteslistBox.Items.Count; i++)
-                 {
-                     Lotes lotes = new Lotes();
-                    lotes.LoteId = (int)LoteIdcomboBox.SelectedValue;
-                    exportacion.AgregarLotes(lotes.LoteId,LoteslistBox.Items[i].ToString());
-                 }
-                 if (exportacion.Insertar())
-                 {
-                     MessageBox.Show("Se guardaron los datos!");
-                 }
-                 else
-                 {
-                     MessageBox.Show("No se han guardado los datos!");
-                 }
+                    for (int i = 0; i < LoteslistBox.Items.Count; i++)
+                    {
+                        Lotes lotes = new Lotes();
+                        lotes.LoteId = (int)LoteIdcomboBox.SelectedValue;
+                        exportacion.AgregarLotes(lotes.LoteId, LoteslistBox.Items[i].ToString());
+                    }
+                    if (exportacion.Insertar())
+                    {
+                        MessageBox.Show("El producto esta listo para exportarce");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se han guardado los datos!");
+                    }
 
-
+                }
              
 
             }
@@ -109,5 +117,45 @@ namespace CocoaExport.Vistas
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CantidadtextBox.Clear();
+            ResumenrichTextBox.Clear();
+            LoteslistBox.ClearSelected();
+            ExportacionIdtextBox.Clear();
+
+        }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            Lotes lote = new Lotes();
+            Exportacion exportacion = new Exportacion();
+            int.TryParse(ExportacionIdtextBox.Text, out idbuscado);
+            lote.ExportacionId = idbuscado;
+            lote.Buscar(idbuscado);
+            
+                exportacion.CantidadToneladas = toneladas;
+                exportacion.Fecha = FechadateTimePicker.Text;
+
+                foreach (var item in exportacion.Lotes)
+                {
+                    LoteslistBox.Items.Add(item.CodigoLote);
+                }
+
+            }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int id;
+            int.TryParse(ExportacionIdtextBox.Text, out id);
+            Exportacion exportacion = new Exportacion();
+            exportacion.ExportacionId = id;
+
+            if (exportacion.Eliminar())
+            {
+                MessageBox.Show("puto");
+            }
+        }
     }
-}
+    }

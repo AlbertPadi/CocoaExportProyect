@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CocoaExport.Vistas;
+using CocoaExport.ConsultaVistas;
 
 namespace CocoaExport
 {
@@ -151,6 +152,31 @@ namespace CocoaExport
         private void inspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login login = new Login();
+            this.Visible = false;
+            login.Show();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarUsuarios usuarios = new ListarUsuarios();
+            usuarios.Show();
+        }
+
+        private void certificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarCertificaciones listarcer = new ListarCertificaciones();
+            listarcer.Show();
+        }
+
+        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListarLotes listarlotes = new ListarLotes();
+            listarlotes.Show();
         }
     }
 }

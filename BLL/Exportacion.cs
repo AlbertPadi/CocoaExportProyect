@@ -68,17 +68,41 @@ namespace BLL
         }
         public override bool Eliminar()
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+
+            retorno = conexion.Ejecutar("Delete LotesExportes where ExportacionId = " + this.ExportacionId + ";" + "Delete Exportaciones where ExportacionId = " + this.ExportacionId);
+
+            return retorno;
         }
 
         public override bool Buscar(int IdBuscado)
         {
-            throw new NotImplementedException();
+            DataTable dt = new DataTable ();
+            DataTable LotesExp = new DataTable();
+            dt = conexion.getDatos(String.Format("select DestinoId, CantidadToneladas, Fecha, Resumen from Exportaciones where ExportacionId = {0}", IdBuscado));
+
+            if (dt.Rows.Count>0)
+            {
+                this.DestinoId = (int)dt.Rows[0]["DestinoId"];
+                this.CantidadToneladas = (double)dt.Rows[0]["CantidadToneladas"];
+                this.Fecha = dt.Rows[0]["Fecha"].ToString();
+                this.Resumen = dt.Rows[0]["Resumen"].ToString();
+
+                LotesExp = conexion.getDatos(String.Format("select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = {0}", this.ExportacionId));
+                foreach (DataRow data in LotesExp.Rows)
+                {
+                    this.AgregarLotes((int)data["LoteId"], data["CodigoLote"].ToString());
+                }
+            }
+            return dt.Rows.Count > 0;
         }
         
         public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
-            throw new NotImplementedException();
+            string ordenFinal = "";
+            if (!Orden.Equals(""))
+                ordenFinal = " Orden By " + Orden;
+            return conexion.getDatos(String.Format(" Select " + Campos + " From Exportaciones Where " + Condicion + " " + ordenFinal));
         }
     }
 }

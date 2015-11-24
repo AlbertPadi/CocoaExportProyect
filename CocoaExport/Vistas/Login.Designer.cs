@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.NombretextBox = new System.Windows.Forms.TextBox();
@@ -36,11 +35,9 @@
             this.Clave = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.imagenpictureBox = new System.Windows.Forms.PictureBox();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Entrarbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,8 +66,6 @@
             this.ContrasenatextBox.Size = new System.Drawing.Size(142, 20);
             this.ContrasenatextBox.TabIndex = 1;
             this.ContrasenatextBox.UseSystemPasswordChar = true;
-            this.ContrasenatextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.ContrasenatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ContrasenatextBox_KeyDown);
             // 
             // Clave
             // 
@@ -86,7 +81,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(227, 175);
+            this.label2.Location = new System.Drawing.Point(110, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 6;
@@ -96,15 +91,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(115, 175);
+            this.label3.Location = new System.Drawing.Point(228, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Entrar";
-            // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
             // 
             // imagenpictureBox
             // 
@@ -114,11 +105,12 @@
             this.imagenpictureBox.Size = new System.Drawing.Size(102, 123);
             this.imagenpictureBox.TabIndex = 8;
             this.imagenpictureBox.TabStop = false;
+            this.imagenpictureBox.Click += new System.EventHandler(this.imagenpictureBox_Click);
             // 
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(202, 129);
+            this.Nuevobutton.Location = new System.Drawing.Point(87, 129);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(100, 43);
             this.Nuevobutton.TabIndex = 3;
@@ -128,7 +120,7 @@
             // Entrarbutton
             // 
             this.Entrarbutton.Image = global::CocoaExport.Properties.Resources.businessman_person_web_login_friend_web_browser_32;
-            this.Entrarbutton.Location = new System.Drawing.Point(87, 129);
+            this.Entrarbutton.Location = new System.Drawing.Point(202, 129);
             this.Entrarbutton.Name = "Entrarbutton";
             this.Entrarbutton.Size = new System.Drawing.Size(100, 43);
             this.Entrarbutton.TabIndex = 2;
@@ -153,8 +145,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,7 +163,6 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.PictureBox imagenpictureBox;
     }
 }

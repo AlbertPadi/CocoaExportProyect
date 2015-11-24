@@ -18,9 +18,10 @@ create table Certificaciones(
 			CertificacionId int primary key identity, 
 			Descripcion varchar(50));
 
-			select*from Certificaciones	
+			select*from Certificaciones
+			select *from LotesExportes	
 						
-							
+			select *from Exportaciones
 create table Socios(
 			SocioId int primary key identity, 
 			Nombre varchar(50), 
@@ -74,7 +75,7 @@ create table LotesExportes(
 
 			select *from LotesExportes
 		    drop table LotesExportes
-			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 2
+			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 3
 
 create table RecepcionLotes(
 			RecepcionId int, 
@@ -101,7 +102,6 @@ create table Exportaciones(
 			 DestinoId int References DestinosExportes(DestinoId), 
 			 CantidadToneladas float, 
 			 Fecha varchar(20), 
-			 LoteId int References Lotes(LoteId), 
 			 Resumen varchar(300));
 
 			 select *from Exportaciones

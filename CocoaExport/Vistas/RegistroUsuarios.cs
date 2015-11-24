@@ -36,20 +36,29 @@ namespace CocoaExport.Vistas
             
             
             int.TryParse(UsuarioIdtextBox.Text, out usuarioId);
+            
             if (UsuarioIdtextBox.Text.Length == 0)
             {
+                Utilities.Utilitarios.Validacion(NombretextBox, errorProvider, "No puede haver campos en blanco");
                 Registro.Nombre = NombretextBox.Text;
+                Utilities.Utilitarios.Validacion(ApellidotextBox, errorProvider, "No puede haver campos en blanco");
                 Registro.Apellido = ApellidotextBox.Text;
+                Utilities.Utilitarios.Validacion(DirecciontextBox, errorProvider, "No puede haver campos en blanco");
                 Registro.Direccion = DirecciontextBox.Text;
+                Utilities.Utilitarios.Validacion(NomUsuariotextBox, errorProvider, "No puede haver campos en blanco");
                 Registro.NombreUsuario = NomUsuariotextBox.Text;
+                Utilities.Utilitarios.Validacion(ContraseñatextBox, errorProvider, "No puede haver campos en blanco");
                 Registro.Contrasena = ContraseñatextBox.Text;
+                Utilities.Utilitarios.Validacion(Contrasena1textBox, errorProvider, "No puede haver campos en blanco");
                 Registro.Contrasena1 = Contrasena1textBox.Text;
+
                 if (ContraseñatextBox.Text.Trim() != Contrasena1textBox.Text.Trim())
                 {
                     errorProvider.SetError(ContraseñatextBox, "Las contraseña no son identicas");
                     errorProvider.SetError(Contrasena1textBox, "Las contraseña no son identicas");
                     Contrasena1textBox.Clear();
                 }
+               
                 else
                 {
                     if (Registro.Insertar())

@@ -12,8 +12,9 @@ namespace CocoaExport.Vistas
 {
     public partial class Login : Form
     {
+        ErrorProvider error = new ErrorProvider();
         Usuarios registro = new Usuarios();
-        
+        Principal principal = new Principal();
         public Login()
         {
             InitializeComponent();
@@ -26,7 +27,9 @@ namespace CocoaExport.Vistas
 
         private void Entrarbutton_Click(object sender, EventArgs e)
         {
+            Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haver campos en blanco");
             registro.NombreUsuario = NombretextBox.Text;
+            Utilities.Utilitarios.Validacion(ContrasenatextBox, error, "No puede haver campos en blanco");
             registro.Contrasena = ContrasenatextBox.Text;
 
             if (registro.Login())
@@ -34,7 +37,7 @@ namespace CocoaExport.Vistas
                 if (NombretextBox.Text == registro.NombreUsuario && ContrasenatextBox.Text == registro.Contrasena)
                 {
 
-                    Principal principal = new Principal();
+                    
                     principal.Show();
                     this.Visible = false;
                 }
@@ -42,9 +45,9 @@ namespace CocoaExport.Vistas
             }
             else 
             {
-
-                    errorProvider.SetError(NombretextBox, "Usuario Incorrecto");
-                    errorProvider.SetError(ContrasenatextBox, "Contrasena Incorrecta");
+                
+                error.SetError(NombretextBox, "Usuario Incorrecto");
+                error.SetError(ContrasenatextBox, "Contrasena Incorrecta");
 
 
             }
@@ -70,11 +73,40 @@ namespace CocoaExport.Vistas
 
         private void ContrasenatextBox_KeyDown(object sender, KeyPressEventArgs e)
         {
-            /*if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }*/
             
+            }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void imagenpictureBox_Click(object sender, EventArgs e)
+        {
+            Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haver campos en blanco");
+            registro.NombreUsuario = NombretextBox.Text;
+            Utilities.Utilitarios.Validacion(ContrasenatextBox, error, "No puede haver campos en blanco");
+            registro.Contrasena = ContrasenatextBox.Text;
+
+            if (registro.Login())
+            {
+                if (NombretextBox.Text == registro.NombreUsuario && ContrasenatextBox.Text == registro.Contrasena)
+                {
+
+                    
+                    principal.Show();
+                    this.Visible = false;
+                }
+
+            }
+            else
+            {
+
+                error.SetError(NombretextBox, "Usuario Incorrecto");
+                error.SetError(ContrasenatextBox, "Contrasena Incorrecta");
+
+
+            }
         }
     }
 }

@@ -31,6 +31,8 @@ namespace CocoaExport.Vistas
         {
             if (IDtextBox.Text.Length == 0)
             {
+                ErrorProvider error = new ErrorProvider();
+                Utilities.Utilitarios.Validacion(DescripciontextBox, error, "No puede haver campos en blanco");
                 registro.Descripcion = DescripciontextBox.Text;
 
                 if (registro.Insertar())
@@ -101,6 +103,11 @@ namespace CocoaExport.Vistas
         }
 
         private void IDtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

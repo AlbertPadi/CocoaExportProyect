@@ -87,7 +87,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(575, 148);
+            this.label4.Location = new System.Drawing.Point(589, 152);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 6;
@@ -95,10 +95,10 @@
             // 
             // ResumenrichTextBox
             // 
-            this.ResumenrichTextBox.Location = new System.Drawing.Point(451, 179);
+            this.ResumenrichTextBox.Location = new System.Drawing.Point(451, 171);
             this.ResumenrichTextBox.Name = "ResumenrichTextBox";
-            this.ResumenrichTextBox.Size = new System.Drawing.Size(335, 134);
-            this.ResumenrichTextBox.TabIndex = 7;
+            this.ResumenrichTextBox.Size = new System.Drawing.Size(335, 121);
+            this.ResumenrichTextBox.TabIndex = 4;
             this.ResumenrichTextBox.Text = "";
             // 
             // label5
@@ -137,7 +137,7 @@
             this.DestinosIdcomboBox.Location = new System.Drawing.Point(550, 68);
             this.DestinosIdcomboBox.Name = "DestinosIdcomboBox";
             this.DestinosIdcomboBox.Size = new System.Drawing.Size(221, 21);
-            this.DestinosIdcomboBox.TabIndex = 5;
+            this.DestinosIdcomboBox.TabIndex = 3;
             this.DestinosIdcomboBox.SelectedIndexChanged += new System.EventHandler(this.DestinosIdcomboBox_SelectedIndexChanged);
             // 
             // Buscarlabel
@@ -154,7 +154,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(707, 429);
+            this.label8.Location = new System.Drawing.Point(705, 394);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 16);
             this.label8.TabIndex = 23;
@@ -164,7 +164,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(589, 429);
+            this.label9.Location = new System.Drawing.Point(470, 394);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 16);
             this.label9.TabIndex = 22;
@@ -174,7 +174,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(471, 429);
+            this.label10.Location = new System.Drawing.Point(582, 394);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 21;
@@ -213,9 +213,9 @@
             // 
             this.LoteslistBox.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.LoteslistBox.FormattingEnabled = true;
-            this.LoteslistBox.Location = new System.Drawing.Point(62, 179);
+            this.LoteslistBox.Location = new System.Drawing.Point(110, 171);
             this.LoteslistBox.Name = "LoteslistBox";
-            this.LoteslistBox.Size = new System.Drawing.Size(335, 134);
+            this.LoteslistBox.Size = new System.Drawing.Size(228, 121);
             this.LoteslistBox.TabIndex = 31;
             // 
             // label11
@@ -234,14 +234,14 @@
             this.AgregarLotebutton.Location = new System.Drawing.Point(340, 129);
             this.AgregarLotebutton.Name = "AgregarLotebutton";
             this.AgregarLotebutton.Size = new System.Drawing.Size(57, 24);
-            this.AgregarLotebutton.TabIndex = 3;
+            this.AgregarLotebutton.TabIndex = 2;
             this.AgregarLotebutton.UseVisualStyleBackColor = true;
             this.AgregarLotebutton.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CocoaExport.Properties.Resources.IconoCocoa1;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 319);
+            this.pictureBox1.Location = new System.Drawing.Point(127, 311);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(167, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -256,32 +256,35 @@
             this.Buscarbutton.Size = new System.Drawing.Size(95, 34);
             this.Buscarbutton.TabIndex = 24;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.button2.Location = new System.Drawing.Point(691, 392);
+            this.button2.Location = new System.Drawing.Point(689, 357);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 34);
             this.button2.TabIndex = 20;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button1.Location = new System.Drawing.Point(570, 392);
+            this.button1.Location = new System.Drawing.Point(449, 357);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 34);
-            this.button1.TabIndex = 7;
+            this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(451, 392);
+            this.Guardarbutton.Location = new System.Drawing.Point(567, 357);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(95, 34);
-            this.Guardarbutton.TabIndex = 6;
+            this.Guardarbutton.TabIndex = 5;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 

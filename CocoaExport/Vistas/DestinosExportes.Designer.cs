@@ -141,7 +141,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(397, 347);
+            this.label11.Location = new System.Drawing.Point(471, 322);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 16);
             this.label11.TabIndex = 46;
@@ -151,7 +151,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(275, 347);
+            this.label12.Location = new System.Drawing.Point(193, 322);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 16);
             this.label12.TabIndex = 45;
@@ -161,7 +161,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(151, 347);
+            this.label13.Location = new System.Drawing.Point(334, 322);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 16);
             this.label13.TabIndex = 44;
@@ -188,7 +188,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(527, 347);
+            this.label10.Location = new System.Drawing.Point(589, 90);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 16);
             this.label10.TabIndex = 50;
@@ -197,7 +197,7 @@
             // button4
             // 
             this.button4.Image = global::CocoaExport.Properties.Resources._1443814210_fine_print;
-            this.button4.Location = new System.Drawing.Point(507, 310);
+            this.button4.Location = new System.Drawing.Point(569, 53);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(104, 34);
             this.button4.TabIndex = 49;
@@ -207,7 +207,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(375, 310);
+            this.Eliminarbutton.Location = new System.Drawing.Point(449, 285);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
             this.Eliminarbutton.TabIndex = 43;
@@ -217,7 +217,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(249, 310);
+            this.Nuevobutton.Location = new System.Drawing.Point(167, 285);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
             this.Nuevobutton.TabIndex = 42;
@@ -226,7 +226,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(128, 310);
+            this.Guardarbutton.Location = new System.Drawing.Point(311, 285);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
             this.Guardarbutton.TabIndex = 41;

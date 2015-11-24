@@ -183,7 +183,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(209, 336);
+            this.label6.Location = new System.Drawing.Point(338, 336);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 20;
@@ -193,7 +193,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(350, 336);
+            this.label8.Location = new System.Drawing.Point(205, 336);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 21;
@@ -223,10 +223,12 @@
             // 
             this.CertificacioncomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CertificacioncomboBox.FormattingEnabled = true;
+            this.CertificacioncomboBox.Items.AddRange(new object[] {
+            ""});
             this.CertificacioncomboBox.Location = new System.Drawing.Point(473, 87);
             this.CertificacioncomboBox.Name = "CertificacioncomboBox";
             this.CertificacioncomboBox.Size = new System.Drawing.Size(193, 21);
-            this.CertificacioncomboBox.TabIndex = 25;
+            this.CertificacioncomboBox.TabIndex = 4;
             this.CertificacioncomboBox.SelectedIndexChanged += new System.EventHandler(this.CertificacioncomboBox_SelectedIndexChanged);
             // 
             // label4
@@ -279,17 +281,17 @@
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button2.Location = new System.Drawing.Point(323, 299);
+            this.button2.Location = new System.Drawing.Point(180, 299);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 34);
-            this.button2.TabIndex = 15;
+            this.button2.TabIndex = 8;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.button1.Location = new System.Drawing.Point(189, 299);
+            this.button1.Location = new System.Drawing.Point(318, 299);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 34);
             this.button1.TabIndex = 7;
