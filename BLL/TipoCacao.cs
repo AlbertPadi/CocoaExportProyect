@@ -71,7 +71,6 @@ namespace BLL
                 throw ex;
             }
             return retorno;
-
         }
 
         public override bool Buscar(int IdBuscado)
