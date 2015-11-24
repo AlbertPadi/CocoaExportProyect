@@ -1,6 +1,6 @@
 ﻿namespace CocoaExport.Vistas
 {
-    partial class InspeccionesRegistro
+    partial class RegistroDeInspecciones
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.Buuscarlabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.Nuevobutton = new System.Windows.Forms.Button();
@@ -60,16 +59,17 @@
             // 
             // IdInsptextBox
             // 
-            this.IdInsptextBox.Location = new System.Drawing.Point(619, 12);
+            this.IdInsptextBox.Location = new System.Drawing.Point(172, 30);
             this.IdInsptextBox.Name = "IdInsptextBox";
-            this.IdInsptextBox.Size = new System.Drawing.Size(200, 20);
+            this.IdInsptextBox.Size = new System.Drawing.Size(88, 20);
             this.IdInsptextBox.TabIndex = 34;
+            this.IdInsptextBox.TextChanged += new System.EventHandler(this.IdInsptextBox_TextChanged);
             // 
             // IdInsplabel
             // 
             this.IdInsplabel.AutoSize = true;
             this.IdInsplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdInsplabel.Location = new System.Drawing.Point(481, 12);
+            this.IdInsplabel.Location = new System.Drawing.Point(38, 30);
             this.IdInsplabel.Name = "IdInsplabel";
             this.IdInsplabel.Size = new System.Drawing.Size(100, 16);
             this.IdInsplabel.TabIndex = 33;
@@ -81,7 +81,7 @@
             this.IdSociocomboBox.FormattingEnabled = true;
             this.IdSociocomboBox.Items.AddRange(new object[] {
             ""});
-            this.IdSociocomboBox.Location = new System.Drawing.Point(586, 62);
+            this.IdSociocomboBox.Location = new System.Drawing.Point(172, 77);
             this.IdSociocomboBox.Name = "IdSociocomboBox";
             this.IdSociocomboBox.Size = new System.Drawing.Size(200, 21);
             this.IdSociocomboBox.TabIndex = 36;
@@ -91,11 +91,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(481, 63);
+            this.label1.Location = new System.Drawing.Point(38, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 35;
             this.label1.Text = "Id Socio";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label7
             // 
@@ -117,20 +118,10 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // Buuscarlabel
-            // 
-            this.Buuscarlabel.AutoSize = true;
-            this.Buuscarlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buuscarlabel.Location = new System.Drawing.Point(616, 349);
-            this.Buuscarlabel.Name = "Buuscarlabel";
-            this.Buuscarlabel.Size = new System.Drawing.Size(56, 16);
-            this.Buuscarlabel.TabIndex = 42;
-            this.Buuscarlabel.Text = "Buscar";
-            // 
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources.Inspection_128;
-            this.button1.Location = new System.Drawing.Point(586, 312);
+            this.button1.Location = new System.Drawing.Point(268, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 34);
             this.button1.TabIndex = 41;
@@ -161,7 +152,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(712, 349);
+            this.label9.Location = new System.Drawing.Point(610, 349);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 44;
@@ -170,7 +161,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(696, 312);
+            this.Eliminarbutton.Location = new System.Drawing.Point(592, 312);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
             this.Eliminarbutton.TabIndex = 43;
@@ -197,7 +188,7 @@
             // 
             // ControlPlagastextBox
             // 
-            this.ControlPlagastextBox.Location = new System.Drawing.Point(172, 245);
+            this.ControlPlagastextBox.Location = new System.Drawing.Point(172, 225);
             this.ControlPlagastextBox.Name = "ControlPlagastextBox";
             this.ControlPlagastextBox.Size = new System.Drawing.Size(200, 20);
             this.ControlPlagastextBox.TabIndex = 48;
@@ -206,7 +197,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 249);
+            this.label5.Location = new System.Drawing.Point(38, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 16);
             this.label5.TabIndex = 51;
@@ -214,7 +205,7 @@
             // 
             // MaterialSiembratextBox
             // 
-            this.MaterialSiembratextBox.Location = new System.Drawing.Point(172, 202);
+            this.MaterialSiembratextBox.Location = new System.Drawing.Point(172, 178);
             this.MaterialSiembratextBox.Name = "MaterialSiembratextBox";
             this.MaterialSiembratextBox.Size = new System.Drawing.Size(200, 20);
             this.MaterialSiembratextBox.TabIndex = 46;
@@ -223,7 +214,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 202);
+            this.label4.Location = new System.Drawing.Point(38, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 16);
             this.label4.TabIndex = 50;
@@ -233,7 +224,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(38, 13);
+            this.label2.Location = new System.Drawing.Point(38, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 47;
@@ -241,8 +232,7 @@
             // 
             // FechadateTimePicker
             // 
-            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(137, 13);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(172, 129);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.FechadateTimePicker.TabIndex = 45;
@@ -252,7 +242,7 @@
             this.FertgroupBox.Controls.Add(this.FertNoradioButton);
             this.FertgroupBox.Controls.Add(this.FertSiradioButton);
             this.FertgroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FertgroupBox.Location = new System.Drawing.Point(50, 52);
+            this.FertgroupBox.Location = new System.Drawing.Point(441, 30);
             this.FertgroupBox.Name = "FertgroupBox";
             this.FertgroupBox.Size = new System.Drawing.Size(350, 93);
             this.FertgroupBox.TabIndex = 53;
@@ -288,7 +278,7 @@
             this.CrianzaAngroupBox.Controls.Add(this.CrianzaNoradioButton);
             this.CrianzaAngroupBox.Controls.Add(this.CrianzaSiradioButton);
             this.CrianzaAngroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CrianzaAngroupBox.Location = new System.Drawing.Point(441, 129);
+            this.CrianzaAngroupBox.Location = new System.Drawing.Point(441, 152);
             this.CrianzaAngroupBox.Name = "CrianzaAngroupBox";
             this.CrianzaAngroupBox.Size = new System.Drawing.Size(352, 93);
             this.CrianzaAngroupBox.TabIndex = 54;
@@ -337,7 +327,6 @@
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Eliminarbutton);
-            this.Controls.Add(this.Buuscarlabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Nuevobutton);
@@ -367,7 +356,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Guardarbutton;
-        private System.Windows.Forms.Label Buuscarlabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button Nuevobutton;

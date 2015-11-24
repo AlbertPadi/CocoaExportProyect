@@ -88,11 +88,10 @@ namespace BLL
 
         public override DataTable Listar(string Campos, string Condicion, string Orden)
         {
-            string ordenFinal = " ";
+            string ordenFinal = "";
             if (!Orden.Equals(""))
                 ordenFinal = " Orden By " + Orden;
-            
-            return conexion.getDatos(" Select " + Campos + " from Certificaciones where " + Condicion + ordenFinal);
+            return conexion.getDatos(" Select " + Campos + " from Certificaciones where " + Condicion + "" + ordenFinal);
         }
     }
 }

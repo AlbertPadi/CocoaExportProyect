@@ -27,7 +27,8 @@ namespace CocoaExport.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ErrorProvider error = new ErrorProvider();
+           
             ErrorProvider error = new ErrorProvider();
             BLL.Certificaciones registrocer = new BLL.Certificaciones();
             if (SocioIdtextBox.Text.Length == 0)
@@ -168,13 +169,6 @@ namespace CocoaExport.Vistas
 
             RegistroSocios registro = new RegistroSocios ();
             
-            table = socios.Listar("", "", "");
-
-            /*chart.Series.Add("Socios");
-            chart.Series["Series1"].XValueMember = "Fecha";
-            chart.Series["Series1"].YValueMembers = "Monto";
-            chart.DataSource = table;
-            chart.DataBind();*/
 
         }
 
@@ -182,10 +176,37 @@ namespace CocoaExport.Vistas
         {
              
            
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                MessageBox.Show("Este Campo no acepta numeros ni caracteres especiales.");
                
+                }
             }
 
         private void CertificacioncomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ApellidotextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombretextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

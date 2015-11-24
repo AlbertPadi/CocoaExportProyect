@@ -82,6 +82,7 @@
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(179, 20);
             this.ApellidotextBox.TabIndex = 1;
+            this.ApellidotextBox.TextChanged += new System.EventHandler(this.ApellidotextBox_TextChanged);
             // 
             // label2
             // 

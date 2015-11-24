@@ -63,6 +63,7 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(193, 20);
             this.NombretextBox.TabIndex = 0;
+            this.NombretextBox.TextChanged += new System.EventHandler(this.NombretextBox_TextChanged);
             this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // label1
@@ -91,6 +92,8 @@
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(193, 20);
             this.ApellidotextBox.TabIndex = 1;
+            this.ApellidotextBox.TextChanged += new System.EventHandler(this.ApellidotextBox_TextChanged);
+            this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // label3
             // 
