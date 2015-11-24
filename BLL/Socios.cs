@@ -95,6 +95,7 @@ namespace BLL
                     this.Cedula = dt.Rows[0]["Cedula"].ToString();
                     this.CantidadTerreno = (double)dt.Rows[0]["CantidadTerreno"];
                     this.Fertilizantes = (int)dt.Rows[0]["Fertilizantes"];
+
                 }
 
             return dt.Rows.Count > 0;
