@@ -121,6 +121,7 @@
             // 
             // CertificacionIdcomboBox
             // 
+            this.CertificacionIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CertificacionIdcomboBox.FormattingEnabled = true;
             this.CertificacionIdcomboBox.Location = new System.Drawing.Point(167, 174);
             this.CertificacionIdcomboBox.Name = "CertificacionIdcomboBox";
@@ -129,6 +130,7 @@
             // 
             // TipoCacaoIdcomboBox
             // 
+            this.TipoCacaoIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoCacaoIdcomboBox.FormattingEnabled = true;
             this.TipoCacaoIdcomboBox.Location = new System.Drawing.Point(167, 215);
             this.TipoCacaoIdcomboBox.Name = "TipoCacaoIdcomboBox";
@@ -137,6 +139,7 @@
             // 
             // SocioIdcomboBox
             // 
+            this.SocioIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SocioIdcomboBox.FormattingEnabled = true;
             this.SocioIdcomboBox.Location = new System.Drawing.Point(167, 79);
             this.SocioIdcomboBox.Name = "SocioIdcomboBox";
@@ -154,6 +157,7 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(167, 258);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -230,7 +234,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(174, 514);
+            this.label8.Location = new System.Drawing.Point(63, 514);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 48;
@@ -239,7 +243,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(142, 477);
+            this.Nuevobutton.Location = new System.Drawing.Point(31, 477);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
             this.Nuevobutton.TabIndex = 47;
@@ -250,7 +254,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(56, 514);
+            this.label7.Location = new System.Drawing.Point(172, 514);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 16);
             this.label7.TabIndex = 46;
@@ -259,7 +263,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(32, 477);
+            this.Guardarbutton.Location = new System.Drawing.Point(148, 477);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
             this.Guardarbutton.TabIndex = 45;
@@ -278,6 +282,7 @@
             // 
             // LoteIdcomboBox
             // 
+            this.LoteIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LoteIdcomboBox.FormattingEnabled = true;
             this.LoteIdcomboBox.Location = new System.Drawing.Point(167, 125);
             this.LoteIdcomboBox.Name = "LoteIdcomboBox";

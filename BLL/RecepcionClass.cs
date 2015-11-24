@@ -74,6 +74,7 @@ namespace BLL
                 this.CantidadPesada = (int)dt.Rows[0]["CantidadPesada"];
                 this.Observacion = dt.Rows[0]["Observacion"].ToString();
                 this.RecibidoPor = dt.Rows[0]["RecibidoPor"].ToString();
+                this.LoteId = (int)dt.Rows[0]["LoteId"];
 
             }
 
@@ -85,7 +86,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update Recepciones Set Fecha='{0}', CantidadPesada={1}, Observacion='{3}', RecebidoPor='{4}' where RecepcionId={5}", this.Fecha, this.CantidadPesada, this.Observacion, this.RecibidoPor ));
+                retorno = conexion.Ejecutar(String.Format("Update Recepciones Set Fecha='{0}', CantidadPesada={1}, Observacion='{3}', RecebidoPor='{4}', SocioId={5}, LoteId={6}, CertificacionId={7} where RecepcionId={8}", this.Fecha, this.CantidadPesada, this.Observacion, this.RecibidoPor, this.SocioId, this.LoteId, this.CertificacionId, this.RecepcionId ));
             }
             catch (Exception ex)
             {

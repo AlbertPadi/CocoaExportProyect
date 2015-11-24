@@ -187,8 +187,19 @@ namespace CocoaExport
 
         private void recepcionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Recepcion re = new Recepcion();
-            re.Show();
+            
+        }
+
+        private void registroToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Recepcion recepcion = new Recepcion();
+            recepcion.Show();
+        }
+
+        private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteExpaciones reporte = new ReporteExpaciones();
+            reporte.Show();
         }
     }
 }

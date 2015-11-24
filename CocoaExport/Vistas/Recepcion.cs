@@ -14,7 +14,6 @@ namespace CocoaExport.Vistas
     public partial class Recepcion : Form
     {
         int IdBuscado;
-        int Num;
         RecepcionClass Registro = new RecepcionClass();
 
         public Recepcion()
@@ -45,10 +44,15 @@ namespace CocoaExport.Vistas
             CertificacionIdcomboBox.DisplayMember = "Descripcion";
             CertificacionIdcomboBox.ValueMember = "CertificacionId";
 
-            /*BLL.TipoCacaoRegistro TipoC = new BLL.TipoCacaoRegistro();
+            Lotes lotes = new Lotes();
+            LoteIdcomboBox.DataSource = lotes.Listar("*", "1=1", "");
+            LoteIdcomboBox.DisplayMember = "CodigoLote";
+            LoteIdcomboBox.ValueMember = "LoteId";
+
+            BLL.TipoCacao TipoC = new BLL.TipoCacao();
             TipoCacaoIdcomboBox.DataSource = TipoC.Listar("TipoCacaoId, Descripcion", "1=1", "");
             TipoCacaoIdcomboBox.DisplayMember = "Descripcion";
-            TipoCacaoIdcomboBox.ValueMember = "TipoCacaoId";*/
+            TipoCacaoIdcomboBox.ValueMember = "TipoCacaoId";
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)

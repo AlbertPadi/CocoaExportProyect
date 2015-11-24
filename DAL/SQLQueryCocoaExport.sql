@@ -12,7 +12,6 @@ create table Usuarios(
 			Contrasena1 varchar(100));
 			select *from Usuarios
 
-			insert into Usuarios(Nombres, Apellidos, Direccion, NombreUsuario, Contrasena, Contrasena1) values('Juan Alberto', 'Padilla Balbi', 'San Francisco de Macoris', 'Master', 'alberto2015', 'alberto2015');
 					drop table Usuarios
 create table Certificaciones(
 			CertificacionId int primary key identity, 
