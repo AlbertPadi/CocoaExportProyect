@@ -33,11 +33,13 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroSociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroCertificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroTipoCacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,8 +57,6 @@
             this.registroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registroTipoCacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenumenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +106,13 @@
             this.sistemaToolStripMenuItem.Text = "Sistema";
             this.sistemaToolStripMenuItem.Click += new System.EventHandler(this.sistemaToolStripMenuItem_Click);
             // 
+            // recepcionToolStripMenuItem
+            // 
+            this.recepcionToolStripMenuItem.Name = "recepcionToolStripMenuItem";
+            this.recepcionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.recepcionToolStripMenuItem.Text = "Recepcion";
+            this.recepcionToolStripMenuItem.Click += new System.EventHandler(this.recepcionToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -145,6 +152,13 @@
             this.registroCertificacionesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.registroCertificacionesToolStripMenuItem.Text = "Registro Certificaciones";
             this.registroCertificacionesToolStripMenuItem.Click += new System.EventHandler(this.registroCertificacionesToolStripMenuItem_Click);
+            // 
+            // registroTipoCacaoToolStripMenuItem
+            // 
+            this.registroTipoCacaoToolStripMenuItem.Name = "registroTipoCacaoToolStripMenuItem";
+            this.registroTipoCacaoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.registroTipoCacaoToolStripMenuItem.Text = "Registro Tipo Cacao";
+            this.registroTipoCacaoToolStripMenuItem.Click += new System.EventHandler(this.registroTipoCacaoToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem
             // 
@@ -214,14 +228,14 @@
             // registroToolStripMenuItem2
             // 
             this.registroToolStripMenuItem2.Name = "registroToolStripMenuItem2";
-            this.registroToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.registroToolStripMenuItem2.Size = new System.Drawing.Size(117, 22);
             this.registroToolStripMenuItem2.Text = "Registro";
             this.registroToolStripMenuItem2.Click += new System.EventHandler(this.registroToolStripMenuItem2_Click);
             // 
             // listarToolStripMenuItem1
             // 
             this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
-            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
             this.listarToolStripMenuItem1.Text = "Listar";
             this.listarToolStripMenuItem1.Click += new System.EventHandler(this.listarToolStripMenuItem1_Click);
             // 
@@ -276,20 +290,6 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // recepcionToolStripMenuItem
-            // 
-            this.recepcionToolStripMenuItem.Name = "recepcionToolStripMenuItem";
-            this.recepcionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.recepcionToolStripMenuItem.Text = "Recepcion";
-            this.recepcionToolStripMenuItem.Click += new System.EventHandler(this.recepcionToolStripMenuItem_Click);
-            // 
-            // registroTipoCacaoToolStripMenuItem
-            // 
-            this.registroTipoCacaoToolStripMenuItem.Name = "registroTipoCacaoToolStripMenuItem";
-            this.registroTipoCacaoToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.registroTipoCacaoToolStripMenuItem.Text = "Registro Tipo Cacao";
-            this.registroTipoCacaoToolStripMenuItem.Click += new System.EventHandler(this.registroTipoCacaoToolStripMenuItem_Click);
             // 
             // Principal
             // 

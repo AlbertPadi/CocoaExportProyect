@@ -28,8 +28,7 @@ namespace CocoaExport.Vistas
         private void button1_Click(object sender, EventArgs e)
         {
             ErrorProvider error = new ErrorProvider();
-           
-            ErrorProvider error = new ErrorProvider();
+
             BLL.Certificaciones registrocer = new BLL.Certificaciones();
             if (SocioIdtextBox.Text.Length == 0)
             {

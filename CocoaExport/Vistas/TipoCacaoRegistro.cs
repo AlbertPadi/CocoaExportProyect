@@ -36,10 +36,8 @@ namespace CocoaExport.Vistas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            ErrorProvider error = new ErrorProvider();
             if (IdTipoCacaotextBox.Text.Length == 0)
             {
-                Utilities.Utilitarios.Validacion(DescripcionTipotextBox, error, "No puede quedar este campo en blanco");
                 registro.Descripcion = DescripcionTipotextBox.Text;
 
                 if (registro.Insertar())
@@ -81,28 +79,6 @@ namespace CocoaExport.Vistas
         {
             IdTipoCacaotextBox.Clear();
             DescripcionTipotextBox.Clear();
-        }
-
-        private void DescripcionTipotextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-                MessageBox.Show("Este Campo no acepta numeros ni caracteres especiales.");
-
-            }
         }
     }
 }

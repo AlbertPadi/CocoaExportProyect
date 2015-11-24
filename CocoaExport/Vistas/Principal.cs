@@ -178,5 +178,17 @@ namespace CocoaExport
             ListarLotes listarlotes = new ListarLotes();
             listarlotes.Show();
         }
+
+        private void registroTipoCacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoCacaoRegistro Registro = new TipoCacaoRegistro();
+            Registro.Show();
+        }
+
+        private void recepcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Recepcion re = new Recepcion();
+            re.Show();
+        }
     }
 }

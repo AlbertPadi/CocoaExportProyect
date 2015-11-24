@@ -154,7 +154,7 @@ namespace CocoaExport.Vistas
 
             if (exportacion.Eliminar())
             {
-                MessageBox.Show("puto");
+                MessageBox.Show("Eliminado con exito!");
             }
         }
     }

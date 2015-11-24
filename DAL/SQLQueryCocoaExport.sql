@@ -81,7 +81,7 @@ create table LotesExportes(
 
 			select *from LotesExportes
 		    drop table LotesExportes
-			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 3
+			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 1
 
 create table RecepcionLotes(
 			RecepcionId int, 
