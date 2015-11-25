@@ -16,11 +16,10 @@ create table Usuarios(
 create table Certificaciones(
 			CertificacionId int primary key identity, 
 			Descripcion varchar(50));
-
+			
 			select*from Certificaciones
-			select *from LotesExportes	
-						
-			select *from Exportaciones
+			drop table Certificaciones
+
 create table Socios(
 			SocioId int primary key identity, 
 			Nombre varchar(50), 
@@ -28,11 +27,10 @@ create table Socios(
 			Direccion varchar(40),
 			Cedula varchar(13), 
 			CertificacionId int References Certificaciones(CertificacionId), 
-			CantidadTerreno float, 
-			Fertilizantes int);
+			CantidadTerreno float)
 			
 		select *from Socios
-								
+						drop table Socios		
 create table Inspecciones(
 			InspeccionId int primary key identity, 
 			SocioId int References Socios(SocioId),
@@ -44,7 +42,7 @@ create table Inspecciones(
 			ResumenInspeccion varchar(200));
 			
 			select *from Inspecciones
-
+			drop table Inspecciones
 create table TiposCacao(
 			TipoCacaoId int primary key identity, 
 			Descripcion varchar(35));					
@@ -55,12 +53,14 @@ create table Recepciones(
 			RecepcionId int primary key identity, 
 			SocioId int References Socios(SocioId), 
 			LoteId int References Lotes(LoteId),
-			CertificacionId int References Certificaciones(CertificacionId), 
 			TipoCacaoId int References TiposCacao(TipoCacaoId),
+			CantidadPesada float,
+			Monto float,
 			Fecha varchar(40),
-			CantidadPesada int,
 			Observacion varchar(200), 
 			RecibidoPor varchar(50));
+
+			select *from Recepciones
 			drop table Recepciones
 						
 						 
@@ -75,21 +75,14 @@ create table Lotes(
 	select*from Lotes
 	--detalle
 create table LotesExportes(
-			LoteId int References Lotes(LoteId), CodigoLote varchar(20),
+			LoteId int References Lotes(LoteId), 
+			CodigoLote varchar(20), Total float,
 			ExportacionId int References Exportaciones(ExportacionId));
 
 			select *from LotesExportes
 		    drop table LotesExportes
 			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 1
 
-create table RecepcionLotes(
-			RecepcionId int, 
-			CertificacionId int, 
-			Fecha varchar(10), 
-			CantidadPesada float, 
-			Observacion varchar(200));
-			drop table RecepcionLotes
-select *from RecepcionLotes
 
 
 create table DestinosExportes(
@@ -104,8 +97,8 @@ create table DestinosExportes(
 			drop table DestinosExportes
 create table Exportaciones(
 			 ExportacionId int primary key identity, 
-			 DestinoId int References DestinosExportes(DestinoId), 
-			 CantidadToneladas float, 
+			 DestinoId int References DestinosExportes(DestinoId),
+			 Monto float,
 			 Fecha varchar(20), 
 			 Resumen varchar(300));
 

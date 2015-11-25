@@ -109,7 +109,7 @@
             // 
             this.Nuevolabel.AutoSize = true;
             this.Nuevolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nuevolabel.Location = new System.Drawing.Point(226, 205);
+            this.Nuevolabel.Location = new System.Drawing.Point(109, 205);
             this.Nuevolabel.Name = "Nuevolabel";
             this.Nuevolabel.Size = new System.Drawing.Size(53, 16);
             this.Nuevolabel.TabIndex = 48;
@@ -118,7 +118,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(194, 168);
+            this.Nuevobutton.Location = new System.Drawing.Point(84, 168);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
             this.Nuevobutton.TabIndex = 47;
@@ -129,7 +129,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(108, 205);
+            this.label7.Location = new System.Drawing.Point(218, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 16);
             this.label7.TabIndex = 46;
@@ -138,7 +138,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(84, 168);
+            this.Guardarbutton.Location = new System.Drawing.Point(194, 168);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
             this.Guardarbutton.TabIndex = 45;

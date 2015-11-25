@@ -102,7 +102,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(390, 349);
+            this.label7.Location = new System.Drawing.Point(534, 349);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 16);
             this.label7.TabIndex = 38;
@@ -111,7 +111,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(366, 312);
+            this.Guardarbutton.Location = new System.Drawing.Point(510, 312);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
             this.Guardarbutton.TabIndex = 37;
@@ -132,7 +132,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(508, 349);
+            this.label8.Location = new System.Drawing.Point(409, 349);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 40;
@@ -141,7 +141,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(476, 312);
+            this.Nuevobutton.Location = new System.Drawing.Point(377, 312);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
             this.Nuevobutton.TabIndex = 39;
@@ -152,7 +152,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(610, 349);
+            this.label9.Location = new System.Drawing.Point(655, 349);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 44;
@@ -161,7 +161,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(592, 312);
+            this.Eliminarbutton.Location = new System.Drawing.Point(637, 312);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
             this.Eliminarbutton.TabIndex = 43;

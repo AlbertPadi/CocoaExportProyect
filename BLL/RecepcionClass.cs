@@ -17,7 +17,8 @@ namespace BLL
         public int CertificacionId { get; set; }
         public int TipoCacaoId { get; set; }
         public string Fecha { get; set; }
-        public int CantidadPesada { get; set; }
+        public double CantidadPesada { get; set; }
+        public double Monto { get; set; }
         public string Observacion { get; set; }
         public string RecibidoPor { get; set; }
 
@@ -30,6 +31,7 @@ namespace BLL
             this.TipoCacaoId = 0;
             this.Fecha = "";
             this.CantidadPesada = 0;
+            this.Monto = 0;
             this.Observacion = "";
             this.RecibidoPor = "";
         }
@@ -70,11 +72,15 @@ namespace BLL
             dt = conexion.getDatos(String.Format("select *from Recepciones where RecepcionId= {0}", IdBuscado));
             if (dt.Rows.Count > 0)
             {
+                this.SocioId = (int)dt.Rows[0]["SocioId"];
+                this.LoteId = (int)dt.Rows[0]["LoteId"];
+                this.CertificacionId = (int)dt.Rows[0]["CertificacionId"];
+                this.TipoCacaoId = (int)dt.Rows[0]["TipoCacaoId"];
                 this.Fecha = dt.Rows[0]["Fecha"].ToString();
-                this.CantidadPesada = (int)dt.Rows[0]["CantidadPesada"];
+                this.CantidadPesada = (double)dt.Rows[0]["CantidadPesada"];
+                this.Monto = (double)dt.Rows[0]["Monto"];
                 this.Observacion = dt.Rows[0]["Observacion"].ToString();
                 this.RecibidoPor = dt.Rows[0]["RecibidoPor"].ToString();
-                this.LoteId = (int)dt.Rows[0]["LoteId"];
 
             }
 

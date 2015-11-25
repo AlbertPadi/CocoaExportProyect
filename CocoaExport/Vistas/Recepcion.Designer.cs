@@ -53,13 +53,17 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.LoteIdcomboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MontotextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // RecepcionIdlabel
             // 
             this.RecepcionIdlabel.AutoSize = true;
             this.RecepcionIdlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecepcionIdlabel.Location = new System.Drawing.Point(33, 32);
+            this.RecepcionIdlabel.Location = new System.Drawing.Point(481, 16);
             this.RecepcionIdlabel.Name = "RecepcionIdlabel";
             this.RecepcionIdlabel.Size = new System.Drawing.Size(102, 16);
             this.RecepcionIdlabel.TabIndex = 0;
@@ -67,16 +71,16 @@
             // 
             // RecepcionIdtextBox
             // 
-            this.RecepcionIdtextBox.Location = new System.Drawing.Point(167, 32);
+            this.RecepcionIdtextBox.Location = new System.Drawing.Point(589, 12);
             this.RecepcionIdtextBox.Name = "RecepcionIdtextBox";
-            this.RecepcionIdtextBox.Size = new System.Drawing.Size(121, 20);
+            this.RecepcionIdtextBox.Size = new System.Drawing.Size(95, 20);
             this.RecepcionIdtextBox.TabIndex = 1;
             // 
             // SocioIdlabel
             // 
             this.SocioIdlabel.AutoSize = true;
             this.SocioIdlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SocioIdlabel.Location = new System.Drawing.Point(33, 80);
+            this.SocioIdlabel.Location = new System.Drawing.Point(50, 20);
             this.SocioIdlabel.Name = "SocioIdlabel";
             this.SocioIdlabel.Size = new System.Drawing.Size(67, 16);
             this.SocioIdlabel.TabIndex = 2;
@@ -86,7 +90,7 @@
             // 
             this.LoteIdlabel.AutoSize = true;
             this.LoteIdlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoteIdlabel.Location = new System.Drawing.Point(33, 125);
+            this.LoteIdlabel.Location = new System.Drawing.Point(50, 65);
             this.LoteIdlabel.Name = "LoteIdlabel";
             this.LoteIdlabel.Size = new System.Drawing.Size(57, 16);
             this.LoteIdlabel.TabIndex = 4;
@@ -96,7 +100,7 @@
             // 
             this.CertificacionIdlabel.AutoSize = true;
             this.CertificacionIdlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CertificacionIdlabel.Location = new System.Drawing.Point(33, 174);
+            this.CertificacionIdlabel.Location = new System.Drawing.Point(50, 114);
             this.CertificacionIdlabel.Name = "CertificacionIdlabel";
             this.CertificacionIdlabel.Size = new System.Drawing.Size(113, 16);
             this.CertificacionIdlabel.TabIndex = 6;
@@ -104,16 +108,16 @@
             // 
             // CantPtextBox
             // 
-            this.CantPtextBox.Location = new System.Drawing.Point(167, 301);
+            this.CantPtextBox.Location = new System.Drawing.Point(195, 242);
             this.CantPtextBox.Name = "CantPtextBox";
-            this.CantPtextBox.Size = new System.Drawing.Size(121, 20);
-            this.CantPtextBox.TabIndex = 7;
+            this.CantPtextBox.Size = new System.Drawing.Size(170, 20);
+            this.CantPtextBox.TabIndex = 5;
             // 
             // TipoCacaoIdlabel
             // 
             this.TipoCacaoIdlabel.AutoSize = true;
             this.TipoCacaoIdlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoCacaoIdlabel.Location = new System.Drawing.Point(33, 215);
+            this.TipoCacaoIdlabel.Location = new System.Drawing.Point(50, 155);
             this.TipoCacaoIdlabel.Name = "TipoCacaoIdlabel";
             this.TipoCacaoIdlabel.Size = new System.Drawing.Size(108, 16);
             this.TipoCacaoIdlabel.TabIndex = 8;
@@ -123,51 +127,51 @@
             // 
             this.CertificacionIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CertificacionIdcomboBox.FormattingEnabled = true;
-            this.CertificacionIdcomboBox.Location = new System.Drawing.Point(167, 174);
+            this.CertificacionIdcomboBox.Location = new System.Drawing.Point(195, 115);
             this.CertificacionIdcomboBox.Name = "CertificacionIdcomboBox";
-            this.CertificacionIdcomboBox.Size = new System.Drawing.Size(121, 21);
-            this.CertificacionIdcomboBox.TabIndex = 9;
+            this.CertificacionIdcomboBox.Size = new System.Drawing.Size(170, 21);
+            this.CertificacionIdcomboBox.TabIndex = 2;
             // 
             // TipoCacaoIdcomboBox
             // 
             this.TipoCacaoIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoCacaoIdcomboBox.FormattingEnabled = true;
-            this.TipoCacaoIdcomboBox.Location = new System.Drawing.Point(167, 215);
+            this.TipoCacaoIdcomboBox.Location = new System.Drawing.Point(195, 156);
             this.TipoCacaoIdcomboBox.Name = "TipoCacaoIdcomboBox";
-            this.TipoCacaoIdcomboBox.Size = new System.Drawing.Size(121, 21);
-            this.TipoCacaoIdcomboBox.TabIndex = 10;
+            this.TipoCacaoIdcomboBox.Size = new System.Drawing.Size(170, 21);
+            this.TipoCacaoIdcomboBox.TabIndex = 3;
             // 
             // SocioIdcomboBox
             // 
             this.SocioIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SocioIdcomboBox.FormattingEnabled = true;
-            this.SocioIdcomboBox.Location = new System.Drawing.Point(167, 79);
+            this.SocioIdcomboBox.Location = new System.Drawing.Point(195, 20);
             this.SocioIdcomboBox.Name = "SocioIdcomboBox";
-            this.SocioIdcomboBox.Size = new System.Drawing.Size(121, 21);
-            this.SocioIdcomboBox.TabIndex = 12;
+            this.SocioIdcomboBox.Size = new System.Drawing.Size(170, 21);
+            this.SocioIdcomboBox.TabIndex = 0;
             // 
             // ObservacionrichTextBox
             // 
-            this.ObservacionrichTextBox.Location = new System.Drawing.Point(167, 342);
+            this.ObservacionrichTextBox.Location = new System.Drawing.Point(528, 199);
             this.ObservacionrichTextBox.Name = "ObservacionrichTextBox";
-            this.ObservacionrichTextBox.Size = new System.Drawing.Size(200, 76);
-            this.ObservacionrichTextBox.TabIndex = 13;
+            this.ObservacionrichTextBox.Size = new System.Drawing.Size(237, 119);
+            this.ObservacionrichTextBox.TabIndex = 8;
             this.ObservacionrichTextBox.Text = "";
             this.ObservacionrichTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(167, 258);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(195, 199);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.FechadateTimePicker.TabIndex = 14;
+            this.FechadateTimePicker.Size = new System.Drawing.Size(170, 20);
+            this.FechadateTimePicker.TabIndex = 4;
             // 
             // Fechalabel
             // 
             this.Fechalabel.AutoSize = true;
             this.Fechalabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fechalabel.Location = new System.Drawing.Point(33, 262);
+            this.Fechalabel.Location = new System.Drawing.Point(50, 199);
             this.Fechalabel.Name = "Fechalabel";
             this.Fechalabel.Size = new System.Drawing.Size(51, 16);
             this.Fechalabel.TabIndex = 15;
@@ -177,17 +181,17 @@
             // 
             this.Cantlabel.AutoSize = true;
             this.Cantlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cantlabel.Location = new System.Drawing.Point(33, 305);
+            this.Cantlabel.Location = new System.Drawing.Point(50, 245);
             this.Cantlabel.Name = "Cantlabel";
-            this.Cantlabel.Size = new System.Drawing.Size(128, 16);
+            this.Cantlabel.Size = new System.Drawing.Size(139, 16);
             this.Cantlabel.TabIndex = 16;
-            this.Cantlabel.Text = "Cantidad Pesada";
+            this.Cantlabel.Text = "Cantidad Quintales";
             // 
             // Observacionlabel
             // 
             this.Observacionlabel.AutoSize = true;
             this.Observacionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Observacionlabel.Location = new System.Drawing.Point(33, 342);
+            this.Observacionlabel.Location = new System.Drawing.Point(601, 180);
             this.Observacionlabel.Name = "Observacionlabel";
             this.Observacionlabel.Size = new System.Drawing.Size(96, 16);
             this.Observacionlabel.TabIndex = 17;
@@ -197,7 +201,7 @@
             // 
             this.Recibidolabel.AutoSize = true;
             this.Recibidolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Recibidolabel.Location = new System.Drawing.Point(33, 442);
+            this.Recibidolabel.Location = new System.Drawing.Point(50, 302);
             this.Recibidolabel.Name = "Recibidolabel";
             this.Recibidolabel.Size = new System.Drawing.Size(99, 16);
             this.Recibidolabel.TabIndex = 18;
@@ -205,16 +209,16 @@
             // 
             // RecibidoPortextBox
             // 
-            this.RecibidoPortextBox.Location = new System.Drawing.Point(167, 442);
+            this.RecibidoPortextBox.Location = new System.Drawing.Point(195, 298);
             this.RecibidoPortextBox.Name = "RecibidoPortextBox";
-            this.RecibidoPortextBox.Size = new System.Drawing.Size(121, 20);
-            this.RecibidoPortextBox.TabIndex = 19;
+            this.RecibidoPortextBox.Size = new System.Drawing.Size(170, 20);
+            this.RecibidoPortextBox.TabIndex = 7;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(276, 514);
+            this.label9.Location = new System.Drawing.Point(497, 390);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 50;
@@ -223,7 +227,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(258, 477);
+            this.Eliminarbutton.Location = new System.Drawing.Point(479, 353);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(104, 34);
             this.Eliminarbutton.TabIndex = 49;
@@ -234,7 +238,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(63, 514);
+            this.label8.Location = new System.Drawing.Point(284, 390);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 48;
@@ -243,10 +247,10 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.Nuevobutton.Location = new System.Drawing.Point(31, 477);
+            this.Nuevobutton.Location = new System.Drawing.Point(252, 353);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
-            this.Nuevobutton.TabIndex = 47;
+            this.Nuevobutton.TabIndex = 10;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
@@ -254,7 +258,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(172, 514);
+            this.label7.Location = new System.Drawing.Point(393, 390);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 16);
             this.label7.TabIndex = 46;
@@ -263,17 +267,17 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(148, 477);
+            this.Guardarbutton.Location = new System.Drawing.Point(369, 353);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
-            this.Guardarbutton.TabIndex = 45;
+            this.Guardarbutton.TabIndex = 9;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
-            this.Buscarbutton.Location = new System.Drawing.Point(294, 32);
+            this.Buscarbutton.Location = new System.Drawing.Point(689, 6);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(73, 31);
             this.Buscarbutton.TabIndex = 51;
@@ -284,17 +288,56 @@
             // 
             this.LoteIdcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LoteIdcomboBox.FormattingEnabled = true;
-            this.LoteIdcomboBox.Location = new System.Drawing.Point(167, 125);
+            this.LoteIdcomboBox.Location = new System.Drawing.Point(195, 66);
             this.LoteIdcomboBox.Name = "LoteIdcomboBox";
-            this.LoteIdcomboBox.Size = new System.Drawing.Size(121, 21);
-            this.LoteIdcomboBox.TabIndex = 11;
+            this.LoteIdcomboBox.Size = new System.Drawing.Size(170, 21);
+            this.LoteIdcomboBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(407, 279);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "Monto";
+            // 
+            // MontotextBox
+            // 
+            this.MontotextBox.Location = new System.Drawing.Point(371, 298);
+            this.MontotextBox.Name = "MontotextBox";
+            this.MontotextBox.ReadOnly = true;
+            this.MontotextBox.Size = new System.Drawing.Size(119, 20);
+            this.MontotextBox.TabIndex = 52;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(371, 222);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 16);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Precio Quintales";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(371, 241);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(119, 20);
+            this.textBox1.TabIndex = 6;
             // 
             // Recepcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(405, 532);
+            this.ClientSize = new System.Drawing.Size(777, 439);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MontotextBox);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Eliminarbutton);
@@ -355,5 +398,9 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ComboBox LoteIdcomboBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox MontotextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

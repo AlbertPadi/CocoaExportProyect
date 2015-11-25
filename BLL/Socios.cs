@@ -18,20 +18,19 @@ namespace BLL
         public string Cedula { get; set; }
         public int CertificacionId { get; set; }
         public double CantidadTerreno { get; set; }
-        public int Fertilizantes { get; set; }
         
 
 
         public Socios()
         {
+            this.SocioId = 0;
             this.Nombre = "";
             this.Apellido = "";
             this.Direccion = "";
             this.Cedula = "";
             this.CertificacionId = 0;
             this.CantidadTerreno = 0;
-            this.Fertilizantes = 0;
-            this.SocioId = 0;
+            
         }
 
         
@@ -41,7 +40,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-               retorno = conexion.Ejecutar(String.Format("Insert Into Socios(Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno, Fertilizantes) Values('{0}', '{1}', '{2}', {3}, {4}, {5}, {6})", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.CantidadTerreno, this.Fertilizantes));
+               retorno = conexion.Ejecutar(String.Format("Insert Into Socios(Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno) Values('{0}', '{1}', '{2}', {3}, {4}, {5})", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.CantidadTerreno));
             }
             catch (Exception ex)
             {
@@ -57,7 +56,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, CertificacionId={4}, CantidadTerreno={5}, Fertilizantes={6} where SocioId={7}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.CantidadTerreno, this.Fertilizantes, this.SocioId));
+                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, CertificacionId={4}, CantidadTerreno={5} where SocioId={7}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.CantidadTerreno, this.SocioId));
             }
             catch (Exception ex)
             {
@@ -94,7 +93,6 @@ namespace BLL
                     this.Direccion = dt.Rows[0]["Direccion"].ToString();
                     this.Cedula = dt.Rows[0]["Cedula"].ToString();
                     this.CantidadTerreno = (double)dt.Rows[0]["CantidadTerreno"];
-                    this.Fertilizantes = (int)dt.Rows[0]["Fertilizantes"];
 
                 }
 

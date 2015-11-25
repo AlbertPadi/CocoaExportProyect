@@ -14,7 +14,7 @@ namespace CocoaExport.Vistas
     public partial class Recepcion : Form
     {
         int IdBuscado;
-        RecepcionClass Registro = new RecepcionClass();
+        BLL.Recepcion Registro = new BLL.Recepcion();
 
         public Recepcion()
         {

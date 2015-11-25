@@ -222,6 +222,7 @@
             this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
             this.Nuevobutton.TabIndex = 42;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 

@@ -92,14 +92,12 @@ namespace CocoaExport
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DestinosExportes destinos = new DestinosExportes();
-            destinos.Show();
+            
         }
 
         private void registroInspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistroDeInspecciones Inspecciones = new RegistroDeInspecciones();
-            Inspecciones.Show();
+            
         }
 
         private void exportacionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,14 +107,12 @@ namespace CocoaExport
 
         private void registroToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            RegistroExportacion registro = new RegistroExportacion();
-            registro.Show();
+            
         }
 
         private void registroToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            RegistroLote control = new RegistroLote();
-            control.Show();
+            
         }
 
         private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,8 +141,7 @@ namespace CocoaExport
 
         private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Listar listar = new Listar();
-            listar.Show();
+            
         }
 
         private void inspeccionesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,14 +158,12 @@ namespace CocoaExport
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListarUsuarios usuarios = new ListarUsuarios();
-            usuarios.Show();
+            
         }
 
         private void certificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListarCertificaciones listarcer = new ListarCertificaciones();
-            listarcer.Show();
+            
         }
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -192,14 +185,61 @@ namespace CocoaExport
 
         private void registroToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            Recepcion recepcion = new Recepcion();
-            recepcion.Show();
+            
         }
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ReporteExpaciones reporte = new ReporteExpaciones();
             reporte.Show();
+        }
+
+        private void registroInspeccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroDeInspecciones Inspecciones = new RegistroDeInspecciones();
+            Inspecciones.Show();
+        }
+
+        private void recepcionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Recepcion recepcion = new Recepcion();
+            recepcion.Show();
+        }
+
+        private void controlLotesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RegistroLote control = new RegistroLote();
+            control.Show();
+        }
+
+        private void destinoExporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DestinosExportes destinos = new DestinosExportes();
+            destinos.Show();
+        }
+
+        private void exportacionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RegistroExportacion registro = new RegistroExportacion();
+            registro.Show();
+        }
+
+        private void sociosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Listar listar = new Listar();
+            listar.Show();
+        }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ListarUsuarios usuarios = new ListarUsuarios();
+            usuarios.Show();
+        }
+
+        private void certificacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarCertificaciones listarcer = new ListarCertificaciones();
+            listarcer.Show();
         }
     }
 }

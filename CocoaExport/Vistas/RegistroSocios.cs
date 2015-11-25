@@ -13,7 +13,6 @@ namespace CocoaExport.Vistas
     public partial class RegistroSocios : Form
     {
         double CantTerreno;
-        int n;
         int IdBuscado;
         int socioId;
         BLL.Socios registro = new BLL.Socios();
@@ -46,18 +45,7 @@ namespace CocoaExport.Vistas
                 double.TryParse(TerrenotextBox.Text, out CantTerreno);
 
                 registro.CantidadTerreno = CantTerreno;
-
-                if (FertSiradioButton.Checked == true)
-                {
-                    n = 1;
-                }
-
-                if (FertNoradioButton.Checked == true)
-                {
-                    n = 0;
-                }
-
-                registro.Fertilizantes = n;
+                
                 if (registro.Insertar())
                 {
                     MessageBox.Show("Se guardaron los datos!");
@@ -125,14 +113,6 @@ namespace CocoaExport.Vistas
                 CedulatextBox.Text = registro.Cedula.ToString();
                 TerrenotextBox.Text = registro.CantidadTerreno.ToString();
 
-                if (registro.Fertilizantes == 1)
-                {
-                    FertSiradioButton.Checked = true;
-                }
-                if (registro.Fertilizantes == 0)
-                {
-                    FertNoradioButton.Checked = false;
-                }
             }
             
             
@@ -147,8 +127,6 @@ namespace CocoaExport.Vistas
             CedulatextBox.Clear();
             SocioIdtextBox.Clear();
             TerrenotextBox.Clear();
-            FertNoradioButton.Checked = false;
-            FertSiradioButton.Checked = false;
 
             
 
@@ -165,8 +143,6 @@ namespace CocoaExport.Vistas
             CertificacioncomboBox.DisplayMember = "Descripcion";
             CertificacioncomboBox.ValueMember = "CertificacionId";
             Socios socios = new Socios(); 
-
-            RegistroSocios registro = new RegistroSocios ();
             
 
         }

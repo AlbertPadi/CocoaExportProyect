@@ -39,9 +39,6 @@
             this.TerrenotextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.CedulatextBox = new System.Windows.Forms.TextBox();
-            this.FertSiradioButton = new System.Windows.Forms.RadioButton();
-            this.FertNoradioButton = new System.Windows.Forms.RadioButton();
-            this.FertilizantesgroupBox = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,7 +51,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.FertilizantesgroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // NombretextBox
@@ -146,47 +142,11 @@
             this.CedulatextBox.Size = new System.Drawing.Size(193, 20);
             this.CedulatextBox.TabIndex = 3;
             // 
-            // FertSiradioButton
-            // 
-            this.FertSiradioButton.AutoSize = true;
-            this.FertSiradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FertSiradioButton.Location = new System.Drawing.Point(40, 28);
-            this.FertSiradioButton.Name = "FertSiradioButton";
-            this.FertSiradioButton.Size = new System.Drawing.Size(40, 20);
-            this.FertSiradioButton.TabIndex = 0;
-            this.FertSiradioButton.TabStop = true;
-            this.FertSiradioButton.Text = "Si";
-            this.FertSiradioButton.UseVisualStyleBackColor = true;
-            // 
-            // FertNoradioButton
-            // 
-            this.FertNoradioButton.AutoSize = true;
-            this.FertNoradioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FertNoradioButton.Location = new System.Drawing.Point(167, 28);
-            this.FertNoradioButton.Name = "FertNoradioButton";
-            this.FertNoradioButton.Size = new System.Drawing.Size(46, 20);
-            this.FertNoradioButton.TabIndex = 18;
-            this.FertNoradioButton.TabStop = true;
-            this.FertNoradioButton.Text = "No";
-            this.FertNoradioButton.UseVisualStyleBackColor = true;
-            // 
-            // FertilizantesgroupBox
-            // 
-            this.FertilizantesgroupBox.Controls.Add(this.FertNoradioButton);
-            this.FertilizantesgroupBox.Controls.Add(this.FertSiradioButton);
-            this.FertilizantesgroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FertilizantesgroupBox.Location = new System.Drawing.Point(378, 198);
-            this.FertilizantesgroupBox.Name = "FertilizantesgroupBox";
-            this.FertilizantesgroupBox.Size = new System.Drawing.Size(288, 71);
-            this.FertilizantesgroupBox.TabIndex = 6;
-            this.FertilizantesgroupBox.TabStop = false;
-            this.FertilizantesgroupBox.Text = "Fertilizantes";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(338, 336);
+            this.label6.Location = new System.Drawing.Point(332, 264);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 16);
             this.label6.TabIndex = 20;
@@ -196,7 +156,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(205, 336);
+            this.label8.Location = new System.Drawing.Point(199, 264);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 16);
             this.label8.TabIndex = 21;
@@ -206,7 +166,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(484, 336);
+            this.label9.Location = new System.Drawing.Point(478, 264);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 22;
@@ -274,7 +234,7 @@
             // button3
             // 
             this.button3.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.button3.Location = new System.Drawing.Point(464, 299);
+            this.button3.Location = new System.Drawing.Point(458, 227);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 34);
             this.button3.TabIndex = 16;
@@ -284,7 +244,7 @@
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button2.Location = new System.Drawing.Point(180, 299);
+            this.button2.Location = new System.Drawing.Point(174, 227);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 34);
             this.button2.TabIndex = 8;
@@ -294,7 +254,7 @@
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.button1.Location = new System.Drawing.Point(318, 299);
+            this.button1.Location = new System.Drawing.Point(312, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 34);
             this.button1.TabIndex = 7;
@@ -306,7 +266,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(705, 378);
+            this.ClientSize = new System.Drawing.Size(705, 298);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.SocioIdtextBox);
             this.Controls.Add(this.label4);
@@ -316,7 +276,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.FertilizantesgroupBox);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
@@ -334,8 +293,6 @@
             this.Name = "RegistroSocios";
             this.Text = "Registro Socios";
             this.Load += new System.EventHandler(this.RegistroSocios_Load);
-            this.FertilizantesgroupBox.ResumeLayout(false);
-            this.FertilizantesgroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,9 +313,6 @@
         private System.Windows.Forms.TextBox CedulatextBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RadioButton FertSiradioButton;
-        private System.Windows.Forms.RadioButton FertNoradioButton;
-        private System.Windows.Forms.GroupBox FertilizantesgroupBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;

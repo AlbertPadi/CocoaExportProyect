@@ -91,7 +91,7 @@ namespace BLL
                     this.CodigoDestino = dt.Rows[0]["CodigoDestino"].ToString();
                     this.NombreDestino = dt.Rows[0]["NombreDestino"].ToString();
                     this.Direccion = dt.Rows[0]["Direccion"].ToString();
-                    this.CodigoPostal = (int)dt.Rows[0]["CodigoPostal"];
+                    this.CodigoPostal = (double)dt.Rows[0]["CodigoPostal"];
                 }
             return dt.Rows.Count > 0;
         }

@@ -118,5 +118,14 @@ namespace CocoaExport.Vistas
         {
 
         }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            PaistextBox.Clear();
+            CodigoDesttextBox.Clear();
+            NombreDesttextBox.Clear();
+            DireccionDesttextBox.Clear();
+            CodigoDesttextBox.Clear();
+        }
     }
 }
