@@ -91,6 +91,9 @@ namespace CocoaExport.Vistas
                 Registro.Observacion = ObservacionrichTextBox.Text;
                 Utilities.Utilitarios.Validacion(RecibidoPortextBox, error, "No puede quedar este campo en blanco");
                 Registro.RecibidoPor = RecibidoPortextBox.Text;
+                Registro.CodigoLote = LoteIdcomboBox.SelectedValue.ToString();
+                Registro.SocioId = (int)SocioIdcomboBox.SelectedValue;
+                Registro.TipoCacaoId = (int)TipoCacaoIdcomboBox.SelectedValue;
 
                 if (Registro.Insertar())
                 {
@@ -108,7 +111,9 @@ namespace CocoaExport.Vistas
                 Registro.CantidadPesada = Convert.ToInt32(CantPtextBox.Text);
                 Registro.Observacion = ObservacionrichTextBox.Text;
                 Registro.RecibidoPor = RecibidoPortextBox.Text;
-
+                Registro.SocioId = (int)SocioIdcomboBox.SelectedValue;
+                Registro.CodigoLote = LoteIdcomboBox.SelectedValue.ToString();
+                Registro.TipoCacaoId = (int)TipoCacaoIdcomboBox.SelectedValue;
                 Registro.Editar();
 
                 if (Registro.Editar())

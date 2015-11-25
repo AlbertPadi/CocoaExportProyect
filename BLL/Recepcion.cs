@@ -13,8 +13,8 @@ namespace BLL
         Conexion conexion = new Conexion();
 
         public int RecepcionId { get; set; }
-        public string CodigoLote { get; set; }
         public int SocioId { get; set; }
+        public string CodigoLote { get; set; }
         public int LoteId { get; set; }
         public int TipoCacaoId { get; set; }
         public string Fecha { get; set; }
@@ -26,9 +26,9 @@ namespace BLL
         public Recepcion()
         {
             this.RecepcionId = 0;
-            this.CodigoLote = "";
             this.SocioId = 0;
             this.LoteId = 0;
+            this.CodigoLote = "";
             this.TipoCacaoId = 0;
             this.Fecha = "";
             this.CantidadPesada = 0;
@@ -43,7 +43,7 @@ namespace BLL
                     bool retorno = false;
                     try
                     {
-                        retorno = conexion.Ejecutar(String.Format("insert into Recepciones(socioId, CodigoLote, LoteId, TipoCacaoId, Fecha, CantidadesPesada, Monto,  Observacion, RecibidoPor) values({0}, '{1}', {2}, {3}, '{4}', {5}, {6}, '{7}', '{8}')", this.SocioId,this.CodigoLote,  this.LoteId, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Monto, this.Observacion, this.RecibidoPor));
+                        retorno = conexion.Ejecutar(String.Format("insert into Recepciones(SocioId, CodigoLote, TipoCacaoId, Fecha, CantidadPesada, Monto,  Observacion, RecibidoPor) values({0}, '{1}', {2}, '{3}', {4}, {5}, '{6}', '{7}')", this.SocioId, this.CodigoLote, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Monto, this.Observacion, this.RecibidoPor));
                     }
                     catch (Exception ex)
                     {

@@ -53,6 +53,7 @@ create table Recepciones(
 			RecepcionId int primary key identity, 
 			SocioId int References Socios(SocioId), 
 			LoteId int References Lotes(LoteId),
+			CodigoLote varchar(20),
 			TipoCacaoId int References TiposCacao(TipoCacaoId),
 			CantidadPesada float,
 			Monto float,
