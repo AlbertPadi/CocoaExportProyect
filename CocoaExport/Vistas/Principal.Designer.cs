@@ -104,8 +104,8 @@
             // registroToolStripMenuItem
             // 
             this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registroSociosToolStripMenuItem,
             this.registroUsuariosToolStripMenuItem,
+            this.registroSociosToolStripMenuItem,
             this.registroCertificacionesToolStripMenuItem,
             this.registroTipoCacaoToolStripMenuItem,
             this.registroInspeccionToolStripMenuItem,

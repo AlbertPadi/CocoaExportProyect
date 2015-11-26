@@ -1,6 +1,6 @@
 ﻿namespace CocoaExport.Vistas
 {
-    partial class RegistroDeInspecciones
+    partial class RegistroInspecciones
     {
         /// <summary>
         /// Required designer variable.
@@ -232,6 +232,7 @@
             // 
             // FechadateTimePicker
             // 
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(172, 129);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
@@ -309,7 +310,7 @@
             this.CrianzaSiradioButton.Text = "Si";
             this.CrianzaSiradioButton.UseVisualStyleBackColor = true;
             // 
-            // RegistroDeInspecciones
+            // RegistroInspecciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -336,7 +337,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdInsptextBox);
             this.Controls.Add(this.IdInsplabel);
-            this.Name = "RegistroDeInspecciones";
+            this.Name = "RegistroInspecciones";
             this.Text = "Registro Inspecciones";
             this.Load += new System.EventHandler(this.RegistroDeInspecciones_Load);
             this.FertgroupBox.ResumeLayout(false);

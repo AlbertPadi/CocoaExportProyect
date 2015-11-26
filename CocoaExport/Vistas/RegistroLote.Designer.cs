@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(357, 9);
+            this.label1.Location = new System.Drawing.Point(415, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 0;
@@ -61,23 +61,24 @@
             // 
             // LoteIdtextBox
             // 
-            this.LoteIdtextBox.Location = new System.Drawing.Point(418, 5);
+            this.LoteIdtextBox.Location = new System.Drawing.Point(476, 5);
             this.LoteIdtextBox.Name = "LoteIdtextBox";
-            this.LoteIdtextBox.Size = new System.Drawing.Size(141, 20);
+            this.LoteIdtextBox.Size = new System.Drawing.Size(119, 20);
             this.LoteIdtextBox.TabIndex = 1;
             // 
             // TotaltextBox
             // 
-            this.TotaltextBox.Location = new System.Drawing.Point(142, 5);
+            this.TotaltextBox.Location = new System.Drawing.Point(476, 110);
             this.TotaltextBox.Name = "TotaltextBox";
-            this.TotaltextBox.Size = new System.Drawing.Size(200, 20);
+            this.TotaltextBox.ReadOnly = true;
+            this.TotaltextBox.Size = new System.Drawing.Size(119, 20);
             this.TotaltextBox.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Location = new System.Drawing.Point(357, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 16);
             this.label2.TabIndex = 2;
@@ -87,7 +88,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 62);
+            this.label3.Location = new System.Drawing.Point(12, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 16);
             this.label3.TabIndex = 4;
@@ -95,7 +96,7 @@
             // 
             // CodigoLotetextBox
             // 
-            this.CodigoLotetextBox.Location = new System.Drawing.Point(142, 56);
+            this.CodigoLotetextBox.Location = new System.Drawing.Point(142, 8);
             this.CodigoLotetextBox.Name = "CodigoLotetextBox";
             this.CodigoLotetextBox.Size = new System.Drawing.Size(200, 20);
             this.CodigoLotetextBox.TabIndex = 1;
@@ -106,7 +107,7 @@
             this.CertificaionIdcomboBox.FormattingEnabled = true;
             this.CertificaionIdcomboBox.Items.AddRange(new object[] {
             ""});
-            this.CertificaionIdcomboBox.Location = new System.Drawing.Point(142, 105);
+            this.CertificaionIdcomboBox.Location = new System.Drawing.Point(142, 57);
             this.CertificaionIdcomboBox.Name = "CertificaionIdcomboBox";
             this.CertificaionIdcomboBox.Size = new System.Drawing.Size(200, 21);
             this.CertificaionIdcomboBox.TabIndex = 2;
@@ -115,7 +116,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 110);
+            this.label5.Location = new System.Drawing.Point(12, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 16);
             this.label5.TabIndex = 8;
@@ -124,7 +125,7 @@
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(142, 155);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(142, 107);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.FechadateTimePicker.TabIndex = 3;
@@ -133,7 +134,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 159);
+            this.label6.Location = new System.Drawing.Point(12, 111);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 16);
             this.label6.TabIndex = 11;
@@ -143,7 +144,7 @@
             // 
             this.Buscarlabel.AutoSize = true;
             this.Buscarlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarlabel.Location = new System.Drawing.Point(457, 68);
+            this.Buscarlabel.Location = new System.Drawing.Point(509, 68);
             this.Buscarlabel.Name = "Buscarlabel";
             this.Buscarlabel.Size = new System.Drawing.Size(56, 16);
             this.Buscarlabel.TabIndex = 33;
@@ -152,7 +153,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
-            this.Buscarbutton.Location = new System.Drawing.Point(439, 31);
+            this.Buscarbutton.Location = new System.Drawing.Point(491, 31);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(95, 34);
             this.Buscarbutton.TabIndex = 32;
@@ -163,7 +164,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(418, 303);
+            this.label8.Location = new System.Drawing.Point(419, 211);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 16);
             this.label8.TabIndex = 31;
@@ -173,7 +174,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(163, 303);
+            this.label9.Location = new System.Drawing.Point(164, 211);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 16);
             this.label9.TabIndex = 30;
@@ -183,7 +184,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(291, 303);
+            this.label10.Location = new System.Drawing.Point(292, 211);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 29;
@@ -192,7 +193,7 @@
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.button2.Location = new System.Drawing.Point(400, 266);
+            this.button2.Location = new System.Drawing.Point(401, 174);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 34);
             this.button2.TabIndex = 28;
@@ -202,16 +203,17 @@
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button1.Location = new System.Drawing.Point(142, 266);
+            this.button1.Location = new System.Drawing.Point(143, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 34);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(273, 266);
+            this.Guardarbutton.Location = new System.Drawing.Point(274, 174);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(95, 34);
             this.Guardarbutton.TabIndex = 4;
@@ -223,7 +225,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(585, 331);
+            this.ClientSize = new System.Drawing.Size(598, 261);
             this.Controls.Add(this.Buscarlabel);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label8);

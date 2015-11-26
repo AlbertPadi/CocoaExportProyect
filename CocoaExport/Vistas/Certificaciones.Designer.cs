@@ -48,9 +48,9 @@
             this.IDlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDlabel.Location = new System.Drawing.Point(20, 9);
             this.IDlabel.Name = "IDlabel";
-            this.IDlabel.Size = new System.Drawing.Size(24, 18);
+            this.IDlabel.Size = new System.Drawing.Size(124, 18);
             this.IDlabel.TabIndex = 0;
-            this.IDlabel.Text = "ID";
+            this.IDlabel.Text = "Certificacion ID";
             // 
             // Descripcionlabel
             // 
@@ -64,7 +64,7 @@
             // 
             // IDtextBox
             // 
-            this.IDtextBox.Location = new System.Drawing.Point(137, 10);
+            this.IDtextBox.Location = new System.Drawing.Point(150, 10);
             this.IDtextBox.Name = "IDtextBox";
             this.IDtextBox.Size = new System.Drawing.Size(100, 20);
             this.IDtextBox.TabIndex = 2;
@@ -72,10 +72,10 @@
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(137, 52);
+            this.DescripciontextBox.Location = new System.Drawing.Point(150, 51);
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(152, 20);
-            this.DescripciontextBox.TabIndex = 3;
+            this.DescripciontextBox.TabIndex = 0;
             this.DescripciontextBox.TextChanged += new System.EventHandler(this.DescripciontextBox_TextChanged);
             // 
             // label6
@@ -145,7 +145,7 @@
             this.button2.Location = new System.Drawing.Point(23, 115);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 34);
-            this.button2.TabIndex = 23;
+            this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -155,7 +155,7 @@
             this.button1.Location = new System.Drawing.Point(133, 115);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 34);
-            this.button1.TabIndex = 21;
+            this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

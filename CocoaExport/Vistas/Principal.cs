@@ -190,13 +190,13 @@ namespace CocoaExport
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReporteExpaciones reporte = new ReporteExpaciones();
+            ReporteExportaciones reporte = new ReporteExportaciones();
             reporte.Show();
         }
 
         private void registroInspeccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistroDeInspecciones Inspecciones = new RegistroDeInspecciones();
+            RegistroInspecciones Inspecciones = new RegistroInspecciones();
             Inspecciones.Show();
         }
 

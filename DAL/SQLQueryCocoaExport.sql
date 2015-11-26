@@ -49,11 +49,20 @@ create table TiposCacao(
 		
 		select *from TiposCacao
 
+create table Lotes(
+			LoteId int primary key identity,
+			CodigoLote varchar(20), 
+			Total float, 
+			CertificacionId int References Certificaciones(CertificacionId),
+			Fecha varchar(20));
+
+	insert into Lotes(CodigoLote, Total) values('025SGS', 500);
+	select*from Lotes
+
 create table Recepciones(
 			RecepcionId int primary key identity, 
 			SocioId int References Socios(SocioId), 
 			LoteId int References Lotes(LoteId),
-			CodigoLote varchar(20),
 			TipoCacaoId int References TiposCacao(TipoCacaoId),
 			CantidadPesada float,
 			Monto float,
@@ -65,15 +74,7 @@ create table Recepciones(
 			drop table Recepciones
 						
 						 
-create table Lotes(
-			LoteId int primary key identity,
-			CodigoLote varchar(20), 
-			Total float, 
-			CertificacionId int References Certificaciones(CertificacionId),
-			Fecha varchar(20));
 
-	insert into Lotes(CodigoLote, Total) values('025SGS', 500);
-	select*from Lotes
 	--detalle
 create table LotesExportes(
 			LoteId int References Lotes(LoteId), 

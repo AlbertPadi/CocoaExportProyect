@@ -14,6 +14,7 @@ namespace CocoaExport.Vistas
     public partial class TipoCacaoRegistro : Form
     {
         int IdBuscado;
+        int tipo;
         TipoCacao registro = new TipoCacao();
 
         public TipoCacaoRegistro()
@@ -71,8 +72,17 @@ namespace CocoaExport.Vistas
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            registro.TipoCacaoId = Convert.ToInt32(IdTipoCacaotextBox.Text);
-            registro.Eliminar();
+            int.TryParse(IdTipoCacaotextBox.Text, out tipo);
+            registro.TipoCacaoId = tipo;
+            if (registro.Eliminar())
+            {
+                MessageBox.Show("Se han eliminado los datos!");
+            }
+            else
+            {
+                MessageBox.Show("No se han eliminado los datos!");
+            }
+            
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)

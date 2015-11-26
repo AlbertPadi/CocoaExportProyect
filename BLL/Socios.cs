@@ -56,7 +56,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, CertificacionId={4}, CantidadTerreno={5} where SocioId={7}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.CantidadTerreno, this.SocioId));
+                retorno = conexion.Ejecutar(String.Format("Update Socios Set Nombre='{0}', Apellido='{1}', Direccion='{2}', Cedula={3}, CertificacionId={4}, CantidadTerreno={5} where SocioId={6}", this.Nombre, this.Apellido, this.Direccion, this.Cedula, this.CertificacionId, this.CantidadTerreno, this.SocioId));
             }
             catch (Exception ex)
             {
@@ -92,6 +92,7 @@ namespace BLL
                     this.Apellido = dt.Rows[0]["Apellido"].ToString();
                     this.Direccion = dt.Rows[0]["Direccion"].ToString();
                     this.Cedula = dt.Rows[0]["Cedula"].ToString();
+                    this.CertificacionId = (int)dt.Rows[0]["CertificacionId"];
                     this.CantidadTerreno = (double)dt.Rows[0]["CantidadTerreno"];
 
                 }

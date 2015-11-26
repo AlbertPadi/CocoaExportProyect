@@ -43,7 +43,7 @@ namespace BLL
                     bool retorno = false;
                     try
                     {
-                        retorno = conexion.Ejecutar(String.Format("insert into Recepciones(SocioId, CodigoLote, TipoCacaoId, Fecha, CantidadPesada, Monto,  Observacion, RecibidoPor) values({0}, '{1}', {2}, '{3}', {4}, {5}, '{6}', '{7}')", this.SocioId, this.CodigoLote, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Monto, this.Observacion, this.RecibidoPor));
+                        retorno = conexion.Ejecutar(String.Format("insert into Recepciones(SocioId, LoteId, TipoCacaoId, Fecha, CantidadPesada, Monto,  Observacion, RecibidoPor) values({0}, {1}, {2}, '{3}', {4}, {5}, '{6}', '{7}')", this.SocioId, this.LoteId, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Monto, this.Observacion, this.RecibidoPor));
                     }
                     catch (Exception ex)
                     {

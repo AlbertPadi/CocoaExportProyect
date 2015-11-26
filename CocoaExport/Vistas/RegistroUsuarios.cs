@@ -72,7 +72,7 @@ namespace CocoaExport.Vistas
                 }
                 
             }
-            else
+            else if(UsuarioIdtextBox.Text.Length > 0)
             {
                 Registro.UsuarioId = usuarioId;
 
@@ -81,6 +81,7 @@ namespace CocoaExport.Vistas
                 Registro.Direccion = DirecciontextBox.Text;
                 Registro.NombreUsuario = NomUsuariotextBox.Text;
                 Registro.Contrasena = ContraseñatextBox.Text;
+                Registro.Contrasena1 = Contrasena1textBox.Text;
 
                 if (ContraseñatextBox.Text.Trim() != Contrasena1textBox.Text.Trim())
                 {
@@ -90,13 +91,13 @@ namespace CocoaExport.Vistas
                 }
                 else
                 {
-                    if (Registro.Insertar())
+                    if (Registro.Editar())
                     {
-                        MessageBox.Show("Se insertaron los datos correctamente!");
+                        MessageBox.Show("Se han actualizado los datos correctamente!");
                     }
                     else
                     {
-                        MessageBox.Show("No se han podido guardar los datos!");
+                        MessageBox.Show("No se han actualizado podido guardar los datos!");
                     }
                 }
             }
@@ -111,6 +112,8 @@ namespace CocoaExport.Vistas
             DirecciontextBox.Clear();
             NomUsuariotextBox.Clear();
             ContraseñatextBox.Clear();
+            Contrasena1textBox.Clear();
+            UsuarioIdtextBox.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)

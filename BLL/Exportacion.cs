@@ -42,7 +42,7 @@ namespace BLL
             StringBuilder Comando = new StringBuilder();
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Insert into Exportaciones(DestinoId, CantidadToneladas, Fecha, Resumen) values({0}, {1}, '{2}', '{3}')", this.DestinoId, this.CantidadToneladas, this.Fecha, this.Resumen));
+                retorno = conexion.Ejecutar(String.Format("Insert into Exportaciones(DestinoId, Fecha, Resumen) values({0}, '{1}', '{2}')", this.DestinoId, this.Fecha, this.Resumen));
                 if (retorno) 
                 {
                         this.ExportacionId = (int)conexion.getDatos("Select Max(ExportacionId) as ExportacionId from Exportaciones").Rows[0]["ExportacionId"];

@@ -45,15 +45,13 @@ namespace CocoaExport.Vistas
                 }
 
             }
-            else
+            else if(IDtextBox.Text.Length > 0)
             {
                 int.TryParse(IDtextBox.Text, out certificacionId);
                 registro.CertificacionID = certificacionId;
 
                 registro.Descripcion = DescripciontextBox.Text;
      
-                registro.Editar();
-
                 if (registro.Editar())
                 {
                     MessageBox.Show("Se han actualizado los datos!");

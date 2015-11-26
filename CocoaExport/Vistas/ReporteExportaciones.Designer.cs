@@ -1,6 +1,6 @@
 ﻿namespace CocoaExport.Vistas
 {
-    partial class ReporteExpaciones
+    partial class ReporteExportaciones
     {
         /// <summary>
         /// Required designer variable.

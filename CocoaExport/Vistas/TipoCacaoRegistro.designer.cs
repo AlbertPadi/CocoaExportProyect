@@ -47,9 +47,9 @@
             this.IDTipolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDTipolabel.Location = new System.Drawing.Point(97, 62);
             this.IDTipolabel.Name = "IDTipolabel";
-            this.IDTipolabel.Size = new System.Drawing.Size(23, 16);
+            this.IDTipolabel.Size = new System.Drawing.Size(59, 16);
             this.IDTipolabel.TabIndex = 0;
-            this.IDTipolabel.Text = "ID";
+            this.IDTipolabel.Text = "Tipo ID";
             // 
             // Descripcionlabel
             // 
@@ -72,8 +72,8 @@
             // 
             this.DescripcionTipotextBox.Location = new System.Drawing.Point(194, 105);
             this.DescripcionTipotextBox.Name = "DescripcionTipotextBox";
-            this.DescripcionTipotextBox.Size = new System.Drawing.Size(139, 20);
-            this.DescripcionTipotextBox.TabIndex = 3;
+            this.DescripcionTipotextBox.Size = new System.Drawing.Size(168, 20);
+            this.DescripcionTipotextBox.TabIndex = 0;
             // 
             // label9
             // 
@@ -100,7 +100,7 @@
             this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
             this.Buscarbutton.Location = new System.Drawing.Point(258, 62);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 34);
+            this.Buscarbutton.Size = new System.Drawing.Size(104, 34);
             this.Buscarbutton.TabIndex = 49;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.button1_Click);
@@ -121,7 +121,7 @@
             this.Nuevobutton.Location = new System.Drawing.Point(84, 168);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 34);
-            this.Nuevobutton.TabIndex = 47;
+            this.Nuevobutton.TabIndex = 3;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
@@ -141,7 +141,7 @@
             this.Guardarbutton.Location = new System.Drawing.Point(194, 168);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(104, 34);
-            this.Guardarbutton.TabIndex = 45;
+            this.Guardarbutton.TabIndex = 1;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 

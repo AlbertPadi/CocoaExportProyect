@@ -56,7 +56,7 @@ namespace CocoaExport.Vistas
                 }
 
             }
-            else
+            else if(SocioIdtextBox.Text.Length > 0)
             {
                 int.TryParse(SocioIdtextBox.Text, out socioId);
                 registro.SocioId = socioId;
@@ -111,6 +111,7 @@ namespace CocoaExport.Vistas
                 ApellidotextBox.Text = registro.Apellido;
                 DirecciontextBox.Text = registro.Direccion;
                 CedulatextBox.Text = registro.Cedula.ToString();
+                CertificacioncomboBox.SelectedItem = registro.CertificacionId;
                 TerrenotextBox.Text = registro.CantidadTerreno.ToString();
 
             }

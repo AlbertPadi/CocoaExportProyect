@@ -18,7 +18,7 @@ namespace CocoaExport.Vistas
         BLL.DestinosExportes destinos = new BLL.DestinosExportes();
        
 
-        double toneladas;
+        
         int exportacionId;
         string addlotes;
         int idbuscado;
@@ -47,19 +47,11 @@ namespace CocoaExport.Vistas
 
             if (ExportacionIdtextBox.Text.Length == 0)
             {
-                double.TryParse(CantidadtextBox.Text, out toneladas);
-                exportacion.CantidadToneladas = toneladas;
                 exportacion.Fecha = FechadateTimePicker.Text;
                 exportacion.DestinoId = (int)DestinosIdcomboBox.SelectedValue;
                 exportacion.Resumen = ResumenrichTextBox.Text;
 
-                if (toneladas < 25000 || toneladas > 25999)
-                {
-                    ErrorProvider error = new ErrorProvider();
-                    error.SetError(CantidadtextBox, "Asegurese de que la cantidad sea >24999 o <25999");
-                }
-                else
-                {
+                
 
                     for (int i = 0; i < LoteslistBox.Items.Count; i++)
                     {
@@ -76,17 +68,11 @@ namespace CocoaExport.Vistas
                         MessageBox.Show("No se han guardado los datos!");
                     }
 
-                }
-             
-
             }
             else
             {
                 int.TryParse(ExportacionIdtextBox.Text, out exportacionId);
                 exportacion.ExportacionId = exportacionId;
-
-                double.TryParse(CantidadtextBox.Text, out toneladas);
-                exportacion.CantidadToneladas = toneladas;
                 exportacion.Fecha = FechadateTimePicker.Text;
                 exportacion.ExportacionId = (int)DestinosIdcomboBox.SelectedValue;
                 exportacion.Resumen = ResumenrichTextBox.Text;
@@ -120,7 +106,6 @@ namespace CocoaExport.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CantidadtextBox.Clear();
             ResumenrichTextBox.Clear();
             LoteslistBox.ClearSelected();
             ExportacionIdtextBox.Clear();
@@ -135,7 +120,6 @@ namespace CocoaExport.Vistas
             lote.ExportacionId = idbuscado;
             lote.Buscar(idbuscado);
             
-                exportacion.CantidadToneladas = toneladas;
                 exportacion.Fecha = FechadateTimePicker.Text;
 
                 foreach (var item in exportacion.Lotes)

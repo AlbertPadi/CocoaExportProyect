@@ -14,11 +14,18 @@ namespace CocoaExport.Vistas
     public partial class Recepcion : Form
     {
         int IdBuscado;
+        double monto;
+        double precio;
+        double cantidad;
+        double cantidad2;
+        int tipo;
+        int recepcion;
         BLL.Recepcion Registro = new BLL.Recepcion();
 
         public Recepcion()
         {
             InitializeComponent();
+            this.monto = 0;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -57,8 +64,16 @@ namespace CocoaExport.Vistas
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            Registro.RecepcionId = Convert.ToInt32(RecepcionIdtextBox.Text);
-            Registro.Eliminar();
+            Registro.RecepcionId = recepcion;
+            if (Registro.Eliminar())
+            {
+                MessageBox.Show("Se han eliminado los datos!");
+            }
+            else
+            {
+                MessageBox.Show("no se han eliminado los datos!");
+            }
+            
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -67,6 +82,8 @@ namespace CocoaExport.Vistas
             CantPtextBox.Clear();
             ObservacionrichTextBox.Clear();
             RecibidoPortextBox.Clear();
+            MontotextBox.Clear();
+            PreciotextBox.Clear();
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -87,14 +104,24 @@ namespace CocoaExport.Vistas
             ErrorProvider error = new ErrorProvider();
             if (RecepcionIdtextBox.Text.Length == 0)
             {
-                Registro.CantidadPesada = Convert.ToInt32(CantPtextBox.Text);
+                double resultado;
+                double.TryParse(CantPtextBox.Text, out cantidad2);
+                Registro.CantidadPesada = cantidad;
                 Registro.Observacion = ObservacionrichTextBox.Text;
                 Utilities.Utilitarios.Validacion(RecibidoPortextBox, error, "No puede quedar este campo en blanco");
                 Registro.RecibidoPor = RecibidoPortextBox.Text;
-                Registro.CodigoLote = LoteIdcomboBox.SelectedValue.ToString();
+                Registro.LoteId = (int)LoteIdcomboBox.SelectedValue;
                 Registro.SocioId = (int)SocioIdcomboBox.SelectedValue;
                 Registro.TipoCacaoId = (int)TipoCacaoIdcomboBox.SelectedValue;
-
+                Registro.Fecha = FechadateTimePicker.Text;
+                
+                double.TryParse(CantPtextBox.Text, out cantidad);
+                double.TryParse(PreciotextBox.Text, out precio);
+                PreciotextBox.Text = precio.ToString();
+                resultado = precio * cantidad;
+                MontotextBox.Text = resultado.ToString();
+                Registro.Monto = resultado;
+                
                 if (Registro.Insertar())
                 {
                     MessageBox.Show("Se guardaron los datos!");
@@ -105,16 +132,17 @@ namespace CocoaExport.Vistas
                 }
 
             }
-            else
+            else if(RecepcionIdtextBox.Text.Length > 0)
             {
-                Registro.TipoCacaoId = Convert.ToInt32(RecepcionIdtextBox.Text);
-                Registro.CantidadPesada = Convert.ToInt32(CantPtextBox.Text);
+                int.TryParse(RecepcionIdtextBox.Text, out recepcion);
+                Registro.RecepcionId = recepcion;
+                Registro.CantidadPesada = cantidad;
                 Registro.Observacion = ObservacionrichTextBox.Text;
                 Registro.RecibidoPor = RecibidoPortextBox.Text;
                 Registro.SocioId = (int)SocioIdcomboBox.SelectedValue;
-                Registro.CodigoLote = LoteIdcomboBox.SelectedValue.ToString();
+                Registro.LoteId = (int)LoteIdcomboBox.SelectedValue;
                 Registro.TipoCacaoId = (int)TipoCacaoIdcomboBox.SelectedValue;
-                Registro.Editar();
+                Registro.Fecha = FechadateTimePicker.Text;
 
                 if (Registro.Editar())
                 {
@@ -122,7 +150,7 @@ namespace CocoaExport.Vistas
                 }
                 else
                 {
-                    MessageBox.Show("No se han guardado los datos!");
+                    MessageBox.Show("No se han actualizado los datos!");
                 }
             }
         }

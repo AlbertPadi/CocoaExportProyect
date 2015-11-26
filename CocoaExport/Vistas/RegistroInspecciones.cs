@@ -11,12 +11,14 @@ using BLL;
 
 namespace CocoaExport.Vistas
 {
-    public partial class RegistroDeInspecciones : Form
+    public partial class RegistroInspecciones : Form
     {
         int IdBuscado;
         int Num;
+        int Num1;
+        int inspeccionId;
         Inspeciones Registro = new Inspeciones();
-        public RegistroDeInspecciones()
+        public RegistroInspecciones()
         {
             
             InitializeComponent();
@@ -77,7 +79,6 @@ namespace CocoaExport.Vistas
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            RegistroDeInspecciones RegistroInsp = new RegistroDeInspecciones();
             if (IdInsptextBox.Text.Length == 0)
             {
                 Registro.Fecha = FechadateTimePicker.Text;
@@ -98,15 +99,17 @@ namespace CocoaExport.Vistas
 
                 if (CrianzaSiradioButton.Checked == true)
                 {
-                    Num = 1;
+                    Num1 = 1;
                 }
 
                 if (CrianzaNoradioButton.Checked == true)
                 {
-                    Num = 0;
+                    Num1 = 0;
                 }
 
                 Registro.Fertilizantes = Num;
+                Registro.CrianzaAnimales = Num1;
+
                 if (Registro.Insertar())
                 {
                     MessageBox.Show("Se guardaron los datos!");
@@ -117,7 +120,7 @@ namespace CocoaExport.Vistas
                 }
 
             }
-            else
+            else if(IdInsptextBox.Text.Length > 0)
             {   
                 
                 Registro.InspeccionId = Convert.ToInt32(IdInsptextBox.Text);
@@ -127,6 +130,29 @@ namespace CocoaExport.Vistas
                 Registro.ControlPlagas = ControlPlagastextBox.Text;
                 Registro.ResumenInspeccion = ResumenInsprichTextBox.Text;
                 Registro.SocioId = (int)IdSociocomboBox.SelectedValue;
+
+                if (FertSiradioButton.Checked == true)
+                {
+                    Num = 1;
+                }
+
+                if (FertNoradioButton.Checked == true)
+                {
+                    Num = 0;
+                }
+
+                if (CrianzaSiradioButton.Checked == true)
+                {
+                    Num1 = 1;
+                }
+
+                if (CrianzaNoradioButton.Checked == true)
+                {
+                    Num1 = 0;
+                }
+
+                Registro.Fertilizantes = Num;
+                Registro.CrianzaAnimales = Num1;
 
                 Registro.Editar();
 
@@ -143,8 +169,18 @@ namespace CocoaExport.Vistas
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            Registro.InspeccionId = Convert.ToInt32(IdInsptextBox.Text);
-            Registro.Eliminar();
+            int.TryParse(IdInsptextBox.Text, out inspeccionId);
+            Registro.InspeccionId = inspeccionId;
+
+            if (Registro.Eliminar())
+            {
+                MessageBox.Show("Se han eliminado los datos!");
+            }
+            else
+            {
+                MessageBox.Show("No se han eliminado los datos!");
+            }
+            
         }
 
         private void IdSociocomboBox_SelectedIndexChanged(object sender, EventArgs e)

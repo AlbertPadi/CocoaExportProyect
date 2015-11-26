@@ -56,7 +56,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.MontotextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PreciotextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // RecepcionIdlabel
@@ -321,12 +321,12 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Precio Quintales";
             // 
-            // textBox1
+            // PreciotextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 241);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 6;
+            this.PreciotextBox.Location = new System.Drawing.Point(371, 241);
+            this.PreciotextBox.Name = "PreciotextBox";
+            this.PreciotextBox.Size = new System.Drawing.Size(119, 20);
+            this.PreciotextBox.TabIndex = 6;
             // 
             // Recepcion
             // 
@@ -334,7 +334,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
             this.ClientSize = new System.Drawing.Size(777, 439);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PreciotextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MontotextBox);
@@ -401,6 +401,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox MontotextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PreciotextBox;
     }
 }

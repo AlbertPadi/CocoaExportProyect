@@ -60,7 +60,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update Certificaciones Set Descripcion='{0}' where CertificacionId={1}", this.CertificacionID, this.CertificacionID));
+                retorno = conexion.Ejecutar(String.Format("Update Certificaciones Set Descripcion='{0}' where CertificacionId={1}", this.Descripcion, this.CertificacionID));
             }
             catch (Exception ex)
             {
