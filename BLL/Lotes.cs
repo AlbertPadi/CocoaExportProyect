@@ -39,8 +39,6 @@ namespace BLL
             
         }
 
-        
-
         public override bool Insertar()
         {
             StringBuilder comando = new StringBuilder();

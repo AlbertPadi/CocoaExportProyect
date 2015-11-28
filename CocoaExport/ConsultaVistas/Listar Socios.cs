@@ -23,10 +23,6 @@ namespace CocoaExport.Vistas
         {
             
 
-            DatoscomboBox.DataSource = socios.Listar("SocioId, Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno, Fertilizantes", "1=1", "");
-            DatoscomboBox.DisplayMember = "Nombre";
-            DatoscomboBox.ValueMember = "SocioId";
-
             string Filtro = "1=1";
             if (DatoscomboBox.SelectedIndex == 0)
             {
@@ -39,7 +35,7 @@ namespace CocoaExport.Vistas
                     Filtro = "SocioId = " + ListatextBox.Text;
                 }
 
-                dt = socios.Listar("SocioId, Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno, Fertilizantes", Filtro, "");
+                dt = socios.Listar("SocioId, Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno", Filtro, "");
                 ListadataGridView.DataSource = dt;
             }
         }
@@ -57,6 +53,11 @@ namespace CocoaExport.Vistas
         private void Listar_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

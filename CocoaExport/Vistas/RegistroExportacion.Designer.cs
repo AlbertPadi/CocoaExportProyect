@@ -43,22 +43,27 @@
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.LoteIdcomboBox = new System.Windows.Forms.ComboBox();
-            this.LoteslistBox = new System.Windows.Forms.ListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.AgregarLotebutton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.LotesdataGridView = new System.Windows.Forms.DataGridView();
+            this.CodigoLote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotaltextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PreciotextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.LotesdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 76);
+            this.label2.Location = new System.Drawing.Point(12, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 2;
@@ -68,7 +73,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(589, 152);
+            this.label4.Location = new System.Drawing.Point(574, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 6;
@@ -76,7 +81,7 @@
             // 
             // ResumenrichTextBox
             // 
-            this.ResumenrichTextBox.Location = new System.Drawing.Point(451, 171);
+            this.ResumenrichTextBox.Location = new System.Drawing.Point(436, 116);
             this.ResumenrichTextBox.Name = "ResumenrichTextBox";
             this.ResumenrichTextBox.Size = new System.Drawing.Size(335, 121);
             this.ResumenrichTextBox.TabIndex = 4;
@@ -135,7 +140,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(705, 394);
+            this.label8.Location = new System.Drawing.Point(690, 295);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 16);
             this.label8.TabIndex = 23;
@@ -145,7 +150,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(470, 394);
+            this.label9.Location = new System.Drawing.Point(455, 295);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 16);
             this.label9.TabIndex = 22;
@@ -155,7 +160,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(582, 394);
+            this.label10.Location = new System.Drawing.Point(567, 295);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 21;
@@ -164,7 +169,7 @@
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(117, 77);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(127, 21);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(221, 20);
             this.FechadateTimePicker.TabIndex = 1;
@@ -173,7 +178,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 131);
+            this.label3.Location = new System.Drawing.Point(17, 115);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 28;
@@ -185,25 +190,16 @@
             this.LoteIdcomboBox.FormattingEnabled = true;
             this.LoteIdcomboBox.Items.AddRange(new object[] {
             ""});
-            this.LoteIdcomboBox.Location = new System.Drawing.Point(117, 131);
+            this.LoteIdcomboBox.Location = new System.Drawing.Point(127, 115);
             this.LoteIdcomboBox.Name = "LoteIdcomboBox";
             this.LoteIdcomboBox.Size = new System.Drawing.Size(221, 21);
             this.LoteIdcomboBox.TabIndex = 2;
-            // 
-            // LoteslistBox
-            // 
-            this.LoteslistBox.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.LoteslistBox.FormattingEnabled = true;
-            this.LoteslistBox.Location = new System.Drawing.Point(110, 171);
-            this.LoteslistBox.Name = "LoteslistBox";
-            this.LoteslistBox.Size = new System.Drawing.Size(228, 121);
-            this.LoteslistBox.TabIndex = 31;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(344, 152);
+            this.label11.Location = new System.Drawing.Point(354, 136);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 16);
             this.label11.TabIndex = 33;
@@ -212,22 +208,12 @@
             // AgregarLotebutton
             // 
             this.AgregarLotebutton.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.AgregarLotebutton.Location = new System.Drawing.Point(340, 129);
+            this.AgregarLotebutton.Location = new System.Drawing.Point(350, 113);
             this.AgregarLotebutton.Name = "AgregarLotebutton";
             this.AgregarLotebutton.Size = new System.Drawing.Size(57, 24);
             this.AgregarLotebutton.TabIndex = 2;
             this.AgregarLotebutton.UseVisualStyleBackColor = true;
             this.AgregarLotebutton.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CocoaExport.Properties.Resources.IconoCocoa1;
-            this.pictureBox1.Location = new System.Drawing.Point(127, 311);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 154);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // Buscarbutton
             // 
@@ -242,7 +228,7 @@
             // button2
             // 
             this.button2.Image = global::CocoaExport.Properties.Resources.trash_circle_red_32;
-            this.button2.Location = new System.Drawing.Point(689, 357);
+            this.button2.Location = new System.Drawing.Point(674, 258);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 34);
             this.button2.TabIndex = 20;
@@ -252,7 +238,7 @@
             // button1
             // 
             this.button1.Image = global::CocoaExport.Properties.Resources.plus_32;
-            this.button1.Location = new System.Drawing.Point(449, 357);
+            this.button1.Location = new System.Drawing.Point(434, 258);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 34);
             this.button1.TabIndex = 6;
@@ -262,26 +248,89 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Image = global::CocoaExport.Properties.Resources._1441773161_save;
-            this.Guardarbutton.Location = new System.Drawing.Point(567, 357);
+            this.Guardarbutton.Location = new System.Drawing.Point(552, 258);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(95, 34);
             this.Guardarbutton.TabIndex = 5;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
+            // LotesdataGridView
+            // 
+            this.LotesdataGridView.AllowUserToAddRows = false;
+            this.LotesdataGridView.AllowUserToDeleteRows = false;
+            this.LotesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.LotesdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CodigoLote,
+            this.Cantidad});
+            this.LotesdataGridView.Location = new System.Drawing.Point(127, 155);
+            this.LotesdataGridView.Name = "LotesdataGridView";
+            this.LotesdataGridView.ReadOnly = true;
+            this.LotesdataGridView.Size = new System.Drawing.Size(228, 121);
+            this.LotesdataGridView.TabIndex = 34;
+            // 
+            // CodigoLote
+            // 
+            this.CodigoLote.HeaderText = "Codigo Lote";
+            this.CodigoLote.Name = "CodigoLote";
+            this.CodigoLote.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // TotaltextBox
+            // 
+            this.TotaltextBox.Location = new System.Drawing.Point(127, 282);
+            this.TotaltextBox.Name = "TotaltextBox";
+            this.TotaltextBox.Size = new System.Drawing.Size(228, 20);
+            this.TotaltextBox.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 283);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Total";
+            // 
+            // PreciotextBox
+            // 
+            this.PreciotextBox.Location = new System.Drawing.Point(127, 69);
+            this.PreciotextBox.Name = "PreciotextBox";
+            this.PreciotextBox.Size = new System.Drawing.Size(228, 20);
+            this.PreciotextBox.TabIndex = 37;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 16);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Precio Quintal";
+            // 
             // RegistroExportacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(826, 451);
+            this.ClientSize = new System.Drawing.Size(826, 330);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.PreciotextBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TotaltextBox);
+            this.Controls.Add(this.LotesdataGridView);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.AgregarLotebutton);
-            this.Controls.Add(this.LoteslistBox);
             this.Controls.Add(this.LoteIdcomboBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.FechadateTimePicker);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Buscarlabel);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label8);
@@ -301,7 +350,7 @@
             this.Name = "RegistroExportacion";
             this.Text = "Registro Exportacion";
             this.Load += new System.EventHandler(this.RegistroExportacion_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LotesdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,12 +372,17 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Guardarbutton;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox LoteIdcomboBox;
-        private System.Windows.Forms.ListBox LoteslistBox;
         private System.Windows.Forms.Button AgregarLotebutton;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView LotesdataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoLote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.TextBox TotaltextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox PreciotextBox;
+        private System.Windows.Forms.Label label6;
     }
 }

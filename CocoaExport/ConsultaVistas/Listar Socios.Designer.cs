@@ -50,6 +50,10 @@
             // 
             this.DatoscomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DatoscomboBox.FormattingEnabled = true;
+            this.DatoscomboBox.Items.AddRange(new object[] {
+            "Id",
+            "Nombre",
+            "Codigo"});
             this.DatoscomboBox.Location = new System.Drawing.Point(92, 30);
             this.DatoscomboBox.Name = "DatoscomboBox";
             this.DatoscomboBox.Size = new System.Drawing.Size(191, 21);
@@ -81,6 +85,7 @@
             this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Listar";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Listarbutton
             // 

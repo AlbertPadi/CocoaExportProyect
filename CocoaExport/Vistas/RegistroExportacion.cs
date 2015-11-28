@@ -22,9 +22,31 @@ namespace CocoaExport.Vistas
         int exportacionId;
         string addlotes;
         int idbuscado;
+        double precio;
+        double total;
+        double Monto;
         public RegistroExportacion()
         {
             InitializeComponent();
+        }
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //LotesdataGridView.Items.Add(LoteIdcomboBox.Text);
+            Lotes lotes = new Lotes();
+            DataTable dt = new DataTable();
+
+            lotes.Buscar((int)LoteIdcomboBox.SelectedValue);
+            this.LotesdataGridView.Rows.Add(LoteIdcomboBox.SelectedValue.ToString(), lotes.Total.ToString());
+
+            double.TryParse(PreciotextBox.Text, out precio);
+            total += lotes.Total * precio;
+
+            TotaltextBox.Text = total.ToString();
+
+            total = Monto;
+
         }
 
         private void RegistroExportacion_Load(object sender, EventArgs e)
@@ -47,17 +69,19 @@ namespace CocoaExport.Vistas
 
             if (ExportacionIdtextBox.Text.Length == 0)
             {
+
                 exportacion.Fecha = FechadateTimePicker.Text;
                 exportacion.DestinoId = (int)DestinosIdcomboBox.SelectedValue;
                 exportacion.Resumen = ResumenrichTextBox.Text;
-
+                double.TryParse(TotaltextBox.Text, out Monto);
+                exportacion.Monto = Monto;
                 
 
-                    for (int i = 0; i < LoteslistBox.Items.Count; i++)
+                    for (int i = 0; i < LotesdataGridView.Rows.Count; i++)
                     {
                         Lotes lotes = new Lotes();
                         lotes.LoteId = (int)LoteIdcomboBox.SelectedValue;
-                        exportacion.AgregarLotes(lotes.LoteId, LoteslistBox.Items[i].ToString());
+                        exportacion.AgregarLotes(lotes.LoteId, LotesdataGridView.Rows[i].ToString());
                     }
                     if (exportacion.Insertar())
                     {
@@ -89,10 +113,7 @@ namespace CocoaExport.Vistas
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            LoteslistBox.Items.Add(LoteIdcomboBox.Text);
-        }
+        
 
         private void LotescomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -107,7 +128,7 @@ namespace CocoaExport.Vistas
         private void button1_Click(object sender, EventArgs e)
         {
             ResumenrichTextBox.Clear();
-            LoteslistBox.ClearSelected();
+            
             ExportacionIdtextBox.Clear();
 
         }
@@ -124,7 +145,7 @@ namespace CocoaExport.Vistas
 
                 foreach (var item in exportacion.Lotes)
                 {
-                    LoteslistBox.Items.Add(item.CodigoLote);
+                LotesdataGridView.Rows.Add(item.CodigoLote);
                 }
 
             }

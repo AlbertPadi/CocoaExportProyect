@@ -16,6 +16,7 @@ namespace BLL
         public int LoteId { get; set; }
         public int CertificacionId { get; set; }
         public double CantidadToneladas { get; set; }
+        public double Monto { get; set; }
         public string Fecha { get; set; }
         public string Resumen { get; set; }
 
@@ -26,6 +27,7 @@ namespace BLL
             this.DestinoId = 0;
             this.CantidadToneladas = 0;
             this.CertificacionId = 0;
+            this.Monto = 0;
             this.Fecha = "";
             this.LoteId = 0;
             this.Resumen = "";
@@ -42,13 +44,13 @@ namespace BLL
             StringBuilder Comando = new StringBuilder();
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Insert into Exportaciones(DestinoId, Fecha, Resumen) values({0}, '{1}', '{2}')", this.DestinoId, this.Fecha, this.Resumen));
+                retorno = conexion.Ejecutar(String.Format("Insert into Exportaciones(DestinoId, Monto, Fecha, Resumen) values({0}, {1}, '{2}', '{3}')", this.DestinoId, this.Monto, this.Fecha, this.Resumen));
                 if (retorno) 
                 {
                         this.ExportacionId = (int)conexion.getDatos("Select Max(ExportacionId) as ExportacionId from Exportaciones").Rows[0]["ExportacionId"];
                     foreach (var lote in this.Lotes)
                     {
-                        Comando.AppendLine(String.Format("Insert Into LotesExportes(LoteId, CodigoLote, ExportacionId) Values({0},'{1}', {2})",lote.LoteId, lote.CodigoLote, this.ExportacionId));
+                        Comando.AppendLine(String.Format("Insert Into LotesExportes(LoteId, CodigoLote, ExportacionId) Values({0},'{1}', {2})", lote.LoteId, lote.CodigoLote, this.ExportacionId));
                     }
                     retorno = conexion.Ejecutar(Comando.ToString());
                 }
@@ -91,7 +93,7 @@ namespace BLL
                 LotesExp = conexion.getDatos(String.Format("select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = {0}", this.ExportacionId));
                 foreach (DataRow data in LotesExp.Rows)
                 {
-                    this.AgregarLotes((int)data["LoteId"], data["CodigoLote"].ToString());
+                    this.AgregarLotes((int)data["LoteId"],  data["CodigoLote"].ToString());
                 }
             }
             return dt.Rows.Count > 0;

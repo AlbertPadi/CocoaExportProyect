@@ -11,7 +11,7 @@ namespace BLL
     public class Recepcion : ClaseMaestra
     {
         Conexion conexion = new Conexion();
-
+        Lotes lotes = new Lotes();
         public int RecepcionId { get; set; }
         public int SocioId { get; set; }
         public string CodigoLote { get; set; }
@@ -23,7 +23,10 @@ namespace BLL
         public string Observacion { get; set; }
         public string RecibidoPor { get; set; }
 
-        public Recepcion()
+        public double CantidadAnterior { get; set; }
+        
+
+    public Recepcion()
         {
             this.RecepcionId = 0;
             this.SocioId = 0;
@@ -36,15 +39,19 @@ namespace BLL
             this.Observacion = "";
             this.RecibidoPor = "";
         }
+        
 
        
         public override bool Insertar()
                 {
                     bool retorno = false;
-                    try
+                    DataTable dt = new DataTable();
+            try
                     {
-                        retorno = conexion.Ejecutar(String.Format("insert into Recepciones(SocioId, LoteId, TipoCacaoId, Fecha, CantidadPesada, Monto,  Observacion, RecibidoPor) values({0}, {1}, {2}, '{3}', {4}, {5}, '{6}', '{7}')", this.SocioId, this.LoteId, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Monto, this.Observacion, this.RecibidoPor));
-                    }
+                       retorno = conexion.Ejecutar(String.Format("insert into Recepciones(SocioId, LoteId, TipoCacaoId, Fecha, CantidadPesada, Monto,  Observacion, RecibidoPor) values({0}, {1}, {2}, '{3}', {4}, {5}, '{6}', '{7}')", this.SocioId, this.LoteId, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Monto, this.Observacion, this.RecibidoPor));
+                       conexion.Ejecutar(String.Format("update Lotes set Total=Total + " + this.CantidadPesada + " where LoteId=" + this.LoteId));
+
+                     }
                     catch (Exception ex)
                     {
 
@@ -58,7 +65,18 @@ namespace BLL
             bool retorno = false;
             try
             {
-                retorno = conexion.Ejecutar(String.Format("Update Recepciones set SocioId={0}, TipoCacaoId={2}, Fecha = '{3}', CantidadPesada={4}, Observacion='{5}', RecibidoPor='{6}' where RecepcionId={7}", this.SocioId, this, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Observacion, this.RecibidoPor, this.RecepcionId));
+                retorno = conexion.Ejecutar(String.Format("Update Recepciones set SocioId={0}, TipoCacaoId={1}, Fecha = '{2}', CantidadPesada={3}, Observacion='{4}', RecibidoPor='{5}' where RecepcionId={6}", this.SocioId, this.TipoCacaoId, this.Fecha, this.CantidadPesada, this.Observacion, this.RecibidoPor, this.RecepcionId));
+
+                if (this.CantidadPesada > this.CantidadAnterior)
+                {
+                    double aux = (this.CantidadPesada - this.CantidadAnterior);
+                    conexion.Ejecutar(String.Format("update Lotes set Total=Total + " + aux + " where LoteId=" + this.LoteId));
+                }
+                else
+                {
+                    double aux = (this.CantidadAnterior - this.CantidadPesada);
+                    conexion.Ejecutar(String.Format("update Lotes set Total=Total + " + aux + " where LoteId=" + this.LoteId));
+                }
             }
             catch (Exception ex)
             {
@@ -74,6 +92,7 @@ namespace BLL
             try
             {
                 retorno = conexion.Ejecutar(String.Format("delete from Recepciones where RecepcionId = {0}", this.RecepcionId));
+                conexion.Ejecutar(String.Format("update set Total=Total - " + this.CantidadPesada + " where LoteId=" + this.LoteId));
             }
             catch (Exception ex)
             {
@@ -87,7 +106,7 @@ namespace BLL
         {
             DataTable dt;
 
-            dt = conexion.getDatos(String.Format("select *Recepciones Lotes where RecepcionId= {0}", IdBuscado));
+            dt = conexion.getDatos(String.Format("select * From Recepciones where RecepcionId= {0}", IdBuscado));
             if (dt.Rows.Count > 0)
             {
                 this.RecepcionId= (int)dt.Rows[0]["RecepcionId"];

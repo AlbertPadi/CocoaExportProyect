@@ -55,10 +55,14 @@ create table Lotes(
 			Total float, 
 			CertificacionId int References Certificaciones(CertificacionId),
 			Fecha varchar(20));
+			select *from Lotes;
+			select * from Recepciones
+
+		select l.CodigoLote, (l.Total	 +r.CantidadPesada ) from Lotes l inner join Recepciones r on r.LoteId = l.LoteId where l.LoteId = 1
+		
+		update Lotes set Total=Total + 800 where LoteId=2
 
 	insert into Lotes(CodigoLote, Total) values('025SGS', 500);
-	select*from Lotes
-
 create table Recepciones(
 			RecepcionId int primary key identity, 
 			SocioId int References Socios(SocioId), 
@@ -72,18 +76,17 @@ create table Recepciones(
 
 			select *from Recepciones
 			drop table Recepciones
-						
-						 
+
 
 	--detalle
 create table LotesExportes(
 			LoteId int References Lotes(LoteId), 
-			CodigoLote varchar(20), Total float,
+			CodigoLote varchar(20),
 			ExportacionId int References Exportaciones(ExportacionId));
 
 			select *from LotesExportes
 		    drop table LotesExportes
-			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 1
+			select e.CodigoLote from Exportaciones l inner join LotesExportes e on l.ExportacionId = e.ExportacionId where e.ExportacionId = 5
 
 
 
@@ -101,7 +104,7 @@ create table Exportaciones(
 			 ExportacionId int primary key identity, 
 			 DestinoId int References DestinosExportes(DestinoId),
 			 Monto float,
-			 Fecha varchar(20), 
+			 Fecha varchar(40), 
 			 Resumen varchar(300));
 
 			 select *from Exportaciones

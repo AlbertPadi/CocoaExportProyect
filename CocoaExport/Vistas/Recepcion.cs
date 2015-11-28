@@ -73,10 +73,11 @@ namespace CocoaExport.Vistas
             {
                 MessageBox.Show("no se han eliminado los datos!");
             }
-            
+            limpiar();
         }
 
-        private void Nuevobutton_Click(object sender, EventArgs e)
+
+        void limpiar()
         {
             RecepcionIdtextBox.Clear();
             CantPtextBox.Clear();
@@ -85,17 +86,24 @@ namespace CocoaExport.Vistas
             MontotextBox.Clear();
             PreciotextBox.Clear();
         }
-
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            limpiar();    
+        }
+        
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             IdBuscado = Convert.ToInt32(RecepcionIdtextBox.Text);
             if (Registro.Buscar(IdBuscado))
             {
+                Registro.CantidadAnterior = Registro.CantidadPesada;
                 Registro.RecepcionId = IdBuscado;
                 FechadateTimePicker.Text = Registro.Fecha;
+                SocioIdcomboBox.SelectedValue = Registro.SocioId;
                 CantPtextBox.Text = Registro.CantidadPesada.ToString();
                 ObservacionrichTextBox.Text = Registro.Observacion;
                 RecibidoPortextBox.Text = Registro.RecibidoPor;
+                MontotextBox.Text = Registro.Monto.ToString();
             }
             }
 
@@ -105,7 +113,7 @@ namespace CocoaExport.Vistas
             if (RecepcionIdtextBox.Text.Length == 0)
             {
                 double resultado;
-                double.TryParse(CantPtextBox.Text, out cantidad2);
+                double.TryParse(CantPtextBox.Text, out cantidad);
                 Registro.CantidadPesada = cantidad;
                 Registro.Observacion = ObservacionrichTextBox.Text;
                 Utilities.Utilitarios.Validacion(RecibidoPortextBox, error, "No puede quedar este campo en blanco");
@@ -130,11 +138,12 @@ namespace CocoaExport.Vistas
                 {
                     MessageBox.Show("No se han guardado los datos!");
                 }
-
+                limpiar();
             }
             else if(RecepcionIdtextBox.Text.Length > 0)
             {
                 int.TryParse(RecepcionIdtextBox.Text, out recepcion);
+                double.TryParse(CantPtextBox.Text, out cantidad);
                 Registro.RecepcionId = recepcion;
                 Registro.CantidadPesada = cantidad;
                 Registro.Observacion = ObservacionrichTextBox.Text;
