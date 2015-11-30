@@ -56,6 +56,9 @@
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteExportacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenumenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +71,7 @@
             this.archivoToolStripMenuItem,
             this.registroToolStripMenuItem,
             this.listarToolStripMenuItem1,
+            this.reportesToolStripMenuItem,
             this.acercaDeToolStripMenuItem});
             this.MenumenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenumenuStrip.Name = "MenumenuStrip";
@@ -270,7 +274,7 @@
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
@@ -280,6 +284,29 @@
             this.exportacionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exportacionesToolStripMenuItem.Text = "Exportaciones";
             this.exportacionesToolStripMenuItem.Click += new System.EventHandler(this.exportacionesToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteRecepcionToolStripMenuItem,
+            this.reporteExportacionToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // reporteRecepcionToolStripMenuItem
+            // 
+            this.reporteRecepcionToolStripMenuItem.Name = "reporteRecepcionToolStripMenuItem";
+            this.reporteRecepcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteRecepcionToolStripMenuItem.Text = "Reporte Recepcion";
+            this.reporteRecepcionToolStripMenuItem.Click += new System.EventHandler(this.reporteRecepcionToolStripMenuItem_Click_1);
+            // 
+            // reporteExportacionToolStripMenuItem
+            // 
+            this.reporteExportacionToolStripMenuItem.Name = "reporteExportacionToolStripMenuItem";
+            this.reporteExportacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteExportacionToolStripMenuItem.Text = "Reporte Exportacion";
+            this.reporteExportacionToolStripMenuItem.Click += new System.EventHandler(this.reporteExportacionToolStripMenuItem_Click_1);
             // 
             // Principal
             // 
@@ -334,6 +361,9 @@
         private System.Windows.Forms.ToolStripMenuItem recepcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem destinosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exportacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteRecepcionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteExportacionToolStripMenuItem;
     }
 }
 
