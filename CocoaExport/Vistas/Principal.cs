@@ -296,5 +296,11 @@ namespace CocoaExport
             rep.ExpcrystalReportViewer.ReportSource = rep1;
             rep.ShowDialog();
         }
+
+        private void exportacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarExportaciones li = new ListarExportaciones();
+            li.Show();
+        }
     }
 }

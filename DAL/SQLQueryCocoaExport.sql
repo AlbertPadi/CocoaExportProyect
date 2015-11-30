@@ -1,5 +1,4 @@
 create database CocoaExport
-
 use CocoaExport
 
 
@@ -110,3 +109,4 @@ create table Exportaciones(
 
 			 select *from Exportaciones
 			 drop table Exportaciones
+			 insert into Recepciones(SocioId, LoteId, TipoCacaoId, Fecha, CantidadPesada, Monto,  Observacion, RecibidoPor) values(1, 1, 2, '30/11/15', 23, 115000, 'uhdsufhusd', 'jdnfj')
