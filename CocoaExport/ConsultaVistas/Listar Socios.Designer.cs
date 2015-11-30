@@ -46,6 +46,7 @@
             this.ListadataGridView.Name = "ListadataGridView";
             this.ListadataGridView.Size = new System.Drawing.Size(770, 235);
             this.ListadataGridView.TabIndex = 1;
+            this.ListadataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListadataGridView_CellContentClick);
             // 
             // DatoscomboBox
             // 
@@ -59,6 +60,7 @@
             this.DatoscomboBox.Name = "DatoscomboBox";
             this.DatoscomboBox.Size = new System.Drawing.Size(191, 21);
             this.DatoscomboBox.TabIndex = 2;
+            this.DatoscomboBox.SelectedIndexChanged += new System.EventHandler(this.DatoscomboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -69,6 +71,7 @@
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Listar Por";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ListatextBox
             // 
