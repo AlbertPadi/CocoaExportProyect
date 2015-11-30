@@ -20,6 +20,9 @@ namespace CocoaExport.ConsultaVistas
 
         private void Listarbutton_Click(object sender, EventArgs e)
         {
+
+            Vistas.ReporteExportaciones re = new Vistas.ReporteExportaciones();
+            re.Show();
             DataTable dt = new DataTable();
             string Condicion = "1=1";
             if (DatoscomboBox.SelectedIndex == 0)

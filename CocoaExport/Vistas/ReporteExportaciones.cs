@@ -20,8 +20,8 @@ namespace CocoaExport.Vistas
         private void ReporteExpaciones_Load(object sender, EventArgs e)
         {
             ReporteExportaciones reportes = new ReporteExportaciones();
-            ExportacionReporte expReporte = new ExportacionReporte();
-            reportes.ExportacionesCrystalReportViewer.ReportSource = expReporte;
+           // ExportacionReporte expReporte = new ExportacionReporte();
+           ExportacionesCrystalReportViewer.ReportSource = reportes;
 
         }
     }
