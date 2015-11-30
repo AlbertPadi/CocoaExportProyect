@@ -75,7 +75,7 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(179, 20);
             this.NombretextBox.TabIndex = 0;
-            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
+            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress1);
             // 
             // ApellidotextBox
             // 
@@ -102,6 +102,7 @@
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(179, 20);
             this.DirecciontextBox.TabIndex = 2;
+            this.DirecciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DirecciontextBox_KeyPress);
             // 
             // label3
             // 
@@ -119,6 +120,7 @@
             this.NomUsuariotextBox.Name = "NomUsuariotextBox";
             this.NomUsuariotextBox.Size = new System.Drawing.Size(179, 20);
             this.NomUsuariotextBox.TabIndex = 5;
+            this.NomUsuariotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress1);
             // 
             // label4
             // 
@@ -316,6 +318,12 @@
             this.PerformLayout();
 
         }
+
+        private void NombretextBox_KeyPress1(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
 
 
         #endregion

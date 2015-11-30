@@ -74,6 +74,7 @@
             this.TotaltextBox.ReadOnly = true;
             this.TotaltextBox.Size = new System.Drawing.Size(119, 20);
             this.TotaltextBox.TabIndex = 0;
+            this.TotaltextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TotaltextBox_KeyPress);
             // 
             // label2
             // 
@@ -101,6 +102,7 @@
             this.CodigoLotetextBox.Name = "CodigoLotetextBox";
             this.CodigoLotetextBox.Size = new System.Drawing.Size(200, 20);
             this.CodigoLotetextBox.TabIndex = 1;
+            this.CodigoLotetextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodigoLotetextBox_KeyPress);
             // 
             // CertificaionIdcomboBox
             // 
@@ -254,6 +256,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

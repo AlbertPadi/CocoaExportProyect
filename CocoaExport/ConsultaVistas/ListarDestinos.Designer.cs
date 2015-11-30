@@ -53,6 +53,7 @@
             this.ListatextBox.Name = "ListatextBox";
             this.ListatextBox.Size = new System.Drawing.Size(218, 20);
             this.ListatextBox.TabIndex = 22;
+            this.ListatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ListatextBox_KeyPress);
             // 
             // label1
             // 
@@ -111,11 +112,13 @@
             this.Controls.Add(this.ListadataGridView);
             this.Name = "ListarDestinos";
             this.Text = "Destinos";
+            this.Load += new System.EventHandler(this.ListarDestinos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
 
         #endregion
 

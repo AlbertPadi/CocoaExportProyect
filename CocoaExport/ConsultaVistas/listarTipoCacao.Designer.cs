@@ -53,6 +53,7 @@
             this.ListatextBox.Name = "ListatextBox";
             this.ListatextBox.Size = new System.Drawing.Size(141, 20);
             this.ListatextBox.TabIndex = 10;
+            this.ListatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ListatextBox_KeyPress);
             // 
             // label1
             // 
@@ -96,7 +97,7 @@
             this.Listarbutton.UseVisualStyleBackColor = true;
             this.Listarbutton.Click += new System.EventHandler(this.Listarbutton_Click);
             // 
-            // listarTipoCacao
+            // ListarTipoCacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,13 +109,15 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DatoscomboBox);
             this.Controls.Add(this.ListadataGridView);
-            this.Name = "listarTipoCacao";
+            this.Name = "ListarTipoCacao";
             this.Text = "Tipos Cacao";
+            this.Load += new System.EventHandler(this.ListarTipoCacao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
 
         #endregion
 

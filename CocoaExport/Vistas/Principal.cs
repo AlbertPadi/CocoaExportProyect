@@ -190,8 +190,8 @@ namespace CocoaExport
 
         private void reporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReporteExportaciones reporte = new ReporteExportaciones();
-            reporte.Show();
+           // ReporteExportaciones reporte = new ReporteExportaciones();
+           // reporte.Show();
         }
 
         private void registroInspeccionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -277,6 +277,24 @@ namespace CocoaExport
         {
             Extras.Ayuda ayuda = new Extras.Ayuda();
             ayuda.Show();
+        }
+
+        private void reporteRecepcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteRecepcion rep = new ReporteRecepcion();
+            RecepcionCrystalReport rep1 = new RecepcionCrystalReport();
+            rep.RecepcioncrystalReportViewer.ReportSource = rep1;
+            rep.ShowDialog();
+            
+        }
+
+        private void reporteExportacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            RerpoteExportaciones rep1 = new RerpoteExportaciones();
+            ExportacionesReporte rep = new ExportacionesReporte();
+            rep.ExpcrystalReportViewer.ReportSource = rep1;
+            rep.ShowDialog();
         }
     }
 }

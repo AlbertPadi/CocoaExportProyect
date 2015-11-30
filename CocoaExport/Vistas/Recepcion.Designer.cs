@@ -113,6 +113,7 @@
             this.CantPtextBox.Name = "CantPtextBox";
             this.CantPtextBox.Size = new System.Drawing.Size(170, 20);
             this.CantPtextBox.TabIndex = 5;
+            this.CantPtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CantPtextBox_KeyPress);
             // 
             // TipoCacaoIdlabel
             // 
@@ -329,6 +330,7 @@
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(119, 20);
             this.PreciotextBox.TabIndex = 6;
+            this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(PreciotextBox_KeyPress);
             // 
             // Recepcion
             // 
@@ -372,6 +374,7 @@
             this.PerformLayout();
 
         }
+
 
 
 

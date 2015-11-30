@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CocoaExport.Vistas
 {
-    public partial class ExportacionReporte : Form
+    public partial class ReporteRecepcion : Form
     {
-        public ExportacionReporte()
+        public ReporteRecepcion()
         {
             InitializeComponent();
-        }
-
-        private void ExportacionReporte_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -53,6 +53,7 @@
             this.ListatextBox.Name = "ListatextBox";
             this.ListatextBox.Size = new System.Drawing.Size(131, 20);
             this.ListatextBox.TabIndex = 16;
+            this.ListatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ListatextBox_KeyPress);
             // 
             // label1
             // 
@@ -116,6 +117,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

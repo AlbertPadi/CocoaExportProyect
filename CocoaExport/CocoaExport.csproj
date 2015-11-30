@@ -102,6 +102,12 @@
     <Compile Include="Extras\Ayuda.Designer.cs">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecepcionCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecepcionCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="RerpoteExportaciones.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,11 +133,11 @@
     <Compile Include="ConsultaVistas\Listar Socios.Designer.cs">
       <DependentUpon>Listar Socios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ExportacionReporte.cs">
+    <Compile Include="Vistas\ExportacionesReporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\ExportacionReporte.Designer.cs">
-      <DependentUpon>ExportacionReporte.cs</DependentUpon>
+    <Compile Include="Vistas\ExportacionesReporte.Designer.cs">
+      <DependentUpon>ExportacionesReporte.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Login.cs">
       <SubType>Form</SubType>
@@ -183,11 +189,11 @@
     <Compile Include="Vistas\RegistroUsuarios.Designer.cs">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\ReporteExportaciones.cs">
+    <Compile Include="Vistas\ReporteRecepcion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\ReporteExportaciones.Designer.cs">
-      <DependentUpon>ReporteExportaciones.cs</DependentUpon>
+    <Compile Include="Vistas\ReporteRecepcion.Designer.cs">
+      <DependentUpon>ReporteRecepcion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\TipoCacaoRegistro.cs">
       <SubType>Form</SubType>
@@ -219,6 +225,10 @@
     <EmbeddedResource Include="Extras\Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecepcionCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RecepcionCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RerpoteExportaciones.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RerpoteExportaciones.cs</LastGenOutput>
@@ -232,8 +242,8 @@
     <EmbeddedResource Include="ConsultaVistas\Listar Socios.resx">
       <DependentUpon>Listar Socios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\ExportacionReporte.resx">
-      <DependentUpon>ExportacionReporte.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\ExportacionesReporte.resx">
+      <DependentUpon>ExportacionesReporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -269,8 +279,8 @@
     <EmbeddedResource Include="Vistas\RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\ReporteExportaciones.resx">
-      <DependentUpon>ReporteExportaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\ReporteRecepcion.resx">
+      <DependentUpon>ReporteRecepcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\TipoCacaoRegistro.resx">
       <DependentUpon>TipoCacaoRegistro.cs</DependentUpon>

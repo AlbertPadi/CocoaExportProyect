@@ -305,6 +305,7 @@
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(228, 20);
             this.PreciotextBox.TabIndex = 37;
+            this.PreciotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PreciotextBox_KeyPress);
             // 
             // label6
             // 
@@ -356,6 +357,7 @@
             this.PerformLayout();
 
         }
+
 
 
         #endregion

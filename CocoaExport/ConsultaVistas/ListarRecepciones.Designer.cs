@@ -53,6 +53,7 @@
             this.ListatextBox.Name = "ListatextBox";
             this.ListatextBox.Size = new System.Drawing.Size(291, 20);
             this.ListatextBox.TabIndex = 16;
+            this.ListatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ListatextBox_KeyPress);
             // 
             // label1
             // 
@@ -102,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(778, 293);
+            this.ClientSize = new System.Drawing.Size(778, 315);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Listarbutton);
             this.Controls.Add(this.ListatextBox);
@@ -111,11 +112,13 @@
             this.Controls.Add(this.ListadataGridView);
             this.Name = "ListarRecepciones";
             this.Text = "Recepciones";
+            this.Load += new System.EventHandler(this.ListarRecepciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
 
         #endregion
 

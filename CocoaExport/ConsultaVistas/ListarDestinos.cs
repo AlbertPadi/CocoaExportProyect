@@ -21,8 +21,6 @@ namespace CocoaExport.ConsultaVistas
         private void Listarbutton_Click(object sender, EventArgs e)
         {
 
-            Vistas.ReporteExportaciones re = new Vistas.ReporteExportaciones();
-            re.Show();
             DataTable dt = new DataTable();
             string Condicion = "1=1";
             if (DatoscomboBox.SelectedIndex == 0)
@@ -69,6 +67,19 @@ namespace CocoaExport.ConsultaVistas
                 dt = destinos.Listar("DestinoId, Pais, CodigoDestino, NombreDestino, Direccion, CodigoPostal", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
+        }
+
+        private void ListarDestinos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListatextBox_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
         }
     }
 }

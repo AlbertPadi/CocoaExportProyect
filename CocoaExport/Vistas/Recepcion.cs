@@ -61,6 +61,50 @@ namespace CocoaExport.Vistas
             }
         }
 
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(RecepcionIdtextBox, "Este campo solo acepta numeros");
+            }
+        }
+
+        private void CantPtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(RecepcionIdtextBox, "Este campo solo acepta numeros");
+            }
+        }
+
         private void Recepcion_Load(object sender, EventArgs e)
         {
             Socios socio = new Socios();

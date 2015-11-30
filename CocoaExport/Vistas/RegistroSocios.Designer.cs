@@ -107,6 +107,7 @@
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(193, 20);
             this.DirecciontextBox.TabIndex = 2;
+            this.DirecciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DirecciontextBox_KeyPress);
             // 
             // label5
             // 
@@ -124,6 +125,7 @@
             this.TerrenotextBox.Name = "TerrenotextBox";
             this.TerrenotextBox.Size = new System.Drawing.Size(193, 20);
             this.TerrenotextBox.TabIndex = 5;
+            this.TerrenotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TerrenotextBox_KeyPress);
             // 
             // label7
             // 
@@ -141,6 +143,7 @@
             this.CedulatextBox.Name = "CedulatextBox";
             this.CedulatextBox.Size = new System.Drawing.Size(193, 20);
             this.CedulatextBox.TabIndex = 3;
+            this.CedulatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CedulatextBox_KeyPress);
             // 
             // label6
             // 

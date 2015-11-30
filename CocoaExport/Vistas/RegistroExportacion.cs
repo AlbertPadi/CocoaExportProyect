@@ -62,6 +62,27 @@ namespace CocoaExport.Vistas
             DestinosIdcomboBox.ValueMember = "DestinoId";
         }
 
+        private void PreciotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(ExportacionIdtextBox, "Este campo solo acepta numeros");
+            }
+        }
+
         private void ExportacionIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsDigit(e.KeyChar))

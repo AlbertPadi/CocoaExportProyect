@@ -53,6 +53,7 @@
             this.ListatextBox.Name = "ListatextBox";
             this.ListatextBox.Size = new System.Drawing.Size(167, 20);
             this.ListatextBox.TabIndex = 10;
+            this.ListatextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ListatextBox_KeyPress);
             // 
             // label1
             // 
@@ -101,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(641, 290);
+            this.ClientSize = new System.Drawing.Size(641, 300);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Listarbutton);
             this.Controls.Add(this.ListatextBox);
@@ -116,6 +117,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

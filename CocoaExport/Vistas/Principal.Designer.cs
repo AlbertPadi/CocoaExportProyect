@@ -52,9 +52,12 @@
             this.tipoCacaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inspeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recepcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.destinosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.destinosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteRecepcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteExportacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenumenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +70,7 @@
             this.archivoToolStripMenuItem,
             this.registroToolStripMenuItem,
             this.listarToolStripMenuItem1,
+            this.reporteToolStripMenuItem,
             this.acercaDeToolStripMenuItem});
             this.MenumenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenumenuStrip.Name = "MenumenuStrip";
@@ -204,51 +208,58 @@
             // sociosToolStripMenuItem1
             // 
             this.sociosToolStripMenuItem1.Name = "sociosToolStripMenuItem1";
-            this.sociosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.sociosToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.sociosToolStripMenuItem1.Text = "Socios";
             this.sociosToolStripMenuItem1.Click += new System.EventHandler(this.sociosToolStripMenuItem1_Click);
             // 
             // usuariosToolStripMenuItem1
             // 
             this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
-            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(142, 22);
             this.usuariosToolStripMenuItem1.Text = "Usuarios";
             this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
             // 
             // certificacionToolStripMenuItem
             // 
             this.certificacionToolStripMenuItem.Name = "certificacionToolStripMenuItem";
-            this.certificacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.certificacionToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.certificacionToolStripMenuItem.Text = "Certificacion";
             this.certificacionToolStripMenuItem.Click += new System.EventHandler(this.certificacionToolStripMenuItem_Click);
             // 
             // lotesToolStripMenuItem
             // 
             this.lotesToolStripMenuItem.Name = "lotesToolStripMenuItem";
-            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lotesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.lotesToolStripMenuItem.Text = "Lotes";
             this.lotesToolStripMenuItem.Click += new System.EventHandler(this.lotesToolStripMenuItem_Click);
             // 
             // tipoCacaoToolStripMenuItem
             // 
             this.tipoCacaoToolStripMenuItem.Name = "tipoCacaoToolStripMenuItem";
-            this.tipoCacaoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tipoCacaoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.tipoCacaoToolStripMenuItem.Text = "Tipo Cacao";
             this.tipoCacaoToolStripMenuItem.Click += new System.EventHandler(this.tipoCacaoToolStripMenuItem_Click);
             // 
             // inspeccionesToolStripMenuItem
             // 
             this.inspeccionesToolStripMenuItem.Name = "inspeccionesToolStripMenuItem";
-            this.inspeccionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inspeccionesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.inspeccionesToolStripMenuItem.Text = "Inspecciones";
             this.inspeccionesToolStripMenuItem.Click += new System.EventHandler(this.inspeccionesToolStripMenuItem_Click_1);
             // 
             // recepcionesToolStripMenuItem
             // 
             this.recepcionesToolStripMenuItem.Name = "recepcionesToolStripMenuItem";
-            this.recepcionesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.recepcionesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.recepcionesToolStripMenuItem.Text = "Recepciones";
             this.recepcionesToolStripMenuItem.Click += new System.EventHandler(this.recepcionesToolStripMenuItem_Click);
+            // 
+            // destinosToolStripMenuItem
+            // 
+            this.destinosToolStripMenuItem.Name = "destinosToolStripMenuItem";
+            this.destinosToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.destinosToolStripMenuItem.Text = "Destinos";
+            this.destinosToolStripMenuItem.Click += new System.EventHandler(this.destinosToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -265,12 +276,28 @@
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             this.ayudaToolStripMenuItem.Click += new System.EventHandler(this.ayudaToolStripMenuItem_Click);
             // 
-            // destinosToolStripMenuItem
+            // reporteToolStripMenuItem
             // 
-            this.destinosToolStripMenuItem.Name = "destinosToolStripMenuItem";
-            this.destinosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.destinosToolStripMenuItem.Text = "Destinos";
-            this.destinosToolStripMenuItem.Click += new System.EventHandler(this.destinosToolStripMenuItem_Click);
+            this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reporteRecepcionToolStripMenuItem,
+            this.reporteExportacionToolStripMenuItem});
+            this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
+            this.reporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.reporteToolStripMenuItem.Text = "Reporte";
+            // 
+            // reporteRecepcionToolStripMenuItem
+            // 
+            this.reporteRecepcionToolStripMenuItem.Name = "reporteRecepcionToolStripMenuItem";
+            this.reporteRecepcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteRecepcionToolStripMenuItem.Text = "Reporte Recepcion";
+            this.reporteRecepcionToolStripMenuItem.Click += new System.EventHandler(this.reporteRecepcionToolStripMenuItem_Click);
+            // 
+            // reporteExportacionToolStripMenuItem
+            // 
+            this.reporteExportacionToolStripMenuItem.Name = "reporteExportacionToolStripMenuItem";
+            this.reporteExportacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteExportacionToolStripMenuItem.Text = "Reporte Exportacion";
+            this.reporteExportacionToolStripMenuItem.Click += new System.EventHandler(this.reporteExportacionToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -324,6 +351,9 @@
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recepcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem destinosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteRecepcionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteExportacionToolStripMenuItem;
     }
 }
 

@@ -76,6 +76,7 @@
             this.CodigoDesttextBox.Name = "CodigoDesttextBox";
             this.CodigoDesttextBox.Size = new System.Drawing.Size(225, 20);
             this.CodigoDesttextBox.TabIndex = 3;
+            this.CodigoDesttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CodigoDesttextBox_KeyPress);
             // 
             // label2
             // 
@@ -111,6 +112,7 @@
             this.DireccionDesttextBox.Name = "DireccionDesttextBox";
             this.DireccionDesttextBox.Size = new System.Drawing.Size(225, 20);
             this.DireccionDesttextBox.TabIndex = 7;
+            this.DireccionDesttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DireccionDesttextBox_KeyPress);
             // 
             // label4
             // 
