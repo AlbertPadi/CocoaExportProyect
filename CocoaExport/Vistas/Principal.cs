@@ -278,5 +278,11 @@ namespace CocoaExport
             Extras.Ayuda ayuda = new Extras.Ayuda();
             ayuda.Show();
         }
+
+        private void exportacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarExportaciones exportacion = new ListarExportaciones();
+            exportacion.Show();
+        }
     }
 }

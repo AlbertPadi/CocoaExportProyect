@@ -66,6 +66,12 @@
     <Compile Include="ConsultaVistas\ListarDestinos.Designer.cs">
       <DependentUpon>ListarDestinos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaVistas\ListarExportaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaVistas\ListarExportaciones.Designer.cs">
+      <DependentUpon>ListarExportaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaVistas\ListarInspecciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaVistas\ListarDestinos.resx">
       <DependentUpon>ListarDestinos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaVistas\ListarExportaciones.resx">
+      <DependentUpon>ListarExportaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaVistas\ListarInspecciones.resx">
       <DependentUpon>ListarInspecciones.cs</DependentUpon>

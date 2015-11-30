@@ -91,5 +91,25 @@ namespace CocoaExport.Vistas
         {
 
         }
+
+        private void ListatextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DatoscomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListadataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

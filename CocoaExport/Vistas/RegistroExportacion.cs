@@ -150,8 +150,10 @@ namespace CocoaExport.Vistas
         private void button1_Click(object sender, EventArgs e)
         {
             ResumenrichTextBox.Clear();
-            
             ExportacionIdtextBox.Clear();
+            LotesdataGridView.Rows.Clear();
+            PreciotextBox.Clear();
+            TotaltextBox.Clear();
 
         }
 
