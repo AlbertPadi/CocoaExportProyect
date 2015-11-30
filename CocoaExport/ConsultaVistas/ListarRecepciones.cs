@@ -8,21 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
-namespace CocoaExport.Vistas
+namespace CocoaExport.ConsultaVistas
 {
-    public partial class Listar : Form
+    public partial class ListarRecepciones : Form
     {
-        Socios socios = new Socios();
-        DataTable dt = new DataTable();
-        public Listar()
+        Recepcion recepcion = new Recepcion();
+        public ListarRecepciones()
         {
             InitializeComponent();
         }
 
         private void Listarbutton_Click(object sender, EventArgs e)
         {
-            
-
+            DataTable dt = new DataTable();
             string Condicion = "1=1";
             if (DatoscomboBox.SelectedIndex == 0)
             {
@@ -32,10 +30,10 @@ namespace CocoaExport.Vistas
                 }
                 else
                 {
-                    Condicion = "SocioId = " + ListatextBox.Text;
+                    Condicion = "RecepcionId = " + ListatextBox.Text;
                 }
 
-                dt = socios.Listar("SocioId, Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno", Condicion, "");
+                dt = recepcion.Listar("RecepcionId, SocioId, LoteId, TipoCacaoId, CantidadPesada, Monto, Fecha, Observacion, RecibidoPor", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
 
@@ -47,11 +45,10 @@ namespace CocoaExport.Vistas
                 }
                 else
                 {
-                    
-                    Condicion = String.Format("Nombre  like '{0}%' ", ListatextBox.Text);
+                    Condicion = "CantidadPesada = " + ListatextBox.Text;
                 }
 
-                dt = socios.Listar("SocioId, Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno", Condicion, "");
+                dt = recepcion.Listar("RecepcionId, SocioId, LoteId, TipoCacaoId, CantidadPesada, Monto, Fecha, Observacion, RecibidoPor", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
 
@@ -63,33 +60,12 @@ namespace CocoaExport.Vistas
                 }
                 else
                 {
-
-                    Condicion = String.Format("Apellido  like '{0}%' ", ListatextBox.Text);
+                    Condicion = "Monto = " + ListatextBox.Text;
                 }
 
-                dt = socios.Listar("SocioId, Nombre, Apellido, Direccion, Cedula, CertificacionId, CantidadTerreno", Condicion, "");
+                dt = recepcion.Listar("RecepcionId, SocioId, LoteId, TipoCacaoId, CantidadPesada, Monto, Fecha, Observacion, RecibidoPor", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
-        }
-
-        private void sociosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Listar_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

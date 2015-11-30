@@ -39,11 +39,12 @@
             // 
             // ListadataGridView
             // 
+            this.ListadataGridView.AllowUserToAddRows = false;
             this.ListadataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ListadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListadataGridView.Location = new System.Drawing.Point(12, 77);
             this.ListadataGridView.Name = "ListadataGridView";
-            this.ListadataGridView.Size = new System.Drawing.Size(817, 235);
+            this.ListadataGridView.Size = new System.Drawing.Size(770, 235);
             this.ListadataGridView.TabIndex = 1;
             // 
             // DatoscomboBox
@@ -53,7 +54,7 @@
             this.DatoscomboBox.Items.AddRange(new object[] {
             "Id",
             "Nombre",
-            "Codigo"});
+            "Apellido"});
             this.DatoscomboBox.Location = new System.Drawing.Point(92, 30);
             this.DatoscomboBox.Name = "DatoscomboBox";
             this.DatoscomboBox.Size = new System.Drawing.Size(191, 21);
@@ -102,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(841, 310);
+            this.ClientSize = new System.Drawing.Size(803, 310);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Listarbutton);
             this.Controls.Add(this.ListatextBox);

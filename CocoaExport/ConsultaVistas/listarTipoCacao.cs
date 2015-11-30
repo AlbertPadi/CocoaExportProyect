@@ -10,10 +10,10 @@ using System.Windows.Forms;
 using BLL;
 namespace CocoaExport.ConsultaVistas
 {
-    public partial class ListarLotes : Form
+    public partial class ListarTipoCacao : Form
     {
-        Lotes lotes = new Lotes();
-        public ListarLotes()
+        TipoCacao tipo = new TipoCacao();
+        public ListarTipoCacao()
         {
             InitializeComponent();
         }
@@ -21,7 +21,6 @@ namespace CocoaExport.ConsultaVistas
         private void Listarbutton_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            
             string Condicion = "1=1";
             if (DatoscomboBox.SelectedIndex == 0)
             {
@@ -31,10 +30,10 @@ namespace CocoaExport.ConsultaVistas
                 }
                 else
                 {
-                    Condicion = "LoteId = " + ListatextBox.Text;
+                    Condicion = "TipoCacaoId = " + ListatextBox.Text;
                 }
 
-                dt = lotes.Listar("LoteId, CodigoLote, Total, CertificacionId, Fecha", Condicion, "");
+                dt = tipo.Listar("TipoCacaoId, Descripcion", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
 
@@ -46,17 +45,12 @@ namespace CocoaExport.ConsultaVistas
                 }
                 else
                 {
-                    Condicion = String.Format("CodigoLote  like '{0}%' ", ListatextBox.Text);
+                    Condicion = String.Format("Descripcion  like '{0}%' ", ListatextBox.Text);
                 }
 
-                dt = lotes.Listar("LoteId, CodigoLote, Total, CertificacionId, Fecha", Condicion, "");
+                dt = tipo.Listar("TipoCacaoId, Descripcion", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
-        }
-
-        private void ListarLotes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 using BLL;
 namespace CocoaExport.ConsultaVistas
 {
-    public partial class ListarLotes : Form
+    public partial class ListarInspecciones : Form
     {
-        Lotes lotes = new Lotes();
-        public ListarLotes()
+        Inspeciones inspeccion = new Inspeciones();
+        public ListarInspecciones()
         {
             InitializeComponent();
         }
@@ -21,7 +21,6 @@ namespace CocoaExport.ConsultaVistas
         private void Listarbutton_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            
             string Condicion = "1=1";
             if (DatoscomboBox.SelectedIndex == 0)
             {
@@ -31,10 +30,10 @@ namespace CocoaExport.ConsultaVistas
                 }
                 else
                 {
-                    Condicion = "LoteId = " + ListatextBox.Text;
+                    Condicion = "InspeccionId = " + ListatextBox.Text;
                 }
 
-                dt = lotes.Listar("LoteId, CodigoLote, Total, CertificacionId, Fecha", Condicion, "");
+                dt = inspeccion.Listar("InspeccionId, SocioId, Fecha, Fertilizantes, MaterialSiembra, CrianzaAnimales, ControlPlagas, ResumenInspeccion", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
 
@@ -46,17 +45,14 @@ namespace CocoaExport.ConsultaVistas
                 }
                 else
                 {
-                    Condicion = String.Format("CodigoLote  like '{0}%' ", ListatextBox.Text);
+                    int id;
+                    int.TryParse(ListatextBox.Text, out id);
+                    Condicion = " SocioId = " + id.ToString();
                 }
 
-                dt = lotes.Listar("LoteId, CodigoLote, Total, CertificacionId, Fecha", Condicion, "");
+                dt = inspeccion.Listar("InspeccionId, SocioId, Fecha, Fertilizantes, MaterialSiembra, CrianzaAnimales, ControlPlagas, ResumenInspeccion", Condicion, "");
                 ListadataGridView.DataSource = dt;
             }
-        }
-
-        private void ListarLotes_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

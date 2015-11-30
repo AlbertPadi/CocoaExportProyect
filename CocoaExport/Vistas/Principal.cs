@@ -241,5 +241,42 @@ namespace CocoaExport
             ListarCertificaciones listarcer = new ListarCertificaciones();
             listarcer.Show();
         }
+
+        private void lotesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarLotes lotes = new ListarLotes();
+            lotes.Show();
+        }
+
+        private void tipoCacaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarTipoCacao tipo = new ListarTipoCacao();
+            tipo.Show();
+        }
+
+        private void inspeccionesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ListarInspecciones inspecciones = new ListarInspecciones();
+            inspecciones.Show();
+
+        }
+
+        private void recepcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarRecepciones recepcion = new ListarRecepciones();
+            recepcion.Show();
+        }
+
+        private void destinosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarDestinos destinos = new ListarDestinos();
+            destinos.Show();
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Extras.Ayuda ayuda = new Extras.Ayuda();
+            ayuda.Show();
+        }
     }
 }

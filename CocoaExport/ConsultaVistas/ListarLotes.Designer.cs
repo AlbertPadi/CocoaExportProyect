@@ -68,6 +68,9 @@
             // 
             this.DatoscomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DatoscomboBox.FormattingEnabled = true;
+            this.DatoscomboBox.Items.AddRange(new object[] {
+            "Id",
+            "Codigo Lote"});
             this.DatoscomboBox.Location = new System.Drawing.Point(105, 9);
             this.DatoscomboBox.Name = "DatoscomboBox";
             this.DatoscomboBox.Size = new System.Drawing.Size(191, 21);
@@ -75,6 +78,7 @@
             // 
             // ListadataGridView
             // 
+            this.ListadataGridView.AllowUserToAddRows = false;
             this.ListadataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ListadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListadataGridView.Location = new System.Drawing.Point(47, 57);
