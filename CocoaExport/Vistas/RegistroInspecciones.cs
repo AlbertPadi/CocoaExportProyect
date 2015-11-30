@@ -17,6 +17,7 @@ namespace CocoaExport.Vistas
         int Num;
         int Num1;
         int inspeccionId;
+        ErrorProvider error = new ErrorProvider();
         Inspeciones Registro = new Inspeciones();
         public RegistroInspecciones()
         {
@@ -30,6 +31,27 @@ namespace CocoaExport.Vistas
             IdSociocomboBox.DataSource = socio.Listar("SocioId, Nombre", "1=1", "");
             IdSociocomboBox.DisplayMember = "Nombre";
             IdSociocomboBox.ValueMember = "SocioId";
+        }
+
+        private void IdInsptextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(IdInsptextBox, "Este campo solo acepta numeros");
+            }
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -74,6 +96,48 @@ namespace CocoaExport.Vistas
                 {
                     CrianzaNoradioButton.Checked = false;
                 }
+            }
+        }
+
+        private void MaterialSiembratextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(MaterialSiembratextBox, "Este campo no acepta numeros ni caracteres especiales");
+            }
+        }
+
+        private void ControlPlagastextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(ControlPlagastextBox, "Este campo no acepta numeros ni caracteres especiales");
             }
         }
 

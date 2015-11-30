@@ -15,7 +15,9 @@ namespace CocoaExport.Vistas
         double CantTerreno;
         int IdBuscado;
         int socioId;
+        ErrorProvider error = new ErrorProvider();
         BLL.Socios registro = new BLL.Socios();
+
         public RegistroSocios()
         {
             
@@ -129,8 +131,6 @@ namespace CocoaExport.Vistas
             SocioIdtextBox.Clear();
             TerrenotextBox.Clear();
 
-            
-
            
 
         }
@@ -146,6 +146,49 @@ namespace CocoaExport.Vistas
             Socios socios = new Socios(); 
             
 
+        }
+
+        private void ApellidotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(ApellidotextBox, "Este Campo no acepta numeros ni caracteres especiales");
+            }
+        }
+
+        private void SocioIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(SocioIdtextBox, "Este campo solo acepta numeros");
+            }
         }
 
         private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -167,7 +210,7 @@ namespace CocoaExport.Vistas
                 else
                 {
                     e.Handled = true;
-                MessageBox.Show("Este Campo no acepta numeros ni caracteres especiales.");
+                error.SetError(NombretextBox, "Este Campo no acepta numeros ni caracteres especiales");
                
                 }
             }

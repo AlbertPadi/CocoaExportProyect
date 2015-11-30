@@ -27,9 +27,9 @@ namespace CocoaExport.Vistas
 
         private void Entrarbutton_Click(object sender, EventArgs e)
         {
-            Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haver campos en blanco");
+            Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haber campos en blanco");
             registro.NombreUsuario = NombretextBox.Text;
-            Utilities.Utilitarios.Validacion(ContrasenatextBox, error, "No puede haver campos en blanco");
+            Utilities.Utilitarios.Validacion(ContrasenatextBox, error, "No puede haber campos en blanco");
             registro.Contrasena = ContrasenatextBox.Text;
 
             if (registro.Login())
@@ -83,9 +83,9 @@ namespace CocoaExport.Vistas
 
         private void imagenpictureBox_Click(object sender, EventArgs e)
         {
-            Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haver campos en blanco");
+            Utilities.Utilitarios.Validacion(NombretextBox, error, "No puede haber campos en blanco");
             registro.NombreUsuario = NombretextBox.Text;
-            Utilities.Utilitarios.Validacion(ContrasenatextBox, error, "No puede haver campos en blanco");
+            Utilities.Utilitarios.Validacion(ContrasenatextBox, error, "No puede haber campos en blanco");
             registro.Contrasena = ContrasenatextBox.Text;
 
             if (registro.Login())

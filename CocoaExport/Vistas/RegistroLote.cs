@@ -13,6 +13,7 @@ namespace CocoaExport.Vistas
     public partial class RegistroLote : Form
     {
         Lotes lotes = new Lotes();
+        ErrorProvider error = new ErrorProvider();
         BLL.Certificaciones registroc = new BLL.Certificaciones();
         double total;
         int loteId;
@@ -115,6 +116,32 @@ namespace CocoaExport.Vistas
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void Buscarlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoteIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(LoteIdtextBox, "Este campo solo acepta numeros");
+            }
         }
     }
 }

@@ -20,6 +20,7 @@ namespace CocoaExport.Vistas
         double cantidad2;
         int tipo;
         int recepcion;
+        ErrorProvider error = new ErrorProvider();
         BLL.Recepcion Registro = new BLL.Recepcion();
 
         public Recepcion()
@@ -36,6 +37,28 @@ namespace CocoaExport.Vistas
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void RecepcionIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(RecepcionIdtextBox, "Este campo solo acepta numeros");
+            }
         }
 
         private void Recepcion_Load(object sender, EventArgs e)
@@ -122,14 +145,14 @@ namespace CocoaExport.Vistas
                 Registro.SocioId = (int)SocioIdcomboBox.SelectedValue;
                 Registro.TipoCacaoId = (int)TipoCacaoIdcomboBox.SelectedValue;
                 Registro.Fecha = FechadateTimePicker.Text;
-                
+
                 double.TryParse(CantPtextBox.Text, out cantidad);
                 double.TryParse(PreciotextBox.Text, out precio);
                 PreciotextBox.Text = precio.ToString();
                 resultado = precio * cantidad;
                 MontotextBox.Text = resultado.ToString();
                 Registro.Monto = resultado;
-                
+
                 if (Registro.Insertar())
                 {
                     MessageBox.Show("Se guardaron los datos!");
@@ -140,7 +163,7 @@ namespace CocoaExport.Vistas
                 }
                 limpiar();
             }
-            else if(RecepcionIdtextBox.Text.Length > 0)
+            else if (RecepcionIdtextBox.Text.Length > 0)
             {
                 int.TryParse(RecepcionIdtextBox.Text, out recepcion);
                 double.TryParse(CantPtextBox.Text, out cantidad);
@@ -163,5 +186,27 @@ namespace CocoaExport.Vistas
                 }
             }
         }
+        private void RecibidoPortextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(RecibidoPortextBox, "Este campo no acepta numeros ni caracteres especiales");
+
+            }
+        }
     }
+    
 }

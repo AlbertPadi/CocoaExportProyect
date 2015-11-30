@@ -68,6 +68,7 @@
             this.PaistextBox.Size = new System.Drawing.Size(225, 20);
             this.PaistextBox.TabIndex = 1;
             this.PaistextBox.TextChanged += new System.EventHandler(this.PaistextBox_TextChanged);
+            this.PaistextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PaistextBox_KeyPress);
             // 
             // CodigoDesttextBox
             // 
@@ -92,6 +93,7 @@
             this.NombreDesttextBox.Name = "NombreDesttextBox";
             this.NombreDesttextBox.Size = new System.Drawing.Size(225, 20);
             this.NombreDesttextBox.TabIndex = 5;
+            this.NombreDesttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombreDesttextBox_KeyPress);
             // 
             // label3
             // 
@@ -126,6 +128,7 @@
             this.CodigoPosttextBox.Name = "CodigoPosttextBox";
             this.CodigoPosttextBox.Size = new System.Drawing.Size(225, 20);
             this.CodigoPosttextBox.TabIndex = 9;
+            this.CodigoPosttextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CodigoPosttextBox_KeyPress);
             // 
             // label5
             // 
@@ -173,6 +176,7 @@
             this.DestinoIdtextBox.Name = "DestinoIdtextBox";
             this.DestinoIdtextBox.Size = new System.Drawing.Size(140, 20);
             this.DestinoIdtextBox.TabIndex = 48;
+            this.DestinoIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DestinoIdtextBox_KeyPress);
             // 
             // label6
             // 
@@ -268,6 +272,9 @@
             this.PerformLayout();
 
         }
+
+
+
 
         #endregion
 

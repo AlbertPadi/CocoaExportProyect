@@ -67,6 +67,7 @@
             this.IdTipoCacaotextBox.Name = "IdTipoCacaotextBox";
             this.IdTipoCacaotextBox.Size = new System.Drawing.Size(58, 20);
             this.IdTipoCacaotextBox.TabIndex = 2;
+            this.IdTipoCacaotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdTipoCacaotextBox_KeyPress);
             // 
             // DescripcionTipotextBox
             // 
@@ -74,6 +75,7 @@
             this.DescripcionTipotextBox.Name = "DescripcionTipotextBox";
             this.DescripcionTipotextBox.Size = new System.Drawing.Size(168, 20);
             this.DescripcionTipotextBox.TabIndex = 0;
+            this.DescripcionTipotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripcionTipotextBox_KeyPress);
             // 
             // label9
             // 
@@ -164,10 +166,13 @@
             this.Controls.Add(this.IDTipolabel);
             this.Name = "TipoCacaoRegistro";
             this.Text = "Registro de Tipos de Cacao";
+            this.Load += new System.EventHandler(this.TipoCacaoRegistro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+
 
         #endregion
 

@@ -103,6 +103,7 @@
             this.ExportacionIdtextBox.Name = "ExportacionIdtextBox";
             this.ExportacionIdtextBox.Size = new System.Drawing.Size(103, 20);
             this.ExportacionIdtextBox.TabIndex = 9;
+            this.ExportacionIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExportacionIdtextBox_KeyPress);
             // 
             // label7
             // 
@@ -355,6 +356,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
         private System.Windows.Forms.Label label2;

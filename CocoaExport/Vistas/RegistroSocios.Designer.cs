@@ -89,7 +89,7 @@
             this.ApellidotextBox.Size = new System.Drawing.Size(193, 20);
             this.ApellidotextBox.TabIndex = 1;
             this.ApellidotextBox.TextChanged += new System.EventHandler(this.ApellidotextBox_TextChanged);
-            this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
+            this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidotextBox_KeyPress);
             // 
             // label3
             // 
@@ -220,6 +220,7 @@
             this.SocioIdtextBox.Name = "SocioIdtextBox";
             this.SocioIdtextBox.Size = new System.Drawing.Size(109, 20);
             this.SocioIdtextBox.TabIndex = 27;
+            this.SocioIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SocioIdtextBox_KeyPress);
             // 
             // button4
             // 
@@ -297,6 +298,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

@@ -75,6 +75,7 @@
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(179, 20);
             this.NombretextBox.TabIndex = 0;
+            this.NombretextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombretextBox_KeyPress);
             // 
             // ApellidotextBox
             // 
@@ -83,6 +84,7 @@
             this.ApellidotextBox.Size = new System.Drawing.Size(179, 20);
             this.ApellidotextBox.TabIndex = 1;
             this.ApellidotextBox.TextChanged += new System.EventHandler(this.ApellidotextBox_TextChanged);
+            this.ApellidotextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ApellidotextBox_KeyPress);
             // 
             // label2
             // 
@@ -192,6 +194,7 @@
             this.UsuarioIdtextBox.Name = "UsuarioIdtextBox";
             this.UsuarioIdtextBox.Size = new System.Drawing.Size(110, 20);
             this.UsuarioIdtextBox.TabIndex = 18;
+            this.UsuarioIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioIdtextBox_KeyPress);
             // 
             // label9
             // 
@@ -313,6 +316,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

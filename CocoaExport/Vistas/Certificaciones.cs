@@ -15,6 +15,7 @@ namespace CocoaExport.Vistas
     {
         int IdBuscado;
         int certificacionId;
+        ErrorProvider error = new ErrorProvider();
         BLL.Certificaciones registro = new BLL.Certificaciones();
 
         public Certificaciones()
@@ -25,6 +26,48 @@ namespace CocoaExport.Vistas
         private void Certificaciones_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void IDtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(IDtextBox, "Este campo solo acepta numeros");
+            }
+        }
+
+        private void DescripciontextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(DescripciontextBox, "Este campo no acepta numeros ni caracteres especiales");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
