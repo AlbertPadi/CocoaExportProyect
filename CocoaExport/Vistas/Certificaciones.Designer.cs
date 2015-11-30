@@ -35,7 +35,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -45,10 +44,10 @@
             // IDlabel
             // 
             this.IDlabel.AutoSize = true;
-            this.IDlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDlabel.Location = new System.Drawing.Point(20, 9);
+            this.IDlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDlabel.Location = new System.Drawing.Point(20, 25);
             this.IDlabel.Name = "IDlabel";
-            this.IDlabel.Size = new System.Drawing.Size(124, 18);
+            this.IDlabel.Size = new System.Drawing.Size(113, 16);
             this.IDlabel.TabIndex = 0;
             this.IDlabel.Text = "Certificacion ID";
             // 
@@ -56,7 +55,7 @@
             // 
             this.Descripcionlabel.AutoSize = true;
             this.Descripcionlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Descripcionlabel.Location = new System.Drawing.Point(20, 52);
+            this.Descripcionlabel.Location = new System.Drawing.Point(20, 67);
             this.Descripcionlabel.Name = "Descripcionlabel";
             this.Descripcionlabel.Size = new System.Drawing.Size(91, 16);
             this.Descripcionlabel.TabIndex = 1;
@@ -64,19 +63,21 @@
             // 
             // IDtextBox
             // 
-            this.IDtextBox.Location = new System.Drawing.Point(150, 10);
+            this.IDtextBox.Location = new System.Drawing.Point(150, 26);
             this.IDtextBox.Name = "IDtextBox";
             this.IDtextBox.Size = new System.Drawing.Size(100, 20);
             this.IDtextBox.TabIndex = 2;
             this.IDtextBox.TextChanged += new System.EventHandler(this.IDtextBox_TextChanged);
+            this.IDtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IDtextBox_KeyPress);
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(150, 51);
+            this.DescripciontextBox.Location = new System.Drawing.Point(150, 67);
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(152, 20);
             this.DescripciontextBox.TabIndex = 0;
             this.DescripciontextBox.TextChanged += new System.EventHandler(this.DescripciontextBox_TextChanged);
+            this.DescripciontextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripciontextBox_KeyPress);
             // 
             // label6
             // 
@@ -109,22 +110,12 @@
             this.label9.TabIndex = 26;
             this.label9.Text = "Eliminar";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(373, 152);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 16);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Buscar";
-            // 
             // button4
             // 
             this.button4.Image = global::CocoaExport.Properties.Resources._1443814210_fine_print;
-            this.button4.Location = new System.Drawing.Point(353, 115);
+            this.button4.Location = new System.Drawing.Point(260, 25);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 34);
+            this.button4.Size = new System.Drawing.Size(42, 34);
             this.button4.TabIndex = 27;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -164,8 +155,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(477, 192);
-            this.Controls.Add(this.label10);
+            this.ClientSize = new System.Drawing.Size(371, 192);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button3);
@@ -185,6 +175,8 @@
 
         }
 
+
+
         #endregion
 
         private System.Windows.Forms.Label IDlabel;
@@ -197,7 +189,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button4;
     }
 }

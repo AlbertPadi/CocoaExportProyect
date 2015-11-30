@@ -15,6 +15,7 @@ namespace CocoaExport.Vistas
     {
         int IdBuscado;
         int tipo;
+        ErrorProvider error = new ErrorProvider();
         TipoCacao registro = new TipoCacao();
 
         public TipoCacaoRegistro()
@@ -89,6 +90,53 @@ namespace CocoaExport.Vistas
         {
             IdTipoCacaotextBox.Clear();
             DescripcionTipotextBox.Clear();
+        }
+
+        private void TipoCacaoRegistro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IdTipoCacaotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(IdTipoCacaotextBox, "Este campo solo acepta numeros");
+            }
+        }
+
+        private void DescripcionTipotextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(DescripcionTipotextBox, "Este campo no acepta numeros ni caracteres especiales");
+            }
         }
     }
 }

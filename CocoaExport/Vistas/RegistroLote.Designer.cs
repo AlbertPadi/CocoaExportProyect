@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(415, 9);
+            this.label1.Location = new System.Drawing.Point(398, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 16);
             this.label1.TabIndex = 0;
@@ -61,10 +61,11 @@
             // 
             // LoteIdtextBox
             // 
-            this.LoteIdtextBox.Location = new System.Drawing.Point(476, 5);
+            this.LoteIdtextBox.Location = new System.Drawing.Point(476, 8);
             this.LoteIdtextBox.Name = "LoteIdtextBox";
             this.LoteIdtextBox.Size = new System.Drawing.Size(119, 20);
             this.LoteIdtextBox.TabIndex = 1;
+            this.LoteIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LoteIdtextBox_KeyPress);
             // 
             // TotaltextBox
             // 
@@ -144,16 +145,17 @@
             // 
             this.Buscarlabel.AutoSize = true;
             this.Buscarlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarlabel.Location = new System.Drawing.Point(509, 68);
+            this.Buscarlabel.Location = new System.Drawing.Point(522, 68);
             this.Buscarlabel.Name = "Buscarlabel";
             this.Buscarlabel.Size = new System.Drawing.Size(56, 16);
             this.Buscarlabel.TabIndex = 33;
             this.Buscarlabel.Text = "Buscar";
+            this.Buscarlabel.Click += new System.EventHandler(this.Buscarlabel_Click);
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::CocoaExport.Properties.Resources.Inspection_128;
-            this.Buscarbutton.Location = new System.Drawing.Point(491, 31);
+            this.Buscarbutton.Location = new System.Drawing.Point(500, 31);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(95, 34);
             this.Buscarbutton.TabIndex = 32;
@@ -225,7 +227,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(160)))), ((int)(((byte)(133)))));
-            this.ClientSize = new System.Drawing.Size(598, 261);
+            this.ClientSize = new System.Drawing.Size(611, 261);
             this.Controls.Add(this.Buscarlabel);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.label8);

@@ -16,8 +16,7 @@ namespace CocoaExport.Vistas
     {
         BLL.Certificaciones certificacion = new BLL.Certificaciones();
         BLL.DestinosExportes destinos = new BLL.DestinosExportes();
-       
-
+        ErrorProvider error = new ErrorProvider();
         
         int exportacionId;
         string addlotes;
@@ -61,6 +60,27 @@ namespace CocoaExport.Vistas
             DestinosIdcomboBox.DataSource = destinos.Listar("DestinoId, NombreDestino", "1=1", "");
             DestinosIdcomboBox.DisplayMember = "NombreDestino";
             DestinosIdcomboBox.ValueMember = "DestinoId";
+        }
+
+        private void ExportacionIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(ExportacionIdtextBox, "Este campo solo acepta numeros");
+            }
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)

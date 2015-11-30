@@ -64,6 +64,7 @@
             this.IdInsptextBox.Size = new System.Drawing.Size(88, 20);
             this.IdInsptextBox.TabIndex = 34;
             this.IdInsptextBox.TextChanged += new System.EventHandler(this.IdInsptextBox_TextChanged);
+            this.IdInsptextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdInsptextBox_KeyPress);
             // 
             // IdInsplabel
             // 
@@ -192,6 +193,7 @@
             this.ControlPlagastextBox.Name = "ControlPlagastextBox";
             this.ControlPlagastextBox.Size = new System.Drawing.Size(200, 20);
             this.ControlPlagastextBox.TabIndex = 48;
+            this.ControlPlagastextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ControlPlagastextBox_KeyPress);
             // 
             // label5
             // 
@@ -209,6 +211,7 @@
             this.MaterialSiembratextBox.Name = "MaterialSiembratextBox";
             this.MaterialSiembratextBox.Size = new System.Drawing.Size(200, 20);
             this.MaterialSiembratextBox.TabIndex = 46;
+            this.MaterialSiembratextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaterialSiembratextBox_KeyPress);
             // 
             // label4
             // 
@@ -348,6 +351,7 @@
             this.PerformLayout();
 
         }
+
 
         #endregion
 

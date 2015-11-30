@@ -16,6 +16,7 @@ namespace CocoaExport.Vistas
         int IdBuscado;
         int CodigoPost;
         int DestinoId;
+        ErrorProvider error = new ErrorProvider();
         BLL.DestinosExportes destino = new BLL.DestinosExportes();
         public DestinosExportes()
         {
@@ -112,6 +113,90 @@ namespace CocoaExport.Vistas
         {
             
 
+        }
+
+        private void CodigoPosttextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(CodigoPosttextBox, "Este campo solo acepta numeros");
+            }
+        }
+
+        private void DestinoIdtextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(DestinoIdtextBox, "Este campo solo acepta numeros");
+            }
+        }
+
+        private void NombreDesttextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(NombreDesttextBox, "Este campo no acepta numeros ni caracteres especiales");
+            }
+        }
+
+        private void PaistextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                error.SetError(PaistextBox, "Este campo no acepta numeros ni caracteres especiales");
+            }
         }
 
         private void PaistextBox_TextChanged(object sender, EventArgs e)

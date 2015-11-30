@@ -75,6 +75,7 @@
             this.RecepcionIdtextBox.Name = "RecepcionIdtextBox";
             this.RecepcionIdtextBox.Size = new System.Drawing.Size(95, 20);
             this.RecepcionIdtextBox.TabIndex = 1;
+            this.RecepcionIdtextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RecepcionIdtextBox_KeyPress);
             // 
             // SocioIdlabel
             // 
@@ -213,6 +214,7 @@
             this.RecibidoPortextBox.Name = "RecibidoPortextBox";
             this.RecibidoPortextBox.Size = new System.Drawing.Size(170, 20);
             this.RecibidoPortextBox.TabIndex = 7;
+            this.RecibidoPortextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RecibidoPortextBox_KeyPress);
             // 
             // label9
             // 
@@ -370,6 +372,8 @@
             this.PerformLayout();
 
         }
+
+
 
         #endregion
 
