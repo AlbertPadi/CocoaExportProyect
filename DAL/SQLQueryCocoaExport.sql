@@ -2,6 +2,7 @@ create database CocoaExport
 
 use CocoaExport
 
+
 create table Usuarios(
 			UsuarioId int primary key identity ,
 			Nombres varchar(50),

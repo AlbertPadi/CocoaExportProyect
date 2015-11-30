@@ -95,14 +95,16 @@ namespace CocoaExport.Vistas
                 exportacion.Resumen = ResumenrichTextBox.Text;
                 double.TryParse(TotaltextBox.Text, out Monto);
                 exportacion.Monto = Monto;
-                
 
-                    for (int i = 0; i < LotesdataGridView.Rows.Count; i++)
-                    {
-                        Lotes lotes = new Lotes();
-                        lotes.LoteId = (int)LoteIdcomboBox.SelectedValue;
-                        exportacion.AgregarLotes(lotes.LoteId, LotesdataGridView.Rows[i].ToString());
-                    }
+
+                foreach (DataGridViewRow item in LotesdataGridView.Rows)
+                {
+                    Lotes lotes = new Lotes();
+                    lotes.LoteId = (int)LoteIdcomboBox.SelectedValue;
+                    exportacion.AgregarLotes(lotes.LoteId, item.Cells["CodigoLote"].Value.ToString());
+                }
+                        
+                    
                     if (exportacion.Insertar())
                     {
                         MessageBox.Show("El producto esta listo para exportarce");
